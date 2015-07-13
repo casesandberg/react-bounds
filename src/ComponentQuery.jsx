@@ -3,7 +3,6 @@
 
 var React = require('react');
 var ReactCSS = require('reactcss');
-
 var listener = require('./listener');
 
 
@@ -34,36 +33,35 @@ module.exports = function(Component) {
     }
 
     handleResize(e) {
-      var bounds = this.calculateBounds(React.findDOMNode(this.refs.wrap).clientWidth);
-      this.setState({ width: React.findDOMNode(this.refs.wrap).clientWidth, activeBounds: bounds });
+      var element = React.findDOMNode(this.refs.wrap).clientWidth;
+      this.setState({ width: React.findDOMNode(this.refs.wrap).clientWidth, activeBounds: this.calculateBounds(element) });
     }
 
     calculateBounds(newWidth) {
-      console.log('newWidth', newWidth);
-      if (Component.bounds) {
-        var bounds = [];
-        for (var boundName in Component.bounds()) {
-          if (Component.bounds().hasOwnProperty(boundName)) {
-            var boundValue = Component.bounds()[boundName];
+      var bounds = Component.bounds();
+      var activeBounds = [];
+
+      if (bounds) {
+        for (var boundName in bounds) {
+          if (bounds.hasOwnProperty(boundName)) {
+            var boundValue = bounds[boundName];
             if (newWidth > boundValue[0] && newWidth < boundValue[1]) {
-              bounds.push(boundName);
+              activeBounds.push(boundName);
             }
           }
         }
-        return bounds;
       }
 
-      return false;
+      return activeBounds;
     }
 
     componentDidMount() {
       var element = React.findDOMNode(this.refs.component);
+      var wrap = React.findDOMNode(this.refs.wrap);
       listener.add(element, this.handleResize);
 
-      var bounds = this.calculateBounds(React.findDOMNode(this.refs.wrap).clientWidth);
-
       if (!this.state.loaded) {
-        this.setState({ loaded: true, width: React.findDOMNode(this.refs.wrap).clientWidth, activeBounds: bounds  });
+        this.setState({ loaded: true, width: wrap.clientWidth, activeBounds: this.calculateBounds(wrap.clientWidth) });
       }
     }
 
