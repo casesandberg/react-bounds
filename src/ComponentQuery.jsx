@@ -16,7 +16,8 @@ module.exports = function(Component) {
 
       this.state = {
         loaded: false,
-        width: 0
+        width: 0,
+        activeBounds: []
       };
 
       this.handleResize = this.handleResize.bind(this);
@@ -33,15 +34,36 @@ module.exports = function(Component) {
     }
 
     handleResize(e) {
-      this.setState({ width: React.findDOMNode(this.refs.wrap).clientWidth });
+      var bounds = this.calculateBounds(React.findDOMNode(this.refs.wrap).clientWidth);
+      this.setState({ width: React.findDOMNode(this.refs.wrap).clientWidth, activeBounds: bounds });
+    }
+
+    calculateBounds(newWidth) {
+      console.log('newWidth', newWidth);
+      if (Component.bounds) {
+        var bounds = [];
+        for (var boundName in Component.bounds()) {
+          if (Component.bounds().hasOwnProperty(boundName)) {
+            var boundValue = Component.bounds()[boundName];
+            if (newWidth > boundValue[0] && newWidth < boundValue[1]) {
+              bounds.push(boundName);
+            }
+          }
+        }
+        return bounds;
+      }
+
+      return false;
     }
 
     componentDidMount() {
       var element = React.findDOMNode(this.refs.component);
       listener.add(element, this.handleResize);
 
+      var bounds = this.calculateBounds(React.findDOMNode(this.refs.wrap).clientWidth);
+
       if (!this.state.loaded) {
-        this.setState({ loaded: true, width: React.findDOMNode(this.refs.wrap).clientWidth });
+        this.setState({ loaded: true, width: React.findDOMNode(this.refs.wrap).clientWidth, activeBounds: bounds  });
       }
     }
 
