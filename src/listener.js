@@ -62,7 +62,7 @@ module.exports = {
       addChildTrigger(element);
     }
     element.resizeListener.push(callback);
-    console.log(element);
+    // console.log(element);
   },
 
   remove: function(element, callback){
