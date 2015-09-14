@@ -1,21 +1,20 @@
-/* jshint node: true, esnext: true, browser: true */
-"use strict";
+'use strict';
 
 // http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/
 
 // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
-var requestFrame = function(callback){
+var requestFrame = function(callback) {
   var raf = window.requestAnimationFrame ||
             window.mozRequestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
-            function(callback){
+            function(callback) {
               return window.setTimeout(callback, 1000 / 60);
             };
 
   return raf(callback);
 };
 
-var cancelFrame = function(id){
+var cancelFrame = function(id) {
   var cancel = window.cancelAnimationFrame ||
                window.mozCancelAnimationFrame ||
                window.webkitCancelAnimationFrame ||
@@ -28,7 +27,8 @@ function resizeListener(e) {
   var element = e.target || e.srcElement;
   if (element.resizeAnimation) {
     cancelFrame(element.resizeAnimation);
-  };
+  }
+
   element.resizeAnimation = requestFrame(function() {
     var trigger = element.resizeTrigger;
     trigger.resizeListener.forEach(function(callback) {
@@ -45,6 +45,7 @@ function objectLoad(e) {
 function addChildTrigger(element) {
   var obj = document.createElement('object');
   obj.setAttribute('style', 'display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;');
+
   // Make it not focusable
   obj.setAttribute('tabindex', '-1');
   obj.resizeElement = element;
@@ -56,16 +57,18 @@ function addChildTrigger(element) {
 }
 
 module.exports = {
-  add: function(element, callback){
+  add: function(element, callback) {
     if (!element.resizeListener) {
       element.resizeListener = [];
       addChildTrigger(element);
     }
+
     element.resizeListener.push(callback);
+
     // console.log(element);
   },
 
-  remove: function(element, callback){
+  remove: function(element, callback) {
     element.resizeListener.splice(element.resizeListener.indexOf(callback), 1);
-  }
+  },
 };

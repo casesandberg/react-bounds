@@ -1,11 +1,8 @@
-/* jshint node: true, esnext: true, browser: true */
-"use strict";
+'use strict';
 
 var React = require('react');
 var ReactCSS = require('reactcss');
 var listener = require('./listener');
-
-
 
 module.exports = function(Component) {
   class ComponentQuery extends ReactCSS.Component {
@@ -16,7 +13,7 @@ module.exports = function(Component) {
       this.state = {
         loaded: false,
         width: 0,
-        activeBounds: []
+        activeBounds: [],
       };
 
       this.handleResize = this.handleResize.bind(this);
@@ -26,9 +23,9 @@ module.exports = function(Component) {
       return {
         'default': {
           wrap: {
-            position: 'relative'
-          }
-        }
+            position: 'relative',
+          },
+        },
       };
     }
 
@@ -75,13 +72,14 @@ module.exports = function(Component) {
       if (this.state.loaded && this.state.width > 0) {
         component = <Component {...this.props } {...this.state} />;
       }
+
       return (
         <div ref="wrap" style={ this.styles().wrap }>
           <div ref="component">
             { component }
           </div>
         </div>
-      )
+      );
     }
   }
 
