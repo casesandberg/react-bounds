@@ -3,6 +3,7 @@
 var React = require('react');
 var ReactCSS = require('reactcss');
 var listener = require('./listener');
+var _ = require('underscore');
 
 module.exports = function(Component) {
   class ComponentQuery extends ReactCSS.Component {
@@ -63,6 +64,14 @@ module.exports = function(Component) {
       if (!this.state.loaded) {
         this.setState({ loaded: true, width: wrap.clientWidth, activeBounds: this.calculateBounds(wrap.clientWidth) });
       }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+      if (this.state.loaded && _.isEqual(this.state.activeBounds, nextState.activeBounds)) {
+        return false;
+      }
+
+      return true;
     }
 
     componentWillUnmount() {

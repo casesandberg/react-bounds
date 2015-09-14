@@ -24,6 +24,7 @@ class Box extends ReactCSS.Component {
   }
 
   render() {
+    console.log('render', this.props.activeBounds);
     return <div is="box">{ this.props.width } - { this.props.activeBounds }</div>;
   }
 }
