@@ -42,7 +42,10 @@ module.exports = function(Component) {
         for (var boundName in bounds) {
           if (bounds.hasOwnProperty(boundName)) {
             var boundValue = bounds[boundName];
-            if (newWidth > boundValue[0] && newWidth < boundValue[1]) {
+            var widthMin = boundValue.min || 0;
+            var widthMax = boundValue.max || 0;
+
+            if (newWidth > widthMin && newWidth < widthMax) {
               activeBounds.push(boundName);
             }
           }

@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
-import Box from '../examples/Box.js';
+import Outside from '../examples/Outside.jsx';
 
 React.render(
-  React.createElement(Box),
+  React.createElement(Outside),
   document.getElementById('root')
 );

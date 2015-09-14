@@ -37,7 +37,7 @@ module.exports = function(port) {
     },
     resolve: {
       alias: {
-        'react-color': path.resolve(__dirname, './src/index.js'),
+        'react-bounds': path.resolve(__dirname, './src/index.js'),
         'react': path.resolve(__dirname, './node_modules/react'),
       },
       extensions: ['', '.js', '.jsx'],
