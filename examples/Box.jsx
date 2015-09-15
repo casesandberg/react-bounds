@@ -19,7 +19,9 @@ class Box extends ReactCSS.Component {
 
   static bounds() {
     return {
-      'no-sidebar': { min: 0, max: 500, type: 'width' },
+      'no-sidebar': { maxWidth: 500 },
+      'really-big': { minWidth: 700 },
+      'middle': { minWidth: 400, maxWidth: 550 },
     };
   }
 
