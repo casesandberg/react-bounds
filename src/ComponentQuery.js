@@ -18,6 +18,10 @@ module.exports = function(Component) {
         activeBounds: [],
       };
 
+      this.debounce = _.debounce(function() {
+        this.setState({ debounced: true });
+      }, 100);
+
       this.handleResize = this.handleResize.bind(this);
     }
 
@@ -31,10 +35,12 @@ module.exports = function(Component) {
       };
     }
 
-    handleResize() {
+    handleResize(log) {
       var component = React.findDOMNode(this.refs.wrap);
       var wrap = React.findDOMNode(this.refs.wrap);
-      this.setState({ loaded: true, width: wrap.clientWidth, height: wrap.clientHeight, activeBounds: this.calculateBounds(component.clientWidth, component.clientHeight) });
+      this.setState({ loaded: true, debounced: false, width: wrap.clientWidth, height: wrap.clientHeight, activeBounds: this.calculateBounds(component.clientWidth, component.clientHeight) });
+
+      this.debounce();
     }
 
     calculateBounds(newWidth, newHeight) {
@@ -80,13 +86,13 @@ module.exports = function(Component) {
       }
     }
 
-    // shouldComponentUpdate(nextProps, nextState) {
-    //   if (this.state.loaded && _.isEqual(this.state.activeBounds, nextState.activeBounds)) {
-    //     return false;
-    //   }
-    //
-    //   return true;
-    // }
+    shouldComponentUpdate(nextProps, nextState) {
+      if (this.state.loaded && _.isEqual(this.state.activeBounds, nextState.activeBounds) && nextState.debounced !== true) {
+        return false;
+      }
+
+      return true;
+    }
 
     componentWillUnmount() {
       var component = React.findDOMNode(this.refs.component);
