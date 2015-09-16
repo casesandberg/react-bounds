@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
-import Outside from '../examples/schedule/Schedule.jsx';
+import Home from './components/Home.jsx';
 
 React.render(
-  React.createElement('div', { style: { padding: '20px', height: window.innerHeight - 40 } }, React.createElement(Outside)),
+  React.createElement(Home),
   document.getElementById('root')
 );
