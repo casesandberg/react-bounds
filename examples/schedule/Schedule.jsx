@@ -84,13 +84,13 @@ class Schedule extends ReactCSS.Component {
 
   styles() {
     return this.css({
-      'list': this.props.width < 520,
+      'list': this.props.width < 400,
     });
   }
 
   static bounds() {
     return {
-      'list': { maxWidth: 520 },
+      'list': { maxWidth: 400 },
     };
   }
 
