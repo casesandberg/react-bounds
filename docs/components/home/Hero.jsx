@@ -4,6 +4,7 @@ import React from 'react';
 import ReactCSS from 'reactcss';
 
 import { Container } from '../../../modules/react-basic-layout';
+import Schedule from '../../../examples/schedule/Schedule.jsx';
 
 export default class Hero extends ReactCSS.Component {
 
@@ -28,10 +29,7 @@ export default class Hero extends ReactCSS.Component {
           padding: '20px 0 30px',
         },
         schedule: {
-          width: '100%',
-          height: '370px',
-          background: '#fff',
-          boxShadow: '0 2px 4px rgba(0,0,0,.2)',
+          height: '350px',
         },
         instructions: {
           color: '#425655',
@@ -58,7 +56,7 @@ export default class Hero extends ReactCSS.Component {
           </div>
 
           <div is="schedule">
-
+            <Schedule />
           </div>
 
           <div is="instructions">

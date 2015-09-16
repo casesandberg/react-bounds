@@ -5,6 +5,7 @@ import ReactCSS from 'reactcss';
 import bounds from 'react-bounds';
 
 import ScheduleItem from './ScheduleItem.jsx';
+import { Raised } from '../../modules/react-material-design';
 
 class Schedule extends ReactCSS.Component {
 
@@ -12,43 +13,50 @@ class Schedule extends ReactCSS.Component {
     return {
       'default': {
         schedule: {
+          Absolute: '20px 20px 20px 20px',
+          display: 'flex',
+          flexDirection: 'column',
+        },
+        heading: {
+          fontSize: '20px',
+          color: '#333',
+          height: '60px',
+          lineHeight: '30px',
+          top: '0',
+          left: '4px',
+        },
+        calendar: {
+          flex: '1',
           display: 'flex',
           alignItems: 'stretch',
           height: '100%',
-          minHeight: '400px',
+          boxShadow: 'inset 0 0 0 1px #ddd',
+          borderRadius: '2px',
         },
+
         column: {
           flex: '2',
-          borderRight: '1px solid #ccc',
-          borderTop: '1px solid #ccc',
-          borderBottom: '1px solid #ccc',
+          borderRight: '1px solid #ddd',
           position: 'relative',
         },
-        title: {
-          height: '60px',
-          lineHeight: '60px',
-          textAlign: 'center',
-          textTransform: 'uppercase',
-          color: '#999',
-        },
 
-        timesColumn: {
-          flex: '1',
-          borderRight: '1px solid #ccc',
-          display: 'flex',
+        head: {
+          padding: '16px',
+          fontSize: '15px',
         },
-
-        times: {
-          flex: '1',
-          marginTop: '60px',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
+        day: {
+          float: 'left',
+          color: '#bbb',
+          textTransform: 'Capitalize',
+          fontWeight: '300',
         },
-        time: {
-          padding: '10px 0',
-          textTransform: 'uppercase',
-          color: '#999',
+        number: {
+          float: 'right',
+          color: '#333',
+          fontWeight: '500',
+        },
+        clear: {
+          clear: 'both',
         },
       },
       'list': {
@@ -89,18 +97,6 @@ class Schedule extends ReactCSS.Component {
   render() {
     var schedule = [];
 
-    schedule.push(
-      <div key="time" is="timesColumn">
-        <div is="times">
-          <div is="time">8am</div>
-          <div is="time">12pm</div>
-          <div is="time">4pm</div>
-          <div is="time">8pm</div>
-          <div is="time">12am</div>
-        </div>
-      </div>
-    );
-
     for (var i = 0; i < this.props.days.length; i++) {
       var day = this.props.days[i];
       var thatDay = [];
@@ -117,48 +113,74 @@ class Schedule extends ReactCSS.Component {
 
       schedule.push(
         <div is="column" key={ i }>
-          <div is="title">{ day }</div>
+          <div is="head">
+            <div is="day">{ day }</div>
+            <div is="number">{ this.props.numbers[i] }</div>
+            <div is="clear" />
+          </div>
           { thatDay }
         </div>
       );
     }
 
-    return <div is="schedule">{ schedule }</div>;
+    return (
+      <Raised>
+        <div is="schedule">
+          <div is="heading">My Schedule</div>
+          <div is="calendar">
+            { schedule }
+          </div>
+        </div>
+      </Raised>
+    );
   }
 }
 
 Schedule.defaultProps = {
   days: ['mon', 'tue', 'wed', 'thu', 'fri', /* 'sat', 'sun' */],
+  numbers: [21, 22, 23, 24, 25],
   appointments: {
     1: {
       id: 1,
       date: 'mon',
-      time: '8:30am',
-      label: 'Dr. Appointment',
+      time: '2:30pm',
+      label: 'Dr. Appt.',
+      fromTop: 40,
+      length: 2,
+      type: 'dr',
     },
     2: {
       id: 2,
-      date: 'wed',
-      time: '3pm',
-      label: 'Lunch w/Annie',
+      date: 'tue',
+      time: '1:00pm',
+      label: 'Plumber',
+      fromTop: 25,
+      type: 'chore',
     },
     3: {
       id: 3,
       date: 'wed',
-      time: '12pm',
-      label: 'Meeting w/clients',
+      time: '8:00am',
+      label: 'Sick Day with Kids',
+      fromTop: 0,
+      length: 3,
+      type: 'kids',
     },
     4: {
       id: 4,
-      date: 'wed',
-      time: '7pm',
-      label: 'Clara\'s Dance Recital',
+      date: 'thu',
+      time: '4:00pm',
+      label: 'Dr. Followup',
+      fromTop: 55,
+      type: 'dr',
     },
     5: {
       id: 5,
       date: 'fri',
-      time: '5pm',
-      label: 'Date night @ Oleana',
+      time: '9:00am',
+      label: 'Dry Cleaning',
+      fromTop: 5,
+      type: 'chore',
     },
   },
 };

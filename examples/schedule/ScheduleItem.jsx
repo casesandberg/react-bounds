@@ -6,48 +6,22 @@ import ReactCSS from 'reactcss';
 export default class Schedule extends ReactCSS.Component {
 
   classes() {
-
-    var time = this.props.time;
-    var fromTop = 0;
-    var pm = false;
-
-    if (time.indexOf('pm') > -1) {
-      if (time != '12pm') {
-        pm = true;
-      }
-    }
-
-    var timeSplice = time.split(':');
-    fromTop = parseInt(timeSplice[0]);
-    if (pm) {
-      fromTop += 12;
-    }
-
-    if (parseInt(timeSplice[1])) {
-      fromTop += parseInt(timeSplice[1]) / 60;
-    }
-
-    fromTop = fromTop - 8;
-
     return {
       'default': {
         item: {
           position: 'absolute',
-          borderRadius: '2px',
           padding: '10px',
-          marginTop: '60px',
+          marginTop: '48px',
           overflow: 'hidden',
-          top: fromTop * 5 + '%',
-          fontSize: '13px',
+          top: this.props.fromTop + '%',
+          fontSize: '14px',
           left: '0',
           right: '0',
-          border: '1px solid #fff',
         },
         date: {
           display: 'none',
         },
         time: {
-          fontSize: '11px',
           display: 'inline-block',
         },
         label: {
@@ -57,34 +31,35 @@ export default class Schedule extends ReactCSS.Component {
           display: 'none',
         },
       },
-      'id-1': {
+
+      'type-dr': {
+        item: {
+          background: '#ceebf8',
+          color: '#2b77ad',
+        },
+      },
+      'type-chore': {
         item: {
           background: '#ddd',
           color: '#666',
         },
       },
-      'id-2': {
+      'type-kids': {
         item: {
-          background: '#f4e3f8',
-          color: '#7f4083',
+          background: '#E4F0D7',
+          color: '#69B21A',
         },
       },
-      'id-3': {
+
+      'length-2': {
         item: {
-          background: '#f4e3f8',
-          color: '#7f4083',
+          height: '50px',
         },
       },
-      'id-4': {
+
+      'length-3': {
         item: {
-          background: '#ceebf8',
-          color: '#2b77ad',
-        },
-      },
-      'id-5': {
-        item: {
-          background: '#ceebf8',
-          color: '#2b77ad',
+          height: '150px',
         },
       },
 

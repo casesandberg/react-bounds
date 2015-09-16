@@ -11,9 +11,13 @@ class Raised extends ReactCSS.Component {
       'default': {
         wrap: {
           position: 'relative',
+          width: '100%',
+          height: '100%',
         },
         content: {
           position: 'relative',
+          width: '100%',
+          height: '100%',
         },
         bg: {
           Absolute: '0 0 0 0',
