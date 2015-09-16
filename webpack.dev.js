@@ -24,7 +24,7 @@ module.exports = function(port) {
           loaders: ['react-hot-loader', 'babel-loader'],
         }, {
           test: /\.jsx$/,
-          exclude: [/node_modules/, /modules/],
+          exclude: [/node_modules/],
           loaders: ['jsx-loader', 'babel-loader', 'react-map-styles'],
         }, {
           test: /\.css$/,
