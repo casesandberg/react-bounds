@@ -20,7 +20,11 @@ export default class Features extends ReactCSS.Component {
   render() {
     return (
       <div is="features">
-        <Container width={ 550 }>Features</Container>
+        <Container width={ 550 }>
+
+          Features
+
+        </Container>
       </div>
     );
   }
