@@ -57,14 +57,18 @@ class Docs extends ReactCSS.Component {
   }
 
   attachSidebar() {
-    var sidebarTop = React.findDOMNode(this.refs.sidebar).getBoundingClientRect().top;
+    var sidebar = React.findDOMNode(this.refs.sidebar);
 
-    if (sidebarTop <= 0 && this.state.sidebarFixed === false) {
-      this.setState({ sidebarFixed: true });
-    }
+    if (sidebar) {
+      var sidebarTop = sidebar.getBoundingClientRect().top;
 
-    if (sidebarTop > 0 && this.state.sidebarFixed === true) {
-      this.setState({ sidebarFixed: false });
+      if (sidebarTop <= 0 && this.state.sidebarFixed === false) {
+        this.setState({ sidebarFixed: true });
+      }
+
+      if (sidebarTop > 0 && this.state.sidebarFixed === true) {
+        this.setState({ sidebarFixed: false });
+      }
     }
   }
 
@@ -165,14 +169,21 @@ class Docs extends ReactCSS.Component {
           }
         `}</style>
 
-        <Grid>
-          <div is="sidebar" ref="sidebar">
-            <Sidebar files={ this.props.markdown } active={ this.state.visible } primaryColor={ this.props.primaryColor } bottom={ this.props.bottom } fixed={ this.state.sidebarFixed } />
-          </div>
-          <div ref="files" is="files">
+
+          { this.props.sidebar !== false ?
+            <Grid>
+              <div is="sidebar" ref="sidebar">
+                <Sidebar files={ this.props.markdown } active={ this.state.visible } primaryColor={ this.props.primaryColor } bottom={ this.props.bottom } fixed={ this.state.sidebarFixed } />
+              </div>
+              <div ref="files" is="files">
+                { markdownFiles }
+              </div>
+            </Grid>
+          : <div ref="files" is="files">
             { markdownFiles }
-          </div>
-        </Grid>
+          </div> }
+
+
       </div>
     );
   }

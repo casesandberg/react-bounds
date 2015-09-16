@@ -6,6 +6,8 @@ import ReactCSS from 'reactcss';
 import { Container } from '../../../modules/react-basic-layout';
 import Docs from '../../../modules/react-docs';
 
+import documentation from '../../documentation';
+
 export default class DocsText extends ReactCSS.Component {
 
   classes() {
@@ -14,6 +16,10 @@ export default class DocsText extends ReactCSS.Component {
         docs: {
           background: '#fafafa',
         },
+        Documentation: {
+          primaryColor: '#9013FE',
+          sidebar: false,
+        },
       },
     };
   }
@@ -21,8 +27,9 @@ export default class DocsText extends ReactCSS.Component {
   render() {
     return (
       <div is="docs">
-        <Container width={ 550 }>Docs</Container>
-        <Docs />
+        <Container width={ 550 }>
+          <Docs is="Documentation" markdown={ documentation }/>
+        </Container>
       </div>
     );
   }

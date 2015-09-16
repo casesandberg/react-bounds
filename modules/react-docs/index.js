@@ -1,2 +1,2 @@
 
-module.exports = require('./lib/components/Docs');
+module.exports = require('./src/components/Docs');
