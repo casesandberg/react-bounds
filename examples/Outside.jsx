@@ -23,7 +23,7 @@ class Outside extends React.Component {
   }
 
   render() {
-    return <div style={{ width: '100%', transition: 'width 200ms linear' }} ref="outside" onClick={ this.handleClick }><Box /></div>;
+    return <div style={{ width: '100%', /* transition: 'width 200ms linear' */ }} ref="outside" onClick={ this.handleClick }><Box /></div>;
   }
 }
 

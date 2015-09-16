@@ -30,6 +30,10 @@ module.exports = function(Component) {
         'default': {
           wrap: {
             position: 'relative',
+            height: '100%',
+          },
+          component: {
+            height: '100%',
           },
         },
       };
@@ -107,7 +111,7 @@ module.exports = function(Component) {
 
       return (
         <div ref="wrap" style={ this.styles().wrap }>
-          <div ref="component">
+          <div ref="component" style={ this.styles().component }>
             { component }
           </div>
         </div>
