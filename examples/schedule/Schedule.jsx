@@ -5,7 +5,6 @@ import ReactCSS from 'reactcss';
 import bounds from 'react-bounds';
 
 import ScheduleItem from './ScheduleItem.jsx';
-import { Raised } from '../../modules/react-material-design';
 
 class Schedule extends ReactCSS.Component {
 
@@ -16,11 +15,13 @@ class Schedule extends ReactCSS.Component {
           Absolute: '20px 20px 20px 20px',
           display: 'flex',
           flexDirection: 'column',
+          overflowY: 'scroll',
         },
         heading: {
           fontSize: '20px',
           color: '#333',
-          height: '60px',
+          minHeight: '50px',
+          maxHeight: '50px',
           lineHeight: '30px',
           top: '0',
           left: '4px',
@@ -29,7 +30,6 @@ class Schedule extends ReactCSS.Component {
           flex: '1',
           display: 'flex',
           alignItems: 'stretch',
-          height: '100%',
           boxShadow: 'inset 0 0 0 1px #ddd',
           borderRadius: '2px',
         },
@@ -41,7 +41,7 @@ class Schedule extends ReactCSS.Component {
         },
 
         head: {
-          padding: '16px',
+          padding: '14px',
           fontSize: '15px',
         },
         day: {
@@ -60,22 +60,17 @@ class Schedule extends ReactCSS.Component {
         },
       },
       'list': {
-        schedule: {
+        calendar: {
           display: 'block',
+          boxShadow: 'none',
         },
         Item: {
           list: true,
         },
         column: {
-          borderTop: 'none',
           borderRight: 'none',
-          borderBottom: 'none',
         },
-
-        timesColumn: {
-          display: 'none',
-        },
-        title: {
+        head: {
           display: 'none',
         },
       },
@@ -84,13 +79,13 @@ class Schedule extends ReactCSS.Component {
 
   styles() {
     return this.css({
-      'list': this.props.width < 400,
+      'list': this.props.width < 420,
     });
   }
 
   static bounds() {
     return {
-      'list': { maxWidth: 400 },
+      'list': { maxWidth: 420 },
     };
   }
 
@@ -124,14 +119,12 @@ class Schedule extends ReactCSS.Component {
     }
 
     return (
-      <Raised>
-        <div is="schedule">
-          <div is="heading">My Schedule</div>
-          <div is="calendar">
-            { schedule }
-          </div>
+      <div is="schedule">
+        <div is="heading">My Schedule</div>
+        <div is="calendar">
+          { schedule }
         </div>
-      </Raised>
+      </div>
     );
   }
 }

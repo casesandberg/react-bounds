@@ -59,19 +59,19 @@ export default class Schedule extends ReactCSS.Component {
 
       'length-3': {
         item: {
-          height: '150px',
+          height: '110px',
         },
       },
 
       list: {
         item: {
           position: 'relative',
-          margin: '0',
+          marginTop: '1px',
           borderRadius: '4px',
+          height: 'auto',
         },
         date: {
-          fontSize: '11px',
-          textTransform: 'uppercase',
+          textTransform: 'Capitalize',
           paddingRight: '5px',
           display: 'inline-block',
         },

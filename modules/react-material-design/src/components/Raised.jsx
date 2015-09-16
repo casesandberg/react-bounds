@@ -73,7 +73,7 @@ class Raised extends ReactCSS.Component {
   render() {
     return (
       <div is="wrap">
-        <div is="bg" />
+        <div is="bg" className="bg"/>
         <div is="content">{ this.props.children }</div>
       </div>
     );

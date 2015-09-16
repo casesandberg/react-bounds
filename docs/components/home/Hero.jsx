@@ -4,6 +4,7 @@ import React from 'react';
 import ReactCSS from 'reactcss';
 
 import { Container } from '../../../modules/react-basic-layout';
+import { Raised } from '../../../modules/react-material-design';
 import Schedule from '../../../examples/schedule/Schedule.jsx';
 
 export default class Hero extends ReactCSS.Component {
@@ -40,7 +41,6 @@ export default class Hero extends ReactCSS.Component {
         },
         draggable: {
           height: '100%',
-          transition: 'width 1000ms ease-in-out',
           position: 'relative',
         },
         handle: {
@@ -53,6 +53,10 @@ export default class Hero extends ReactCSS.Component {
           background: '#9013FE',
           zIndex: '2',
           cursor: 'drag',
+        },
+        icon: {
+          fill: '#fff',
+          transform: 'rotate(90deg) translate(-2px, 2px)',
         },
         instructions: {
           color: '#425655',
@@ -69,12 +73,19 @@ export default class Hero extends ReactCSS.Component {
 
   componentDidMount() {
     var draggable = React.findDOMNode(this.refs.draggable);
+    var handle = React.findDOMNode(this.refs.handle);
+    var bg = React.findDOMNode(this.refs.draggable).children[1].children[0].style;
 
+    bg.transition = 'transform 1000ms ease-in-out';
+    handle.style.transition = 'transform 1000ms ease-in-out';
+    bg.transformOrigin = '0 0';
     this.moving = setInterval(() => {
-      if (draggable.style.width === '100%') {
-        draggable.style.width = '99%';
+      if (bg.transform === 'scaleX(1)') {
+        bg.transform = 'scaleX(.99)';
+        handle.style.transform = 'translateX(-5px)';
       } else {
-        draggable.style.width = '100%';
+        bg.transform = 'scaleX(1)';
+        handle.style.transform = 'translateX(0)';
       }
     }, 1000);
   }
@@ -98,8 +109,8 @@ export default class Hero extends ReactCSS.Component {
       percent = 100;
     }
 
-    if (percent < 30) {
-      percent = 30;
+    if (percent < 40) {
+      percent = 40;
     }
 
     if (e.pageX) {
@@ -120,8 +131,16 @@ export default class Hero extends ReactCSS.Component {
 
           <div is="schedule" ref="container">
             <div is="draggable" ref="draggable">
-              <div is="handle" ref="handle" onMouseOver={ this.handleMouseOver } onDrag={ this.handleDrag } draggable/>
-              <Schedule />
+              <div is="handle" ref="handle" onMouseOver={ this.handleMouseOver } onDrag={ this.handleDrag } draggable>
+                <div is="icon">
+                  <svg style={{ width: '24px', height: '24px' }} viewBox="0 0 24 24">
+                    <path d="M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z" />
+                  </svg>
+                </div>
+              </div>
+              <Raised>
+                <Schedule />
+              </Raised>
             </div>
           </div>
 
