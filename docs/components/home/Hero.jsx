@@ -52,7 +52,7 @@ export default class Hero extends ReactCSS.Component {
           height: '20px',
           background: '#9013FE',
           zIndex: '2',
-          cursor: 'drag',
+          cursor: 'ew-resize',
         },
         icon: {
           fill: '#fff',
@@ -126,7 +126,7 @@ export default class Hero extends ReactCSS.Component {
           <h1 is="headline">Morph Components Based On Their Size, Not the Window</h1>
 
           <div is="stars">
-            <iframe src="https://ghbtns.com/github-btn.html?user=casesandberg&repo=react-color&type=star&count=true&size=large" scrolling="0" width="142px" height="30px" frameBorder="0"></iframe>
+            <iframe style={{ paddingLeft: '30px' }} src="https://ghbtns.com/github-btn.html?user=casesandberg&repo=react-bounds&type=star&count=true&size=large" scrolling="0" width="142px" height="30px" frameBorder="0"></iframe>
           </div>
 
           <div is="schedule" ref="container">
