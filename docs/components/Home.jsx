@@ -11,10 +11,10 @@ import Docs from './home/Docs.jsx';
 export default class Home extends React.Component {
 
   render() {
+    // <Header />
+    // <Hero />
     return (
       <div style={{ fontFamily: 'Roboto' }}>
-        <Header />
-        <Hero />
         <Tweet />
         <Features />
         <Docs />

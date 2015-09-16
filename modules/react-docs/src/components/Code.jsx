@@ -78,7 +78,7 @@ class Code extends ReactCSS.Component {
   render() {
     var code = markdown.getBody(this.props.file);
     var args = markdown.getArgs(this.props.file);
-    var colorCoded = markdown.renderCode('```\n' + code + '```').trim();
+    var colorCoded = markdown.renderCode('```\n' + code + '').trim();
     var lineCount = colorCoded.split('\n').length;
 
     var lines;
