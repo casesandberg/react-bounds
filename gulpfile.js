@@ -12,16 +12,17 @@ gulp.task('docs', function(callback) {
   new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     hot: true,
-
-    // stats: {
-    //   cached: false,
-    //   cachedAssets: false,
-    //   colors: true,
-    //   exclude: ['node_modules', 'components'],
-    // },
     stats: false,
   }).listen(port, 'localhost', function(err) {
     if (err) throw new gutil.PluginError('docs-error', err);
     gutil.log('docs', 'http://localhost:' + port + '/docs/');
+  });
+});
+
+gulp.task('docs-build', function(done) {
+  var config = require('./webpack.prod.js')();
+  webpack(config, function(err, stats) {
+    if (err) throw new Error(err);
+    done();
   });
 });
