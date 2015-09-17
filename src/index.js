@@ -1,3 +1,5 @@
 'use strict';
 
-module.exports = require('./ComponentQuery');
+module.exports = {
+  wrap: require('./Wrap.jsx'),
+};

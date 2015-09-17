@@ -172,4 +172,4 @@ Schedule.defaultProps = {
   },
 };
 
-export default bounds(Schedule);
+export default bounds.wrap(Schedule);

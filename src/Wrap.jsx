@@ -6,7 +6,7 @@ var listener = require('./listener');
 var _ = require('underscore');
 
 module.exports = function(Component) {
-  class ComponentQuery extends ReactCSS.Component {
+  class Wrap extends ReactCSS.Component {
 
     constructor() {
       super();
@@ -41,9 +41,7 @@ module.exports = function(Component) {
 
     handleResize(log) {
       var component = React.findDOMNode(this.refs.wrap);
-      var wrap = React.findDOMNode(this.refs.wrap);
-      this.setState({ loaded: true, debounced: false, width: wrap.clientWidth, height: wrap.clientHeight, activeBounds: this.calculateBounds(component.clientWidth, component.clientHeight) });
-
+      this.setState({ loaded: true, debounced: false, width: component.clientWidth, height: component.clientHeight, activeBounds: this.calculateBounds(component.clientWidth, component.clientHeight) });
       this.debounce();
     }
 
@@ -65,14 +63,14 @@ module.exports = function(Component) {
               }
             }
 
-            // var minHeight = boundValue.minHeight || 0;
-            // var maxHeight = boundValue.maxHeight || 99999;
-            //
-            // if (boundValue.minHeight || boundValue.minHeight) {
-            //   if (newHeight > minHeight && newHeight < minHeight) {
-            //     activeBounds.push(boundName);
-            //   }
-            // }
+            var minHeight = boundValue.minHeight || 0;
+            var maxHeight = boundValue.maxHeight || 99999;
+
+            if (boundValue.minHeight || boundValue.minHeight) {
+              if (newHeight > minHeight && newHeight < minHeight) {
+                activeBounds.push(boundName);
+              }
+            }
 
           }
         }
@@ -104,20 +102,15 @@ module.exports = function(Component) {
     }
 
     render() {
-      var component;
-      if (this.state.loaded && this.state.width > 0) {
-        component = <Component {...this.props } {...this.state} />;
-      }
-
       return (
         <div ref="wrap" style={ this.styles().wrap }>
           <div ref="component" style={ this.styles().component }>
-            { component }
+            { this.state.loaded && this.state.width > 0 ? <Component {...this.props } {...this.state} /> : null }
           </div>
         </div>
       );
     }
   }
 
-  return ComponentQuery;
+  return Wrap;
 };

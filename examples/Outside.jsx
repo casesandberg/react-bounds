@@ -1,15 +1,27 @@
 'use strict';
 
 import React from 'react';
+import ReactCSS from 'reactcss';
 
 import Box from './Box.jsx';
 
-class Outside extends React.Component {
+class Outside extends ReactCSS.Component {
 
   constructor() {
     super();
 
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  classes() {
+    return {
+      'default': {
+        outside: {
+          width: '100%',
+          transition: 'width 200ms linear',
+        },
+      },
+    };
   }
 
   handleClick(e) {
@@ -23,7 +35,11 @@ class Outside extends React.Component {
   }
 
   render() {
-    return <div style={{ width: '100%', /* transition: 'width 200ms linear' */ }} ref="outside" onClick={ this.handleClick }><Box /></div>;
+    return (
+      <div is="outside" ref="outside" onClick={ this.handleClick }>
+        <Box />
+      </div>
+    );
   }
 }
 

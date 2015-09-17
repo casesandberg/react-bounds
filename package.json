@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Element Queries in React",
   "author": "",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/casesandberg/react-bounds"
@@ -19,6 +19,8 @@
     "babel-loader": "^5.3.2",
     "css-loader": "^0.18.0",
     "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-uglify": "^1.4.1",
     "gulp-util": "^3.0.6",
     "html-loader": "^0.3.0",
     "jsx-loader": "^0.13.2",

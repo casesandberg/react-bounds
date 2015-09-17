@@ -4,6 +4,8 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
+var uglify = require('gulp-uglify');
+var babel = require('gulp-babel');
 
 gulp.task('docs', function(callback) {
   var port = 9100;
@@ -25,4 +27,11 @@ gulp.task('docs-build', function(done) {
     if (err) throw new Error(err);
     done();
   });
+});
+
+gulp.task('lib', function() {
+  return gulp.src('./src/**/*')
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(gulp.dest('lib'));
 });

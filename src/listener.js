@@ -1,8 +1,8 @@
 'use strict';
 
 // http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/
-
 // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
+
 var requestFrame = function(callback) {
   var raf = window.requestAnimationFrame ||
             window.mozRequestAnimationFrame ||
@@ -64,8 +64,6 @@ module.exports = {
     }
 
     element.resizeListener.push(callback);
-
-    // console.log(element);
   },
 
   remove: function(element, callback) {
