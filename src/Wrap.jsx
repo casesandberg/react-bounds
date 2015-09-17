@@ -24,6 +24,7 @@ module.exports = function(Component) {
       }, 100);
 
       this.handleResize = this.handleResize.bind(this);
+      this.handleLookup = this.handleLookup.bind(this);
     }
 
     classes() {
@@ -102,11 +103,25 @@ module.exports = function(Component) {
       listener.remove(component, this.handleResize);
     }
 
+    handleLookup(bound) {
+      if (this.state.activeBounds.indexOf(bound) > -1) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
     render() {
       return (
         <div ref="wrap" style={ this.styles().wrap }>
           <div ref="component" className={ classNames(this.state.activeBounds) } style={ this.styles().component }>
-            { this.state.loaded && this.state.width > 0 ? <Component {...this.props } {...this.state} /> : null }
+            { this.state.loaded && this.state.width > 0 ?
+              <Component {...this.props }
+                width={ this.state.width }
+                height={ this.state.height }
+                activeBounds={ this.state.activeBounds }
+                isBound={ this.handleLookup }/>
+              : null }
           </div>
         </div>
       );
