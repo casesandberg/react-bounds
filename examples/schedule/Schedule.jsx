@@ -15,6 +15,7 @@ class Schedule extends ReactCSS.Component {
           Absolute: '20px 20px 20px 20px',
           display: 'flex',
           flexDirection: 'column',
+          WebkitFlexDirection: 'column',
           overflowY: 'scroll',
         },
         heading: {
@@ -113,9 +114,9 @@ class Schedule extends ReactCSS.Component {
     }
 
     return (
-      <div is="schedule">
+      <div is="schedule" className="flexbox-fix">
         <div is="heading">My Schedule</div>
-        <div is="calendar">
+        <div is="calendar" className="flexbox-fix">
           { schedule }
         </div>
       </div>

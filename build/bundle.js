@@ -19803,7 +19803,12 @@
 	    value: function render() {
 	      return _react2['default'].createElement(
 	        'div',
-	        { style: { fontFamily: 'Roboto' } },
+	        null,
+	        _react2['default'].createElement(
+	          'style',
+	          null,
+	          '\n          html, body {\n            background: #fafafa;\n            font-family: Roboto;\n          }\n          .flexbox-fix {\n            display: -webkit-box;\n            display: -moz-box;\n            display: -ms-flexbox;\n            display: -webkit-flex;\n            display: flex;\n          }\n        '
+	        ),
 	        _react2['default'].createElement(_homeHeaderJsx2['default'], null),
 	        _react2['default'].createElement(_homeHeroJsx2['default'], null),
 	        _react2['default'].createElement(_homeTweetJsx2['default'], null),
@@ -33704,6 +33709,7 @@
 	            Absolute: '20px 20px 20px 20px',
 	            display: 'flex',
 	            flexDirection: 'column',
+	            WebkitFlexDirection: 'column',
 	            overflowY: 'scroll'
 	          },
 	          heading: {
@@ -33806,7 +33812,7 @@
 
 	      return _react2['default'].createElement(
 	        'div',
-	        { style: this.styles().schedule },
+	        { style: this.styles().schedule, className: 'flexbox-fix' },
 	        _react2['default'].createElement(
 	          'div',
 	          { style: this.styles().heading },
@@ -33814,7 +33820,7 @@
 	        ),
 	        _react2['default'].createElement(
 	          'div',
-	          { style: this.styles().calendar },
+	          { style: this.styles().calendar, className: 'flexbox-fix' },
 	          schedule
 	        )
 	      );

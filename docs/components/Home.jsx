@@ -13,7 +13,22 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <div style={{ fontFamily: 'Roboto' }}>
+      <div>
+
+        <style>{`
+          html, body {
+            background: #fafafa;
+            font-family: Roboto;
+          }
+          .flexbox-fix {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+          }
+        `}</style>
+
         <Header />
         <Hero />
         <Tweet />
