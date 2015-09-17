@@ -7,6 +7,7 @@ import Hero from './home/Hero.jsx';
 import Tweet from './home/Tweet.jsx';
 import Features from './home/Features.jsx';
 import Docs from './home/Docs.jsx';
+import Footer from './home/Footer.jsx';
 
 export default class Home extends React.Component {
 
@@ -18,6 +19,7 @@ export default class Home extends React.Component {
         <Tweet />
         <Features />
         <Docs />
+        <Footer />
       </div>
     );
   }
