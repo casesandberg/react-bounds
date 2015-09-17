@@ -40,30 +40,7 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ((function(modules) {
-	// Check all modules for deduplicated modules
-	for(var i in modules) {
-		if(Object.prototype.hasOwnProperty.call(modules, i)) {
-			switch(typeof modules[i]) {
-			case "function": break;
-			case "object":
-				// Module can be created from a template
-				modules[i] = (function(_m) {
-					var args = _m.slice(1), fn = modules[_m[0]];
-					return function (a,b,c) {
-						fn.apply(this, [a,b,c].concat(args));
-					};
-				}(modules[i]));
-				break;
-			default:
-				// Module is a copy of another module
-				modules[i] = modules[modules[i]];
-				break;
-			}
-		}
-	}
-	return modules;
-}([
+/******/ ([
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -19808,6 +19785,10 @@
 
 	var _homeDocsJsx2 = _interopRequireDefault(_homeDocsJsx);
 
+	var _homeFooterJsx = __webpack_require__(212);
+
+	var _homeFooterJsx2 = _interopRequireDefault(_homeFooterJsx);
+
 	var Home = (function (_React$Component) {
 	  _inherits(Home, _React$Component);
 
@@ -19827,7 +19808,8 @@
 	        _react2['default'].createElement(_homeHeroJsx2['default'], null),
 	        _react2['default'].createElement(_homeTweetJsx2['default'], null),
 	        _react2['default'].createElement(_homeFeaturesJsx2['default'], null),
-	        _react2['default'].createElement(_homeDocsJsx2['default'], null)
+	        _react2['default'].createElement(_homeDocsJsx2['default'], null),
+	        _react2['default'].createElement(_homeFooterJsx2['default'], null)
 	      );
 	    }
 	  }]);
@@ -19952,19 +19934,19 @@
 /* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";var css;module.exports=css={Component:__webpack_require__(156),inline:__webpack_require__(157),mixin:{css:__webpack_require__(157)}};
+	"use strict";module.exports={Component:__webpack_require__(156),inline:__webpack_require__(157),mixin:{css:__webpack_require__(157)}};
 
 /***/ },
 /* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";var React,ReactCSSComponent,inline,extend=function(t,e){function n(){this.constructor=t}for(var r in e)hasProp.call(e,r)&&(t[r]=e[r]);return n.prototype=e.prototype,t.prototype=new n,t.__super__=e.prototype,t},hasProp={}.hasOwnProperty;React=__webpack_require__(2),inline=__webpack_require__(157),module.exports=ReactCSSComponent=function(t){function e(){return e.__super__.constructor.apply(this,arguments)}return extend(e,t),e.contextTypes={mixins:React.PropTypes.object},e.prototype.css=function(t){return inline.call(this,t)},e.prototype.styles=function(){return this.css()},e}(React.Component);
+	"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var _createClass=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),_get=function(e,t,n){for(var r=!0;r;){var o=e,i=t,c=n;a=l=u=void 0,r=!1,null===o&&(o=Function.prototype);var a=Object.getOwnPropertyDescriptor(o,i);if(void 0!==a){if("value"in a)return a.value;var u=a.get;return void 0===u?void 0:u.call(c)}var l=Object.getPrototypeOf(o);if(null===l)return void 0;e=l,t=i,n=c,r=!0}},React=__webpack_require__(2),inline=__webpack_require__(157),ReactCSSComponent=function(e){function t(){_classCallCheck(this,t),_get(Object.getPrototypeOf(t.prototype),"constructor",this).apply(this,arguments)}return _inherits(t,e),_createClass(t,[{key:"css",value:function(e){return inline.call(this,e)}},{key:"styles",value:function(){return this.css()}}]),t}(React.Component);ReactCSSComponent.contextTypes={mixins:React.PropTypes.object},module.exports=ReactCSSComponent;
 
 /***/ },
 /* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";var _,checkClassStructure,combine;_=__webpack_require__(158),checkClassStructure=__webpack_require__(160),combine=__webpack_require__(161),module.exports=function(s){var e,c,n,r,t,i,o,u,l;if(combine=__webpack_require__(161),c=[],null==this.classes)throw console.warn("Define this.classes on `"+this.constructor.name+"`");checkClassStructure(this.classes()),e=function(s){return function(e,n){return null!=s.classes()[e]?c.push(s.classes()[e]):e&&(null!=n?n.warn:void 0)===!0?console.warn("The `"+e+"` css class does not exist on `"+s.constructor.name+"`"):void 0}}(this),e("default"),o=this.props;for(i in o)l=o[i],_.isObject(l)||(l===!0?(e(i),e(i+"-true")):e(l?i+"-"+l:i+"-false"));for(t in s)n=s[t],n===!0&&e(t,{warn:!0});return e("public"),r={},(null!=(u=this.context)?u.mixins:void 0)&&(r=this.context.mixins),combine(c,r)};
+	"use strict";var _=__webpack_require__(158),checkClassStructure=__webpack_require__(160),combine=__webpack_require__(161);module.exports=function(s){var e=this;combine=__webpack_require__(161);var r=[];if(!this.classes)throw console.warn("Define this.classes on `"+this.constructor.name+"`");checkClassStructure(this.classes());var t=function(s,t){e.classes()[s]?r.push(e.classes()[s]):s&&t&&t.warn===!0&&console.warn("The `"+s+"` css class does not exist on `"+e.constructor.name+"`")};t("default");for(var i in this.props){var c=this.props[i];_.isObject(c)||(c===!0?(t(i),t(i+"-true")):t(c?i+"-"+c:i+"-false"))}if(this.props&&this.props.activeBounds)for(var o=0;o<this.props.activeBounds.length;o++){var n=this.props.activeBounds[o];t(n)}for(var a in s){var u=s[a];u===!0&&t(a,{warn:!0})}var h={};return this.context&&this.context.mixins&&(h=this.context.mixins),combine(r,h)};
 
 /***/ },
 /* 158 */
@@ -32344,19 +32326,19 @@
 /* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var _;_=__webpack_require__(158),module.exports=function(e){var o,s,t,n,r;r=[];for(o in e)n=e[o],r.push(_.isObject(n)?function(){var e;e=[];for(t in n)s=n[t],e.push(_.isObject(s)?void 0:console.warn("Make sure the value of the element `"+o+"` is an object of css. You passed it `"+n+"`"));return e}():console.warn("Make sure the value of `"+o+"` is an object of html elements. You passed it `"+n+"`"));return r};
+	"use strict";var _=__webpack_require__(158);module.exports=function(e){for(var s in e){var o=e[s];if(_.isObject(o))for(var a in o){var t=o[a];_.isObject(t)||console.warn("Make sure the value of the element `"+s+"` is an object of css. You passed it `"+o+"`")}else console.warn("Make sure the value of `"+s+"` is an object of html elements. You passed it `"+o+"`")}};
 
 /***/ },
 /* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";var merge,mixins;merge=__webpack_require__(162),mixins=__webpack_require__(164),module.exports=function(e,r){var i;return i=merge(e),mixins(i,r)};
+	"use strict";var merge=__webpack_require__(162),mixins=__webpack_require__(164);module.exports=function(r,e){var i=merge(r);return mixins(i,e)};
 
 /***/ },
 /* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";var _,merge;merge=__webpack_require__(163),_=__webpack_require__(158),module.exports=function(e){return _.isObject(e)&&!_.isArray(e)?e:1===e.length?e[0]:merge.recursive.apply(this,e)};
+	"use strict";var merge=__webpack_require__(163),_=__webpack_require__(158);module.exports=function(e){return _.isObject(e)&&!_.isArray(e)?e:1===e.length?e[0]:merge.recursive.apply(void 0,e)};
 
 /***/ },
 /* 163 */
@@ -32543,7 +32525,7 @@
 /* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";var _,localProps,merge,transform;_=__webpack_require__(158),merge=__webpack_require__(163),localProps={borderRadius:function(r){return null!=r?{msBorderRadius:r,MozBorderRadius:r,OBorderRadius:r,WebkitBorderRadius:r,borderRadius:r}:void 0},boxShadow:function(r){return null!=r?{msBoxShadow:r,MozBoxShadow:r,OBoxShadow:r,WebkitBoxShadow:r,boxShadow:r}:void 0},userSelect:function(r){return null!=r?{WebkitTouchCallout:r,KhtmlUserSelect:r,MozUserSelect:r,msUserSelect:r,WebkitUserSelect:r,userSelect:r}:void 0},flex:function(r){return null!=r?{WebkitBoxFlex:r,MozBoxFlex:r,WebkitFlex:r,msFlex:r,flex:r}:void 0},flexBasis:function(r){return null!=r?{WebkitFlexBasis:r,flexBasis:r}:void 0},justifyContent:function(r){return null!=r?{WebkitJustifyContent:r,justifyContent:r}:void 0},transition:function(r){return null!=r?{msTransition:r,MozTransition:r,OTransition:r,WebkitTransition:r,transition:r}:void 0},transform:function(r){return null!=r?{msTransform:r,MozTransform:r,OTransform:r,WebkitTransform:r,transform:r}:void 0},Absolute:function(r){var o,e;return null!=r?(o=r.split(" "),e={position:"absolute",top:o[0],right:o[1],bottom:o[2],left:o[3]}):void 0},Extend:function(r,o){return o[r]?o[r]:void 0}},transform=function(r,o,e){var t,n,i,s,u,l,a;n=merge(o,localProps),l={};for(u in r)if(a=r[u],_.isObject(a)&&!_.isArray(a))l[u]=transform(a,o,r);else if(null!=n[u]){i=n[u](a,e);for(t in i)s=i[t],l[t]=s}else l[u]=a;return l},module.exports=function(r,o,e){return transform(r,o,e)};
+	"use strict";var _=__webpack_require__(158),merge=__webpack_require__(163),localProps={borderRadius:function(r){return null!==r?{msBorderRadius:r,MozBorderRadius:r,OBorderRadius:r,WebkitBorderRadius:r,borderRadius:r}:void 0},boxShadow:function(r){return null!==r?{msBoxShadow:r,MozBoxShadow:r,OBoxShadow:r,WebkitBoxShadow:r,boxShadow:r}:void 0},userSelect:function(r){return null!==r?{WebkitTouchCallout:r,KhtmlUserSelect:r,MozUserSelect:r,msUserSelect:r,WebkitUserSelect:r,userSelect:r}:void 0},flex:function(r){return null!==r?{WebkitBoxFlex:r,MozBoxFlex:r,WebkitFlex:r,msFlex:r,flex:r}:void 0},flexBasis:function(r){return null!==r?{WebkitFlexBasis:r,flexBasis:r}:void 0},justifyContent:function(r){return null!==r?{WebkitJustifyContent:r,justifyContent:r}:void 0},transition:function(r){return null!==r?{msTransition:r,MozTransition:r,OTransition:r,WebkitTransition:r,transition:r}:void 0},transform:function(r){return null!==r?{msTransform:r,MozTransform:r,OTransform:r,WebkitTransform:r,transform:r}:void 0},Absolute:function(r){if(null!==r){var o=r.split(" ");return{position:"absolute",top:o[0],right:o[1],bottom:o[2],left:o[3]}}},Extend:function(r,o){var e=o[r];return e?e:void 0}},transform=function r(o,e,t){var n=merge(e,localProps),i={};for(var s in o){var u=o[s];if(_.isObject(u)&&!_.isArray(u))i[s]=r(u,e,o);else if(n[s]){var l=n[s](u,t);for(var a in l){var f=l[a];i[a]=f}}else i[s]=u}return i};module.exports=function(r,o,e){return transform(r,o,e)};
 
 /***/ },
 /* 165 */
@@ -32801,7 +32783,7 @@
 
 	var _modulesReactMaterialDesign = __webpack_require__(169);
 
-	var _examplesScheduleScheduleJsx = __webpack_require__(176);
+	var _examplesScheduleScheduleJsx = __webpack_require__(175);
 
 	var _examplesScheduleScheduleJsx2 = _interopRequireDefault(_examplesScheduleScheduleJsx);
 
@@ -32880,8 +32862,8 @@
 	      var handle = _react2['default'].findDOMNode(this.refs.handle);
 	      var bg = _react2['default'].findDOMNode(this.refs.draggable).children[1].children[0].style;
 
-	      bg.transition = 'transform 1000ms ease-in-out';
-	      handle.style.transition = 'transform 1000ms ease-in-out';
+	      bg.transition = 'transform 700ms ease-in-out';
+	      handle.style.transition = 'transform 700ms ease-in-out';
 	      bg.transformOrigin = '0 0';
 	      this.moving = setInterval(function () {
 	        if (bg.transform === 'scaleX(1)') {
@@ -32891,7 +32873,7 @@
 	          bg.transform = 'scaleX(1)';
 	          handle.style.transform = 'translateX(0)';
 	        }
-	      }, 1000);
+	      }, 700);
 	    }
 	  }, {
 	    key: 'handleMouseOver',
@@ -33267,10 +33249,10 @@
 
 	var React = __webpack_require__(2);
 	var ReactCSS = __webpack_require__(155);
-	var _ = __webpack_require__(173);
+	var _ = __webpack_require__(158);
 
-	var Tab = __webpack_require__(174);
-	var Link = __webpack_require__(175);
+	var Tab = __webpack_require__(173);
+	var Link = __webpack_require__(174);
 
 	// var Ink = require('./Ink');
 
@@ -33507,8 +33489,6 @@
 
 /***/ },
 /* 173 */
-158,
-/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33597,7 +33577,7 @@
 	module.exports = Tab;
 
 /***/ },
-/* 175 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33611,7 +33591,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var React = __webpack_require__(2);
-	var _ = __webpack_require__(173);
+	var _ = __webpack_require__(158);
 
 	var Link = (function (_React$Component) {
 	  _inherits(Link, _React$Component);
@@ -33669,7 +33649,7 @@
 	module.exports = Link;
 
 /***/ },
-/* 176 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33698,7 +33678,7 @@
 
 	var _reactcss2 = _interopRequireDefault(_reactcss);
 
-	var _reactBounds = __webpack_require__(177);
+	var _reactBounds = __webpack_require__(176);
 
 	var _reactBounds2 = _interopRequireDefault(_reactBounds);
 
@@ -33784,13 +33764,6 @@
 	          }
 	        }
 	      };
-	    }
-	  }, {
-	    key: 'styles',
-	    value: function styles() {
-	      return this.css({
-	        'list': this.props.width < 420
-	      });
 	    }
 	  }, {
 	    key: 'render',
@@ -33907,19 +33880,21 @@
 	  }
 	};
 
-	exports['default'] = (0, _reactBounds2['default'])(Schedule);
+	exports['default'] = _reactBounds2['default'].wrap(Schedule);
 	module.exports = exports['default'];
 
 /***/ },
-/* 177 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	module.exports = __webpack_require__(178);
+	module.exports = {
+	  wrap: __webpack_require__(177)
+	};
 
 /***/ },
-/* 178 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33936,17 +33911,18 @@
 
 	var React = __webpack_require__(2);
 	var ReactCSS = __webpack_require__(155);
-	var listener = __webpack_require__(179);
-	var _ = __webpack_require__(180);
+	var listener = __webpack_require__(178);
+	var _ = __webpack_require__(179);
+	var classNames = __webpack_require__(180);
 
 	module.exports = function (Component) {
-	  var ComponentQuery = (function (_ReactCSS$Component) {
-	    _inherits(ComponentQuery, _ReactCSS$Component);
+	  var Wrap = (function (_ReactCSS$Component) {
+	    _inherits(Wrap, _ReactCSS$Component);
 
-	    function ComponentQuery() {
-	      _classCallCheck(this, ComponentQuery);
+	    function Wrap() {
+	      _classCallCheck(this, Wrap);
 
-	      _get(Object.getPrototypeOf(ComponentQuery.prototype), 'constructor', this).call(this);
+	      _get(Object.getPrototypeOf(Wrap.prototype), 'constructor', this).call(this);
 
 	      this.state = {
 	        loaded: false,
@@ -33960,9 +33936,10 @@
 	      }, 100);
 
 	      this.handleResize = this.handleResize.bind(this);
+	      this.handleLookup = this.handleLookup.bind(this);
 	    }
 
-	    _createClass(ComponentQuery, [{
+	    _createClass(Wrap, [{
 	      key: 'classes',
 	      value: function classes() {
 	        return {
@@ -33981,9 +33958,7 @@
 	      key: 'handleResize',
 	      value: function handleResize(log) {
 	        var component = React.findDOMNode(this.refs.wrap);
-	        var wrap = React.findDOMNode(this.refs.wrap);
-	        this.setState({ loaded: true, debounced: false, width: wrap.clientWidth, height: wrap.clientHeight, activeBounds: this.calculateBounds(component.clientWidth, component.clientHeight) });
-
+	        this.setState({ loaded: true, debounced: false, width: component.clientWidth, height: component.clientHeight, activeBounds: this.calculateBounds(component.clientWidth, component.clientHeight) });
 	        this.debounce();
 	      }
 	    }, {
@@ -34006,14 +33981,14 @@
 	                }
 	              }
 
-	              // var minHeight = boundValue.minHeight || 0;
-	              // var maxHeight = boundValue.maxHeight || 99999;
-	              //
-	              // if (boundValue.minHeight || boundValue.minHeight) {
-	              //   if (newHeight > minHeight && newHeight < minHeight) {
-	              //     activeBounds.push(boundName);
-	              //   }
-	              // }
+	              var minHeight = boundValue.minHeight || 0;
+	              var maxHeight = boundValue.maxHeight || 99999;
+
+	              if (boundValue.minHeight || boundValue.minHeight) {
+	                if (newHeight > minHeight && newHeight < minHeight) {
+	                  activeBounds.push(boundName);
+	                }
+	              }
 	            }
 	          }
 	        }
@@ -34046,40 +34021,48 @@
 	        listener.remove(component, this.handleResize);
 	      }
 	    }, {
+	      key: 'handleLookup',
+	      value: function handleLookup(bound) {
+	        if (this.state.activeBounds.indexOf(bound) > -1) {
+	          return true;
+	        } else {
+	          return false;
+	        }
+	      }
+	    }, {
 	      key: 'render',
 	      value: function render() {
-	        var component;
-	        if (this.state.loaded && this.state.width > 0) {
-	          component = React.createElement(Component, _extends({}, this.props, this.state));
-	        }
-
 	        return React.createElement(
 	          'div',
 	          { ref: 'wrap', style: this.styles().wrap },
 	          React.createElement(
 	            'div',
-	            { ref: 'component', style: this.styles().component },
-	            component
+	            { ref: 'component', className: classNames(this.state.activeBounds), style: this.styles().component },
+	            this.state.loaded && this.state.width > 0 ? React.createElement(Component, _extends({}, this.props, {
+	              width: this.state.width,
+	              height: this.state.height,
+	              activeBounds: this.state.activeBounds,
+	              isBound: this.handleLookup })) : null
 	          )
 	        );
 	      }
 	    }]);
 
-	    return ComponentQuery;
+	    return Wrap;
 	  })(ReactCSS.Component);
 
-	  return ComponentQuery;
+	  return Wrap;
 	};
 
 /***/ },
-/* 179 */
+/* 178 */
 /***/ function(module, exports) {
 
 	'use strict';
 
 	// http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/
-
 	// http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
+
 	var requestFrame = function requestFrame(callback) {
 	  var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function (callback) {
 	    return window.setTimeout(callback, 1000 / 60);
@@ -34135,8 +34118,6 @@
 	    }
 
 	    element.resizeListener.push(callback);
-
-	    // console.log(element);
 	  },
 
 	  remove: function remove(element, callback) {
@@ -34145,7 +34126,7 @@
 	};
 
 /***/ },
-/* 180 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
@@ -35699,6 +35680,61 @@
 
 
 /***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2015 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+
+	(function () {
+		'use strict';
+
+		function classNames () {
+
+			var classes = '';
+
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+
+				var argType = typeof arg;
+
+				if ('string' === argType || 'number' === argType) {
+					classes += ' ' + arg;
+
+				} else if (Array.isArray(arg)) {
+					classes += ' ' + classNames.apply(null, arg);
+
+				} else if ('object' === argType) {
+					for (var key in arg) {
+						if (arg.hasOwnProperty(key) && arg[key]) {
+							classes += ' ' + key;
+						}
+					}
+				}
+			}
+
+			return classes.substr(1);
+		}
+
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if (true){
+			// AMD. Register as an anonymous module.
+			!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+
+	}());
+
+
+/***/ },
 /* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -36053,7 +36089,7 @@
 	    key: 'render',
 	    value: function render() {
 
-	      var setBreakpoints = '\n```javascript\n static bounds() {\n   return {\n     \'list\': {\n       minWidth: 0,\n       maxWidth: 400,\n     },\n     \'column\': {\n       minWidth: 400,\n     },\n   };\n }\n ```\n    ';
+	      var setBreakpoints = '\n```javascript\n static bounds() {\n   return {\n     \'list\': {\n       minWidth: 0,\n       maxWidth: 399,\n     },\n     \'column\': {\n       minWidth: 400,\n     },\n   };\n }\n ```\n    ';
 
 	      var useBreakpoints = '\n ```javascript\nthis.props.isBound(\'list\')\n// true\n\nthis.props.activeBounds\n// [‘list’]\n ```\n    ';
 
@@ -42778,11 +42814,18 @@
 	'use strict';
 
 	module.exports = {
-	  '01-why-react-bounds': __webpack_require__(200),
-	  '02-getting-started': __webpack_require__(201),
-	  '02.01-install': __webpack_require__(202),
-	  '02.02-wrap': __webpack_require__(203),
-	  '02.03-define-bounds': __webpack_require__(204)
+	  '00-why-react-bounds': __webpack_require__(200),
+	  '01-methodology': __webpack_require__(201),
+	  '02-getting-started': __webpack_require__(202),
+	  '02.01-install': __webpack_require__(203),
+	  '02.02-wrap': __webpack_require__(204),
+	  '02.03-define-bounds': __webpack_require__(205),
+	  '03-props': __webpack_require__(206),
+	  '03.01-active': __webpack_require__(207),
+	  '03.02-isBound': __webpack_require__(208),
+	  '03.03-width-height': __webpack_require__(209),
+	  '04-bounds-method': __webpack_require__(210),
+	  '05-reactcss': __webpack_require__(211)
 	};
 
 /***/ },
@@ -42795,25 +42838,184 @@
 /* 201 */
 /***/ function(module, exports) {
 
-	module.exports = "---\nid: getting-started\ntitle: Getting Started\n---\n";
+	module.exports = "---\nid: methodology\ntitle: Methodology\n\n---\nTruly modular components should conform and adapt to whatever size box you give them. To achieve this, top-level elements in components should have a fluid width and height. Components should strive to fill 100% of the space they are given, and leave the burden of constraining them to the parent.\n\nTake, for example, our Schedule component: I am rendering the schedule in a div that has a fixed height and width, and the scheduler fills up the available space. Similarly, If you were to render that scheduler in an empty body, it would fill the entire page. \n";
 
 /***/ },
 /* 202 */
 /***/ function(module, exports) {
 
-	module.exports = "---\nid: usage-install\ntitle: Install\n---\nStart by installing `react-bounds` via npm:\n```\nnpm install react-bounds --save\n```\n";
+	module.exports = "---\nid: getting-started\ntitle: Getting Started\n---\n";
 
 /***/ },
 /* 203 */
 /***/ function(module, exports) {
 
-	module.exports = "---\nid: usage-wrap\ntitle: Wrap a Component\n---\nRequire `react-bounds` into a component. Wrap the export with `bounds.wrap` and react-bounds will start tracking the width and height of the component.\n```\nvar React = require('react');\nvar bounds = require('react-bounds');\n\nvar SomeComponent = React.createClass({\n  render(){\n    return <div>Some Component</div>\n  }\n});\n\nmodule.exports = bounds.wrap(SomeComponent);\n```\n";
+	module.exports = "---\nid: usage-install\ntitle: Install\n---\nStart by installing `react-bounds` via npm:\n```\nnpm install react-bounds --save\n```\n";
 
 /***/ },
 /* 204 */
 /***/ function(module, exports) {
 
-	module.exports = "---\nid: usage-bounds\ntitle: Define Bounds\n---\nCreate a bounds method that returns an object with all of the bound information for that component:\n```\nvar React = require('react');\nvar bounds = require('react-bounds');\n\nvar SomeComponent = React.createClass({\n\n  bounds() {\n    return {\n      'bound-name': {\n        minWidth: 0,\n        maxWidth: 500,\n      },\n    };\n  }\n\n  render(){\n    return <div>{ this.props.activeBounds }</div>\n  }\n});\n\nmodule.exports = bounds.wrap(SomeComponent);\n```\n";
+	module.exports = "---\nid: usage-wrap\ntitle: Wrap a Component\n---\nRequire `react-bounds` into a component. Wrap the export with `bounds.wrap` and react-bounds will start tracking the width and height of the component.\n```\nvar React = require('react');\nvar bounds = require('react-bounds');\n\nvar SomeComponent = React.createClass({\n  render(){\n    return <div>Some Component</div>\n  }\n});\n\nmodule.exports = bounds.wrap(SomeComponent);\n```\n";
+
+/***/ },
+/* 205 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: usage-bounds\ntitle: Define Bounds\n---\nCreate a bounds method that returns an object with all of the bound information for that component:\n```\nvar React = require('react');\nvar bounds = require('react-bounds');\n\nvar SomeComponent = React.createClass({\n\n  static bounds() {\n    return {\n      'bound-name': {\n        minWidth: 0,\n        maxWidth: 500,\n      },\n    };\n  }\n\n  render(){\n    return <div>{ this.props.activeBounds }</div>\n  }\n});\n\nmodule.exports = bounds.wrap(SomeComponent);\n```\n";
+
+/***/ },
+/* 206 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: props\ntitle: Props\n---\n";
+
+/***/ },
+/* 207 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: props-active\ntitle: activeBounds\n---\nReturns an array of active bounds.\n\n```\nthis.props.activeBounds\n// ['bound-name', 'another-active-bound']\n```\n";
+
+/***/ },
+/* 208 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: props-isBound\ntitle: isBound\n---\nCall this helper function to check if a specific bound is active:\n\n```\nthis.props.isBound('hide-sidebar');\n// false\n```\n";
+
+/***/ },
+/* 209 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: props-width-height\ntitle: width / height\n---\nReturns the width and height of the component:\n\n```\nthis.props.width\n// 340\n\nthis.props.height\n// 100\n```\n";
+
+/***/ },
+/* 210 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: bounds-method\ntitle: Bounds Method\n---\n\nUse the bounds method to set names to different breakpoints. You can then define `minWidth` `minHeight` `maxWidth` and `maxHeight` just like you would with media queries.\n\n```\nstatic bounds() {\n  return {\n    'tiny': {\n      maxWidth: 50,\n    },\n    'large': {\n      minWidth: 400,\n    }\n  };\n}\n```\n";
+
+/***/ },
+/* 211 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: reactcss-support\ntitle: ReactCSS Support\n\n---\n`ReactCSS@0.4.1` introduces support for `react-bounds`. It will now automatically activate and deactivate classes depending on the active bounds:\n\n```\nimport React from 'react';\nimport ReactCSS from 'reactcss';\nimport bounds from 'react-bounds';\n\nclass SomePage extends ReactCSS.Component {\n\n  classes() {\n    return {\n      'default': {\n        page: {\n          width: '960px',\n          margin: '0 auto',\n        },\n      },\n      'no-sidebar': {\n        sidebar: {\n          display: 'none',\n        },\n      },\n      'bigger-content': {\n        page: {\n          width: '1150px',\n        },\n      },\n    };\n  }\n\n  static bounds() {\n    return {\n      'no-sidebar': { maxWidth: 520 },\n      'bigger-content': { minWidth: 1200 },\n    };\n  }\n\n  render() {\n    return (\n      <div is=\"page\">\n        <div is=\"content\"></div>\n        <div is=\"sidebar\"></div>\n      </div>\n    );\n  }\n}\n\nexport default bounds.wrap(SomePage);\n```\n";
+
+/***/ },
+/* 212 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactcss = __webpack_require__(155);
+
+	var _reactcss2 = _interopRequireDefault(_reactcss);
+
+	var _modulesReactBasicLayout = __webpack_require__(165);
+
+	var Footer = (function (_ReactCSS$Component) {
+	  _inherits(Footer, _ReactCSS$Component);
+
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+
+	    _get(Object.getPrototypeOf(Footer.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Footer, [{
+	    key: 'classes',
+	    value: function classes() {
+	      return {
+	        'default': {
+	          footer: {
+	            background: '#fafafa',
+	            paddingTop: '60px',
+	            paddingBottom: '20px',
+	            color: '#aaa',
+	            fontSize: '16px'
+	          },
+
+	          stars: {
+	            textAlign: 'center',
+	            padding: '20px 0',
+	            borderTop: '1px solid #ddd',
+	            borderBottom: '1px solid #ddd',
+	            marginBottom: '20px'
+	          },
+
+	          left: {
+	            float: 'left'
+	          },
+	          right: {
+	            float: 'right'
+	          },
+	          link: {
+	            color: '#666',
+	            textDecoration: 'none'
+	          },
+	          clear: {
+	            clear: 'both'
+	          }
+	        }
+	      };
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2['default'].createElement(
+	        'div',
+	        { style: this.styles().footer },
+	        _react2['default'].createElement(
+	          _modulesReactBasicLayout.Container,
+	          { width: 550 },
+	          _react2['default'].createElement(
+	            'div',
+	            { style: this.styles().stars },
+	            _react2['default'].createElement('iframe', { style: { paddingLeft: '30px' }, src: 'https://ghbtns.com/github-btn.html?user=casesandberg&repo=react-bounds&type=star&count=true&size=large', scrolling: '0', width: '142px', height: '30px', frameBorder: '0' })
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { style: this.styles().left },
+	            'React Bounds'
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { style: this.styles().right },
+	            'Docs built with ',
+	            _react2['default'].createElement(
+	              'a',
+	              { target: '_blank', style: this.styles().link, href: 'http://reactcss.com/' },
+	              'ReactCSS'
+	            )
+	          ),
+	          _react2['default'].createElement('div', { style: this.styles().clear })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Footer;
+	})(_reactcss2['default'].Component);
+
+	exports['default'] = Footer;
+	module.exports = exports['default'];
 
 /***/ }
-/******/ ])));
+/******/ ]);
