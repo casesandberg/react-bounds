@@ -4,6 +4,7 @@ var React = require('react');
 var ReactCSS = require('reactcss');
 var listener = require('./listener');
 var _ = require('underscore');
+var classNames = require('classnames');
 
 module.exports = function(Component) {
   class Wrap extends ReactCSS.Component {
@@ -104,7 +105,7 @@ module.exports = function(Component) {
     render() {
       return (
         <div ref="wrap" style={ this.styles().wrap }>
-          <div ref="component" style={ this.styles().component }>
+          <div ref="component" className={ classNames(this.state.activeBounds) } style={ this.styles().component }>
             { this.state.loaded && this.state.width > 0 ? <Component {...this.props } {...this.state} /> : null }
           </div>
         </div>
