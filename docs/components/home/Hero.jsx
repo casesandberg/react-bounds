@@ -76,8 +76,8 @@ export default class Hero extends ReactCSS.Component {
     var handle = React.findDOMNode(this.refs.handle);
     var bg = React.findDOMNode(this.refs.draggable).children[1].children[0].style;
 
-    bg.transition = 'transform 1000ms ease-in-out';
-    handle.style.transition = 'transform 1000ms ease-in-out';
+    bg.transition = 'transform 700ms ease-in-out';
+    handle.style.transition = 'transform 700ms ease-in-out';
     bg.transformOrigin = '0 0';
     this.moving = setInterval(() => {
       if (bg.transform === 'scaleX(1)') {
@@ -87,7 +87,7 @@ export default class Hero extends ReactCSS.Component {
         bg.transform = 'scaleX(1)';
         handle.style.transform = 'translateX(0)';
       }
-    }, 1000);
+    }, 700);
   }
 
   handleMouseOver() {

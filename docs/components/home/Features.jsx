@@ -52,7 +52,7 @@ export default class Features extends ReactCSS.Component {
    return {
      'list': {
        minWidth: 0,
-       maxWidth: 400,
+       maxWidth: 399,
      },
      'column': {
        minWidth: 400,
