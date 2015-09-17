@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "^0.13.3",
-    "reactcss": "^0.3.2",
+    "reactcss": "^0.4.1",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
