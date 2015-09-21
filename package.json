@@ -14,7 +14,7 @@
     "react-tool",
     "element query",
     "media query",
-    "modular components",
+    "modular components"
   ],
   "license": "MIT",
   "dependencies": {
