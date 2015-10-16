@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react');
+var ReactDOM = require('react-dom')
 var ReactCSS = require('reactcss');
 var listener = require('./listener');
 var _ = require('underscore');
@@ -42,7 +43,7 @@ module.exports = function(Component) {
     }
 
     handleResize(log) {
-      var component = React.findDOMNode(this.refs.wrap);
+      var component = ReactDOM.findDOMNode(this.refs.wrap);
       this.setState({ loaded: true, debounced: false, width: component.clientWidth, height: component.clientHeight, activeBounds: this.calculateBounds(component.clientWidth, component.clientHeight) });
       this.debounce();
     }
@@ -82,7 +83,7 @@ module.exports = function(Component) {
     }
 
     componentDidMount() {
-      var component = React.findDOMNode(this.refs.component);
+      var component = ReactDOM.findDOMNode(this.refs.component);
       listener.add(component, this.handleResize);
 
       if (!this.state.loaded) {
@@ -99,7 +100,7 @@ module.exports = function(Component) {
     }
 
     componentWillUnmount() {
-      var component = React.findDOMNode(this.refs.component);
+      var component = ReactDOM.findDOMNode(this.refs.component);
       listener.remove(component, this.handleResize);
     }
 
