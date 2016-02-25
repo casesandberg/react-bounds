@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import ReactCSS from 'reactcss';
+import React from 'react'
+import ReactCSS from 'reactcss'
 
 export default class Schedule extends ReactCSS.Component {
 
@@ -82,7 +82,7 @@ export default class Schedule extends ReactCSS.Component {
           top: '17px',
         },
       },
-    };
+    }
   }
 
   render() {
@@ -94,6 +94,6 @@ export default class Schedule extends ReactCSS.Component {
         <div is="label">{ this.props.label }</div>
         <div is="arrow">❯</div>
       </div>
-    );
+    )
   }
 }

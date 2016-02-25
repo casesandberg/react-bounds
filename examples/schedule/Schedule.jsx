@@ -1,10 +1,10 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import ReactCSS from 'reactcss';
-import bounds from 'react-bounds';
+import React from 'react'
+import ReactCSS from 'reactcss'
+import bounds from 'react-bounds'
 
-import ScheduleItem from './ScheduleItem.jsx';
+import ScheduleItem from './ScheduleItem.jsx'
 
 class Schedule extends ReactCSS.Component {
 
@@ -75,29 +75,29 @@ class Schedule extends ReactCSS.Component {
           display: 'none',
         },
       },
-    };
+    }
   }
 
   static bounds() {
     return {
       'list': { maxWidth: 420 },
-    };
+    }
   }
 
   render() {
-    var schedule = [];
+    var schedule = []
 
     for (var i = 0; i < this.props.days.length; i++) {
-      var day = this.props.days[i];
-      var thatDay = [];
+      var day = this.props.days[i]
+      var thatDay = []
 
       for (var apptID in this.props.appointments) {
-        var appt = this.props.appointments[apptID];
+        var appt = this.props.appointments[apptID]
 
         if (appt.date === day) {
           thatDay.push(
             <ScheduleItem is="Item" key={ apptID } {...appt} />
-          );
+          )
         }
       }
 
@@ -110,7 +110,7 @@ class Schedule extends ReactCSS.Component {
           </div>
           { thatDay }
         </div>
-      );
+      )
     }
 
     return (
@@ -120,7 +120,7 @@ class Schedule extends ReactCSS.Component {
           { schedule }
         </div>
       </div>
-    );
+    )
   }
 }
 
@@ -171,6 +171,6 @@ Schedule.defaultProps = {
       type: 'chore',
     },
   },
-};
+}
 
-export default bounds.wrap(Schedule);
+export default bounds.wrap(Schedule)

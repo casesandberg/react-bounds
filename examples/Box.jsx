@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import ReactCSS from 'reactcss';
-import bounds from 'react-bounds';
+import React from 'react'
+import ReactCSS from 'reactcss'
+import bounds from 'react-bounds'
 
 class Box extends ReactCSS.Component {
 
@@ -14,7 +14,7 @@ class Box extends ReactCSS.Component {
           color: '#fff',
         },
       },
-    };
+    }
   }
 
   static bounds() {
@@ -22,12 +22,12 @@ class Box extends ReactCSS.Component {
       'no-sidebar': { maxWidth: 500 },
       'really-big': { minWidth: 700 },
       'middle': { minWidth: 400, maxWidth: 550 },
-    };
+    }
   }
 
   render() {
-    return <div is="box">{ this.props.width } - { this.props.activeBounds }</div>;
+    return <div is="box">{ this.props.width } - { this.props.activeBounds }</div>
   }
 }
 
-export default bounds.wrap(Box);
+export default bounds.wrap(Box)
