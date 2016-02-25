@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import ReactCSS from 'reactcss';
+import React from 'react'
+import ReactCSS from 'reactcss'
 
-import { Container } from '../../../modules/react-basic-layout';
+import { Container } from '../../../modules/react-basic-layout'
 
 export default class Header extends ReactCSS.Component {
 
@@ -35,7 +35,7 @@ export default class Header extends ReactCSS.Component {
           clear: 'both',
         },
       },
-    };
+    }
   }
 
   render() {
@@ -53,6 +53,6 @@ export default class Header extends ReactCSS.Component {
           <div is="clear" />
         </Container>
       </div>
-    );
+    )
   }
 }

@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import ReactCSS from 'reactcss';
+import React from 'react'
+import ReactCSS from 'reactcss'
 
-import { Container } from '../../../modules/react-basic-layout';
-import Docs from '../../../modules/react-docs';
+import { Container } from '../../../modules/react-basic-layout'
+import Docs from '../../../modules/react-docs'
 
-import documentation from '../../documentation';
+import documentation from '../../documentation'
 
 export default class DocsText extends ReactCSS.Component {
 
@@ -21,7 +21,7 @@ export default class DocsText extends ReactCSS.Component {
           sidebar: false,
         },
       },
-    };
+    }
   }
 
   render() {
@@ -31,6 +31,6 @@ export default class DocsText extends ReactCSS.Component {
           <Docs is="Documentation" markdown={ documentation }/>
         </Container>
       </div>
-    );
+    )
   }
 }

@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import ReactCSS from 'reactcss';
+import React from 'react'
+import ReactCSS from 'reactcss'
 
-import { Container } from '../../../modules/react-basic-layout';
+import { Container } from '../../../modules/react-basic-layout'
 
 export default class Tweet extends ReactCSS.Component {
 
@@ -26,23 +26,23 @@ export default class Tweet extends ReactCSS.Component {
           clear: 'both',
         },
       },
-    };
+    }
   }
 
   componentDidMount() {
     (d, s, id) => {
-      var js;
-      var fjs = d.getElementsByTagName(s)[0];
-      var button = React.findDOMNode(this.refs.button);
-      var p = /^http:/.test(d.location) ? 'http' : 'https';
+      var js
+      var fjs = d.getElementsByTagName(s)[0]
+      var button = React.findDOMNode(this.refs.button)
+      var p = /^http:/.test(d.location) ? 'http' : 'https'
 
       if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = p + '://platform.twitter.com/widgets.js';
-        button.parentNode.insertBefore(js, fjs);
+        js = d.createElement(s)
+        js.id = id
+        js.src = p + '://platform.twitter.com/widgets.js'
+        button.parentNode.insertBefore(js, fjs)
       }
-    }(document, 'script', 'twitter-wjs');
+    }(document, 'script', 'twitter-wjs')
   }
 
   render() {
@@ -56,6 +56,6 @@ export default class Tweet extends ReactCSS.Component {
           <div is="clear" />
         </Container>
       </div>
-    );
+    )
   }
 }

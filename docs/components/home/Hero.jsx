@@ -1,19 +1,19 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import ReactCSS from 'reactcss';
+import React from 'react'
+import ReactCSS from 'reactcss'
 
-import { Container } from '../../../modules/react-basic-layout';
-import { Raised } from '../../../modules/react-material-design';
-import Schedule from '../../../examples/schedule/Schedule.jsx';
+import { Container } from '../../../modules/react-basic-layout'
+import { Raised } from '../../../modules/react-material-design'
+import Schedule from '../../../examples/schedule/Schedule.jsx'
 
 export default class Hero extends ReactCSS.Component {
 
   constructor() {
-    super();
+    super()
 
-    this.handleMouseOver = this.handleMouseOver.bind(this);
-    this.handleDrag = this.handleDrag.bind(this);
+    this.handleMouseOver = this.handleMouseOver.bind(this)
+    this.handleDrag = this.handleDrag.bind(this)
   }
 
   classes() {
@@ -68,53 +68,53 @@ export default class Hero extends ReactCSS.Component {
           color: '#9013FE',
         },
       },
-    };
+    }
   }
 
   componentDidMount() {
-    var draggable = React.findDOMNode(this.refs.draggable);
-    var handle = React.findDOMNode(this.refs.handle);
-    var bg = React.findDOMNode(this.refs.draggable).children[1].children[0].style;
+    var draggable = React.findDOMNode(this.refs.draggable)
+    var handle = React.findDOMNode(this.refs.handle)
+    var bg = React.findDOMNode(this.refs.draggable).children[1].children[0].style
 
-    bg.transition = 'transform 700ms ease-in-out';
-    handle.style.transition = 'transform 700ms ease-in-out';
-    bg.transformOrigin = '0 0';
+    bg.transition = 'transform 700ms ease-in-out'
+    handle.style.transition = 'transform 700ms ease-in-out'
+    bg.transformOrigin = '0 0'
     this.moving = setInterval(() => {
       if (bg.transform === 'scaleX(1)') {
-        bg.transform = 'scaleX(.99)';
-        handle.style.transform = 'translateX(-5px)';
+        bg.transform = 'scaleX(.99)'
+        handle.style.transform = 'translateX(-5px)'
       } else {
-        bg.transform = 'scaleX(1)';
-        handle.style.transform = 'translateX(0)';
+        bg.transform = 'scaleX(1)'
+        handle.style.transform = 'translateX(0)'
       }
-    }, 700);
+    }, 700)
   }
 
   handleMouseOver() {
-    var draggable = React.findDOMNode(this.refs.draggable);
-    draggable.style.transition = '';
-    clearInterval(this.moving);
+    var draggable = React.findDOMNode(this.refs.draggable)
+    draggable.style.transition = ''
+    clearInterval(this.moving)
   }
 
   handleDrag(e) {
-    var container = React.findDOMNode(this.refs.container);
-    var draggable = React.findDOMNode(this.refs.draggable);
-    var handle = React.findDOMNode(this.refs.handle);
+    var container = React.findDOMNode(this.refs.container)
+    var draggable = React.findDOMNode(this.refs.draggable)
+    var handle = React.findDOMNode(this.refs.handle)
 
-    var containerWidth = container.clientWidth;
-    var left = e.pageX - (container.getBoundingClientRect().left + window.pageXOffset);
+    var containerWidth = container.clientWidth
+    var left = e.pageX - (container.getBoundingClientRect().left + window.pageXOffset)
 
-    var percent = Math.round(left / containerWidth * 100);
+    var percent = Math.round(left / containerWidth * 100)
     if (percent > 100) {
-      percent = 100;
+      percent = 100
     }
 
     if (percent < 40) {
-      percent = 40;
+      percent = 40
     }
 
     if (e.pageX) {
-      draggable.style.width = percent + '%';
+      draggable.style.width = percent + '%'
     }
   }
 
@@ -145,11 +145,11 @@ export default class Hero extends ReactCSS.Component {
           </div>
 
           <div is="instructions">
-            <span is="highlight">Drag &lt;Schedule /&gt;</span> smaller than 400px to change to list-view.
+            <span is="highlight">Drag <Schedule /></span> smaller than 400px to change to list-view.
           </div>
 
         </Container>
       </div>
-    );
+    )
   }
 }

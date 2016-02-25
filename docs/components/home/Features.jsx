@@ -1,10 +1,10 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import ReactCSS from 'reactcss';
+import React from 'react'
+import ReactCSS from 'reactcss'
 
-import { Container } from '../../../modules/react-basic-layout';
-import Markdown from '../../../modules/react-docs/src/components/Markdown';
+import { Container } from '../../../modules/react-basic-layout'
+import Markdown from '../../../modules/react-docs/src/components/Markdown'
 
 export default class Features extends ReactCSS.Component {
 
@@ -41,13 +41,13 @@ export default class Features extends ReactCSS.Component {
           margin: '0',
         },
       },
-    };
+    }
   }
 
   render() {
 
     var setBreakpoints = `
-\`\`\`javascript
+```javascript
  static bounds() {
    return {
      'list': {
@@ -59,26 +59,26 @@ export default class Features extends ReactCSS.Component {
      },
    };
  }
- \`\`\`
-    `;
+ ```
+    `
 
     var useBreakpoints = `
- \`\`\`javascript
+ ```javascript
 this.props.isBound('list')
 // true
 
 this.props.activeBounds
 // [‘list’]
- \`\`\`
-    `;
+ ```
+    `
 
     var useCSS = `
- \`\`\`javascript
+ ```javascript
 .list .schedule { }
 
 .column .schedule { }
- \`\`\`
-    `;
+ ```
+    `
 
     return (
       <div is="features">
@@ -100,6 +100,6 @@ this.props.activeBounds
 
         </Container>
       </div>
-    );
+    )
   }
 }
