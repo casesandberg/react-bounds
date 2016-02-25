@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
 
-module.exports = function(port) {
+module.exports = function (port) {
   return {
     entry: ['webpack-dev-server/client?http://localhost:' + port, 'webpack/hot/dev-server', './docs/index.js'],
     output: {
@@ -44,11 +44,11 @@ module.exports = function(port) {
       fallback: [path.resolve(__dirname, './modules')],
     },
     plugins: [
-      new webpack.HotModuleReplacementPlugin({quiet: true}),
+      new webpack.HotModuleReplacementPlugin({ quiet: true }),
       new webpack.NoErrorsPlugin(),
     ],
     quiet: true,
     devtool: 'eval',
     debug: true,
-  };
-};
+  }
+}
