@@ -1,5 +1,1 @@
-'use strict'
-
-module.exports = {
-  wrap: require('./Wrap.jsx'),
-}
+export {default as wrap} from './wrap'
