@@ -11,10 +11,6 @@ export default function BoundsWrapper() {
 
     class Bounds extends Component {
 
-      static defaultProps = {
-        target: <div/>
-      }
-
       state = {
         loaded: false,
         width: 0,
@@ -123,9 +119,6 @@ export default function BoundsWrapper() {
         })
 
         const {width, height, activeBounds, loaded} = this.state
-        const {target: Target} = this.props
-
-        console.log(width, height, Target)
 
         return <div ref="wrap" style={styles.wrap}>
           <div ref="component" className={classes} style={styles.component}>
