@@ -1,7 +1,18 @@
-'use strict'
-
 // http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/
 // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
+
+export function add(element, callback) {
+  if (!element.resizeListener) {
+    element.resizeListener = []
+    addChildTrigger(element)
+  }
+
+  element.resizeListener.push(callback)
+}
+
+export function remove(element, callback) {
+  element.resizeListener.splice(element.resizeListener.indexOf(callback), 1)
+}
 
 var requestFrame = function (callback) {
   var raf = window.requestAnimationFrame ||
@@ -54,19 +65,4 @@ function addChildTrigger(element) {
 
   element.appendChild(obj)
   element.resizeTrigger = obj
-}
-
-module.exports = {
-  add: function (element, callback) {
-    if (!element.resizeListener) {
-      element.resizeListener = []
-      addChildTrigger(element)
-    }
-
-    element.resizeListener.push(callback)
-  },
-
-  remove: function (element, callback) {
-    element.resizeListener.splice(element.resizeListener.indexOf(callback), 1)
-  },
 }
