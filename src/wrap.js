@@ -1,10 +1,9 @@
-import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
-import reactCSS from 'reactcss'
-import debounce from 'lodash/debounce'
-import * as listener from './listener'
-import classnames from 'classnames'
-
+import React, {Component}   from 'react'
+import ReactDOM             from 'react-dom'
+import reactCSS             from 'reactcss'
+import debounce             from 'lodash/debounce'
+import classnames           from 'classnames'
+import * as listener        from './listener'
 
 export default function BoundsWrapper() {
   return function(Target) {
