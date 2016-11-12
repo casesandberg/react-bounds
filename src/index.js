@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports = {
-  wrap: require('./Wrap.jsx'),
+  wrap: require('./Wrap.js'),
 }
