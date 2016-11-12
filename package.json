@@ -1,6 +1,6 @@
 {
   "name": "react-bounds",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Element Queries in React",
   "author": "case <case@casesandberg.com>",
   "main": "lib/index.js",
