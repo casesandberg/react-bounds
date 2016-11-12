@@ -32,7 +32,7 @@ module.exports = function (Component) {
     }
 
     calculateBounds(newWidth, newHeight) {
-      var bounds = Component.bounds()
+      var bounds = Component.bounds && Component.bounds()
       var activeBounds = []
 
       if (bounds) {
