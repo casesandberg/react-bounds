@@ -5,7 +5,7 @@ var listener = require('./listener')
 var _ = require('underscore')
 var classNames = require('classnames')
 
-module.exports = function (Component) {
+module.exports = function (Component, wrapStyles = {}, componentStyles = {}) {
   class Wrap extends React.Component {
     constructor() {
       super()
@@ -75,7 +75,8 @@ module.exports = function (Component) {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-      if (this.state.loaded && _.isEqual(this.state.activeBounds, nextState.activeBounds) && nextState.debounced !== true) {
+      if (this.state.loaded && _.isEqual(this.state.activeBounds,
+        nextState.activeBounds) && nextState.debounced !== true) {
         return false
       }
 
@@ -105,11 +106,11 @@ module.exports = function (Component) {
         },
       }
       return (
-        <div ref={ wrap => (this.wrap = wrap) } style={ styles.wrap }>
+        <div ref={ wrap => (this.wrap = wrap) } style={{ ...styles.wrap, ...wrapStyles }}>
           <div
             ref={ component => (this.component = component) }
             className={ classNames(this.state.activeBounds) }
-            style={ styles.component }
+            style={{ ...styles.component, ...componentStyles }}
           >
             { this.state.loaded && this.state.width > 0 ?
               <Component {...this.props }
