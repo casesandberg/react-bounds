@@ -52,12 +52,11 @@ module.exports = function (Component, wrapStyles = {}, componentStyles = {}) {
             var minHeight = boundValue.minHeight || 0
             var maxHeight = boundValue.maxHeight || 99999
 
-            if (boundValue.minHeight || boundValue.minHeight) {
-              if (newHeight > minHeight && newHeight < minHeight) {
+            if (boundValue.minHeight || boundValue.maxHeight) {
+              if (newHeight > minHeight && newHeight < maxHeight) {
                 activeBounds.push(boundName)
               }
             }
-
           }
         }
       }
