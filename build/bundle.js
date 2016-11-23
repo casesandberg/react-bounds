@@ -19753,7 +19753,7 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -19769,23 +19769,23 @@
 
 	var _homeHeaderJsx2 = _interopRequireDefault(_homeHeaderJsx);
 
-	var _homeHeroJsx = __webpack_require__(168);
+	var _homeHeroJsx = __webpack_require__(174);
 
 	var _homeHeroJsx2 = _interopRequireDefault(_homeHeroJsx);
 
-	var _homeTweetJsx = __webpack_require__(182);
+	var _homeTweetJsx = __webpack_require__(189);
 
 	var _homeTweetJsx2 = _interopRequireDefault(_homeTweetJsx);
 
-	var _homeFeaturesJsx = __webpack_require__(183);
+	var _homeFeaturesJsx = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./home/Features.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	var _homeFeaturesJsx2 = _interopRequireDefault(_homeFeaturesJsx);
 
-	var _homeDocsJsx = __webpack_require__(193);
+	var _homeDocsJsx = __webpack_require__(191);
 
 	var _homeDocsJsx2 = _interopRequireDefault(_homeDocsJsx);
 
-	var _homeFooterJsx = __webpack_require__(212);
+	var _homeFooterJsx = __webpack_require__(219);
 
 	var _homeFooterJsx2 = _interopRequireDefault(_homeFooterJsx);
 
@@ -19837,7 +19837,7 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -19853,7 +19853,7 @@
 
 	var _reactcss2 = _interopRequireDefault(_reactcss);
 
-	var _modulesReactBasicLayout = __webpack_require__(165);
+	var _modulesReactBasicLayout = __webpack_require__(171);
 
 	var Header = (function (_ReactCSS$Component) {
 	  _inherits(Header, _ReactCSS$Component);
@@ -19939,22 +19939,1329 @@
 /* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";module.exports={Component:__webpack_require__(156),inline:__webpack_require__(157),mixin:{css:__webpack_require__(157)}};
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.ReactCSS=exports.loop=exports.handleActive=exports.handleHover=exports.hover=exports.Component=void 0;var _objectAssign=__webpack_require__(156),_objectAssign2=_interopRequireDefault(_objectAssign),_flattenNames=__webpack_require__(157),_flattenNames2=_interopRequireDefault(_flattenNames),_mergeClasses=__webpack_require__(158),_mergeClasses2=_interopRequireDefault(_mergeClasses),_autoprefix=__webpack_require__(159),_autoprefix2=_interopRequireDefault(_autoprefix),_Component2=__webpack_require__(160),_Component3=_interopRequireDefault(_Component2),_hover2=__webpack_require__(168),_hover3=_interopRequireDefault(_hover2),_active=__webpack_require__(169),_active2=_interopRequireDefault(_active),_loop2=__webpack_require__(170),_loop3=_interopRequireDefault(_loop2);exports.Component=_Component3["default"],exports.hover=_hover3["default"],exports.handleHover=_hover3["default"],exports.handleActive=_active2["default"],exports.loop=_loop3["default"];var ReactCSS=exports.ReactCSS=function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),o=1;o<t;o++)r[o-1]=arguments[o];var a=(0,_flattenNames2["default"])(r),s=(0,_mergeClasses2["default"])(e,a);return(0,_autoprefix2["default"])(s)};ReactCSS.m=_objectAssign2["default"],exports["default"]=ReactCSS;
 
 /***/ },
 /* 156 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var _createClass=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),_get=function(e,t,n){for(var r=!0;r;){var o=e,i=t,c=n;a=l=u=void 0,r=!1,null===o&&(o=Function.prototype);var a=Object.getOwnPropertyDescriptor(o,i);if(void 0!==a){if("value"in a)return a.value;var u=a.get;return void 0===u?void 0:u.call(c)}var l=Object.getPrototypeOf(o);if(null===l)return void 0;e=l,t=i,n=c,r=!0}},React=__webpack_require__(2),inline=__webpack_require__(157),ReactCSSComponent=function(e){function t(){_classCallCheck(this,t),_get(Object.getPrototypeOf(t.prototype),"constructor",this).apply(this,arguments)}return _inherits(t,e),_createClass(t,[{key:"css",value:function(e){return inline.call(this,e)}},{key:"styles",value:function(){return this.css()}}]),t}(React.Component);ReactCSSComponent.contextTypes={mixins:React.PropTypes.object},module.exports=ReactCSSComponent;
+	'use strict';
+	/* eslint-disable no-unused-vars */
+	var hasOwnProperty = Object.prototype.hasOwnProperty;
+	var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+	function toObject(val) {
+		if (val === null || val === undefined) {
+			throw new TypeError('Object.assign cannot be called with null or undefined');
+		}
+
+		return Object(val);
+	}
+
+	function shouldUseNative() {
+		try {
+			if (!Object.assign) {
+				return false;
+			}
+
+			// Detect buggy property enumeration order in older V8 versions.
+
+			// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+			var test1 = new String('abc');  // eslint-disable-line
+			test1[5] = 'de';
+			if (Object.getOwnPropertyNames(test1)[0] === '5') {
+				return false;
+			}
+
+			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+			var test2 = {};
+			for (var i = 0; i < 10; i++) {
+				test2['_' + String.fromCharCode(i)] = i;
+			}
+			var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+				return test2[n];
+			});
+			if (order2.join('') !== '0123456789') {
+				return false;
+			}
+
+			// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+			var test3 = {};
+			'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+				test3[letter] = letter;
+			});
+			if (Object.keys(Object.assign({}, test3)).join('') !==
+					'abcdefghijklmnopqrst') {
+				return false;
+			}
+
+			return true;
+		} catch (e) {
+			// We don't expect any of the above to throw, but better to be safe.
+			return false;
+		}
+	}
+
+	module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+		var from;
+		var to = toObject(target);
+		var symbols;
+
+		for (var s = 1; s < arguments.length; s++) {
+			from = Object(arguments[s]);
+
+			for (var key in from) {
+				if (hasOwnProperty.call(from, key)) {
+					to[key] = from[key];
+				}
+			}
+
+			if (Object.getOwnPropertySymbols) {
+				symbols = Object.getOwnPropertySymbols(from);
+				for (var i = 0; i < symbols.length; i++) {
+					if (propIsEnumerable.call(from, symbols[i])) {
+						to[symbols[i]] = from[symbols[i]];
+					}
+				}
+			}
+		}
+
+		return to;
+	};
+
 
 /***/ },
 /* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";var _=__webpack_require__(158),checkClassStructure=__webpack_require__(160),combine=__webpack_require__(161);module.exports=function(s){var e=this;combine=__webpack_require__(161);var r=[];if(!this.classes)throw console.warn("Define this.classes on `"+this.constructor.name+"`");checkClassStructure(this.classes());var t=function(s,t){e.classes()[s]?r.push(e.classes()[s]):s&&t&&t.warn===!0&&console.warn("The `"+s+"` css class does not exist on `"+e.constructor.name+"`")};t("default");for(var i in this.props){var c=this.props[i];_.isObject(c)||(c===!0?(t(i),t(i+"-true")):t(c?i+"-"+c:i+"-false"))}if(this.props&&this.props.activeBounds)for(var o=0;o<this.props.activeBounds.length;o++){var n=this.props.activeBounds[o];t(n)}for(var a in s){var u=s[a];u===!0&&t(a,{warn:!0})}var h={};return this.context&&this.context.mixins&&(h=this.context.mixins),combine(r,h)};
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.flattenNames=void 0;var _map=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/map\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_map2=_interopRequireDefault(_map),_isPlainObject=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/isPlainObject\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_isPlainObject2=_interopRequireDefault(_isPlainObject),_isString=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/isString\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_isString2=_interopRequireDefault(_isString),flattenNames=exports.flattenNames=function e(t){var i=[];return t.map(function(t){return Array.isArray(t)&&e(t).map(function(e){return i.push(e)}),(0,_isPlainObject2["default"])(t)&&(0,_map2["default"])(t,function(e,t){e===!0&&i.push(t),i.push(t+"-"+e)}),(0,_isString2["default"])(t)&&i.push(t),t}),i};exports["default"]=flattenNames;
 
 /***/ },
 /* 158 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.mergeClasses=void 0;var _map=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/map\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_map2=_interopRequireDefault(_map),_cloneDeep=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/cloneDeep\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_cloneDeep2=_interopRequireDefault(_cloneDeep),_objectAssign=__webpack_require__(156),_objectAssign2=_interopRequireDefault(_objectAssign),mergeClasses=exports.mergeClasses=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],r=e["default"]&&(0,_cloneDeep2["default"])(e["default"])||{};return t.map(function(t){var s=e[t];return s&&(0,_map2["default"])(s,function(e,t){r[t]||(r[t]={}),(0,_objectAssign2["default"])(r[t],s[t])}),t}),r};exports["default"]=mergeClasses;
+
+/***/ },
+/* 159 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.autoprefix=void 0;var _map=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/map\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_map2=_interopRequireDefault(_map),_objectAssign=__webpack_require__(156),_objectAssign2=_interopRequireDefault(_objectAssign),transforms={borderRadius:function(e){return{msBorderRadius:e,MozBorderRadius:e,OBorderRadius:e,WebkitBorderRadius:e,borderRadius:e}},boxShadow:function(e){return{msBoxShadow:e,MozBoxShadow:e,OBoxShadow:e,WebkitBoxShadow:e,boxShadow:e}},userSelect:function(e){return{WebkitTouchCallout:e,KhtmlUserSelect:e,MozUserSelect:e,msUserSelect:e,WebkitUserSelect:e,userSelect:e}},flex:function(e){return{WebkitBoxFlex:e,MozBoxFlex:e,WebkitFlex:e,msFlex:e,flex:e}},flexBasis:function(e){return{WebkitFlexBasis:e,flexBasis:e}},justifyContent:function(e){return{WebkitJustifyContent:e,justifyContent:e}},transition:function(e){return{msTransition:e,MozTransition:e,OTransition:e,WebkitTransition:e,transition:e}},transform:function(e){return{msTransform:e,MozTransform:e,OTransform:e,WebkitTransform:e,transform:e}},absolute:function(e){var t=e&&e.split(" ");return{position:"absolute",top:t&&t[0],right:t&&t[1],bottom:t&&t[2],left:t&&t[3]}},extend:function(e,t){var r=t[e];return r?r:{extend:e}}},autoprefix=exports.autoprefix=function(e){var t={};return(0,_map2["default"])(e,function(e,r){var o={};(0,_map2["default"])(e,function(e,t){var r=transforms[t];r?(0,_objectAssign2["default"])(o,r(e)):o[t]=e}),t[r]=o}),t};exports["default"]=autoprefix;
+
+/***/ },
+/* 160 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.ReactCSSComponent=void 0;var _createClass=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),_react=__webpack_require__(2),_react2=_interopRequireDefault(_react),_inline=__webpack_require__(161),_inline2=_interopRequireDefault(_inline),_once=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/once\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_once2=_interopRequireDefault(_once),warning=(0,_once2["default"])(function(){return console.warn("Extending ReactCSS.Component\n  is deprecated in ReactCSS 1.0.0")}),ReactCSSComponent=exports.ReactCSSComponent=function(e){function t(){return _classCallCheck(this,t),_possibleConstructorReturn(this,(t.__proto__||Object.getPrototypeOf(t)).apply(this,arguments))}return _inherits(t,e),_createClass(t,[{key:"css",value:function(e){return warning(),_inline2["default"].call(this,e)}},{key:"styles",value:function(){return this.css()}}]),t}(_react2["default"].Component);ReactCSSComponent.contextTypes={mixins:_react2["default"].PropTypes.object},exports["default"]=ReactCSSComponent;
+
+/***/ },
+/* 161 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}var _isObject=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/isObject\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_isObject2=_interopRequireDefault(_isObject),_checkClassStructure=__webpack_require__(162),_checkClassStructure2=_interopRequireDefault(_checkClassStructure),_combine=__webpack_require__(163),_combine2=_interopRequireDefault(_combine);module.exports=function(e){var s=this,t=[];if(!this.classes)throw console.warn("Define this.classes on `"+this.constructor.name+"`");(0,_checkClassStructure2["default"])(this.classes());var r=function(e,r){s.classes()[e]?t.push(s.classes()[e]):e&&r&&r.warn===!0&&console.warn("The `"+e+"` css class does not exist on `"+s.constructor.name+"`")};r("default");for(var i in this.props){var c=this.props[i];(0,_isObject2["default"])(c)||(c===!0?(r(i),r(i+"-true")):r(c?i+"-"+c:i+"-false"))}if(this.props&&this.props.activeBounds)for(var o=0;o<this.props.activeBounds.length;o++){var n=this.props.activeBounds[o];r(n)}for(var a in e){var u=e[a];u===!0&&r(a,{warn:!0})}var l={};return this.context&&this.context.mixins&&(l=this.context.mixins),(0,_combine2["default"])(t,l)};
+
+/***/ },
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.checkClassStructure=void 0;var _map=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/map\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_map2=_interopRequireDefault(_map),_isObject=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/isObject\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_isObject2=_interopRequireDefault(_isObject),checkClassStructure=exports.checkClassStructure=function(e){(0,_map2["default"])(e,function(t,s){e.hasOwnProperty(s)&&((0,_isObject2["default"])(t)?(0,_map2["default"])(t,function(e,u){t.hasOwnProperty(u)&&((0,_isObject2["default"])(e)||console.warn("Make sure the value of the element `"+s+"`\n                is an object of css. You passed it `"+t+"`"))}):console.warn("Make sure the value of `"+s+"` is an object of\n          html elements. You passed it `"+t+"`"))})};exports["default"]=checkClassStructure;
+
+/***/ },
+/* 163 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.combine=void 0;var _merge=__webpack_require__(164),_merge2=_interopRequireDefault(_merge),_transformMixins=__webpack_require__(167),_transformMixins2=_interopRequireDefault(_transformMixins),combine=exports.combine=function(e,r){var i=(0,_merge2["default"])(e);return(0,_transformMixins2["default"])(i,r)};exports["default"]=combine;
+
+/***/ },
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}Object.defineProperty(exports,"__esModule",{value:!0});var _merge=__webpack_require__(165),_merge2=_interopRequireDefault(_merge),_isObject=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/isObject\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_isObject2=_interopRequireDefault(_isObject),merge=function(e){return(0,_isObject2["default"])(e)&&!Array.isArray(e)?e:1===e.length?e[0]:_merge2["default"].recursive.apply(void 0,e)};exports["default"]=merge;
+
+/***/ },
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/*!
+	 * @name JavaScript/NodeJS Merge v1.2.0
+	 * @author yeikos
+	 * @repository https://github.com/yeikos/js.merge
+
+	 * Copyright 2014 yeikos - MIT license
+	 * https://raw.github.com/yeikos/js.merge/master/LICENSE
+	 */
+
+	;(function(isNode) {
+
+		/**
+		 * Merge one or more objects 
+		 * @param bool? clone
+		 * @param mixed,... arguments
+		 * @return object
+		 */
+
+		var Public = function(clone) {
+
+			return merge(clone === true, false, arguments);
+
+		}, publicName = 'merge';
+
+		/**
+		 * Merge two or more objects recursively 
+		 * @param bool? clone
+		 * @param mixed,... arguments
+		 * @return object
+		 */
+
+		Public.recursive = function(clone) {
+
+			return merge(clone === true, true, arguments);
+
+		};
+
+		/**
+		 * Clone the input removing any reference
+		 * @param mixed input
+		 * @return mixed
+		 */
+
+		Public.clone = function(input) {
+
+			var output = input,
+				type = typeOf(input),
+				index, size;
+
+			if (type === 'array') {
+
+				output = [];
+				size = input.length;
+
+				for (index=0;index<size;++index)
+
+					output[index] = Public.clone(input[index]);
+
+			} else if (type === 'object') {
+
+				output = {};
+
+				for (index in input)
+
+					output[index] = Public.clone(input[index]);
+
+			}
+
+			return output;
+
+		};
+
+		/**
+		 * Merge two objects recursively
+		 * @param mixed input
+		 * @param mixed extend
+		 * @return mixed
+		 */
+
+		function merge_recursive(base, extend) {
+
+			if (typeOf(base) !== 'object')
+
+				return extend;
+
+			for (var key in extend) {
+
+				if (typeOf(base[key]) === 'object' && typeOf(extend[key]) === 'object') {
+
+					base[key] = merge_recursive(base[key], extend[key]);
+
+				} else {
+
+					base[key] = extend[key];
+
+				}
+
+			}
+
+			return base;
+
+		}
+
+		/**
+		 * Merge two or more objects
+		 * @param bool clone
+		 * @param bool recursive
+		 * @param array argv
+		 * @return object
+		 */
+
+		function merge(clone, recursive, argv) {
+
+			var result = argv[0],
+				size = argv.length;
+
+			if (clone || typeOf(result) !== 'object')
+
+				result = {};
+
+			for (var index=0;index<size;++index) {
+
+				var item = argv[index],
+
+					type = typeOf(item);
+
+				if (type !== 'object') continue;
+
+				for (var key in item) {
+
+					var sitem = clone ? Public.clone(item[key]) : item[key];
+
+					if (recursive) {
+
+						result[key] = merge_recursive(result[key], sitem);
+
+					} else {
+
+						result[key] = sitem;
+
+					}
+
+				}
+
+			}
+
+			return result;
+
+		}
+
+		/**
+		 * Get type of variable
+		 * @param mixed input
+		 * @return string
+		 *
+		 * @see http://jsperf.com/typeofvar
+		 */
+
+		function typeOf(input) {
+
+			return ({}).toString.call(input).slice(8, -1).toLowerCase();
+
+		}
+
+		if (isNode) {
+
+			module.exports = Public;
+
+		} else {
+
+			window[publicName] = Public;
+
+		}
+
+	})(typeof module === 'object' && module && typeof module.exports === 'object' && module.exports);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(166)(module)))
+
+/***/ },
+/* 166 */
+/***/ function(module, exports) {
+
+	module.exports = function(module) {
+		if(!module.webpackPolyfill) {
+			module.deprecate = function() {};
+			module.paths = [];
+			// module.parent = undefined by default
+			module.children = [];
+			module.webpackPolyfill = 1;
+		}
+		return module;
+	}
+
+
+/***/ },
+/* 167 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}var _isObject=__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"lodash/isObject\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),_isObject2=_interopRequireDefault(_isObject),_merge=__webpack_require__(165),_merge2=_interopRequireDefault(_merge),localProps={borderRadius:function(e){if(null!==e)return{msBorderRadius:e,MozBorderRadius:e,OBorderRadius:e,WebkitBorderRadius:e,borderRadius:e}},boxShadow:function(e){if(null!==e)return{msBoxShadow:e,MozBoxShadow:e,OBoxShadow:e,WebkitBoxShadow:e,boxShadow:e}},userSelect:function(e){if(null!==e)return{WebkitTouchCallout:e,KhtmlUserSelect:e,MozUserSelect:e,msUserSelect:e,WebkitUserSelect:e,userSelect:e}},flex:function(e){if(null!==e)return{WebkitBoxFlex:e,MozBoxFlex:e,WebkitFlex:e,msFlex:e,flex:e}},flexBasis:function(e){if(null!==e)return{WebkitFlexBasis:e,flexBasis:e}},justifyContent:function(e){if(null!==e)return{WebkitJustifyContent:e,justifyContent:e}},transition:function(e){if(null!==e)return{msTransition:e,MozTransition:e,OTransition:e,WebkitTransition:e,transition:e}},transform:function(e){if(null!==e)return{msTransform:e,MozTransform:e,OTransform:e,WebkitTransform:e,transform:e}},Absolute:function(e){if(null!==e){var r=e.split(" ");return{position:"absolute",top:r[0],right:r[1],bottom:r[2],left:r[3]}}},Extend:function(e,r){var t=r[e];if(t)return t}},transform=function e(r,t,n){var i=(0,_merge2["default"])(t,localProps),o={};for(var u in r){var s=r[u];if((0,_isObject2["default"])(s)&&!Array.isArray(s))o[u]=e(s,t,r);else if(i[u]){var l=i[u](s,n);for(var a in l){var f=l[a];o[a]=f}}else o[u]=s}return o};module.exports=function(e,r,t){return transform(e,r,t)};
+
+/***/ },
+/* 168 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.hover=void 0;var _extends=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var o in r)Object.prototype.hasOwnProperty.call(r,o)&&(e[o]=r[o])}return e},_react=__webpack_require__(2),_react2=_interopRequireDefault(_react),hover=exports.hover=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"span";return function(r){function o(){var r,n,u,a;_classCallCheck(this,o);for(var s=arguments.length,c=Array(s),i=0;i<s;i++)c[i]=arguments[i];return n=u=_possibleConstructorReturn(this,(r=o.__proto__||Object.getPrototypeOf(o)).call.apply(r,[this].concat(c))),u.state={hover:!1},u.handleMouseOver=function(){return u.setState({hover:!0})},u.handleMouseOut=function(){return u.setState({hover:!1})},u.render=function(){return _react2["default"].createElement(t,{onMouseOver:u.handleMouseOver,onMouseOut:u.handleMouseOut},_react2["default"].createElement(e,_extends({},u.props,u.state)))},a=n,_possibleConstructorReturn(u,a)}return _inherits(o,r),o}(_react2["default"].Component)};exports["default"]=hover;
+
+/***/ },
+/* 169 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{"default":e}}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.active=void 0;var _extends=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e},_react=__webpack_require__(2),_react2=_interopRequireDefault(_react),active=exports.active=function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"span";return function(r){function n(){var r,o,a,c;_classCallCheck(this,n);for(var u=arguments.length,s=Array(u),i=0;i<u;i++)s[i]=arguments[i];return o=a=_possibleConstructorReturn(this,(r=n.__proto__||Object.getPrototypeOf(n)).call.apply(r,[this].concat(s))),a.state={active:!1},a.handleMouseDown=function(){return a.setState({active:!0})},a.handleMouseUp=function(){return a.setState({active:!1})},a.render=function(){return _react2["default"].createElement(t,{onMouseDown:a.handleMouseDown,onMouseUp:a.handleMouseUp},_react2["default"].createElement(e,_extends({},a.props,a.state)))},c=o,_possibleConstructorReturn(a,c)}return _inherits(n,r),n}(_react2["default"].Component)};exports["default"]=active;
+
+/***/ },
+/* 170 */
+/***/ function(module, exports) {
+
+	"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var loopable=function(e,t){var l={},o=function(e){var t=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];l[e]=t};return 0===e&&o("first-child"),e===t-1&&o("last-child"),(0===e||e%2===0)&&o("even"),1===Math.abs(e%2)&&o("odd"),o("nth-child",e),l};exports["default"]=loopable;
+
+/***/ },
+/* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	module.exports = {
+	  Container: __webpack_require__(172),
+	  Grid: __webpack_require__(173),
+	};
+
+
+/***/ },
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(2);
+	var ReactCSS = __webpack_require__(155);
+
+	var Container = (function (_ReactCSS$Component) {
+	  _inherits(Container, _ReactCSS$Component);
+
+	  function Container() {
+	    _classCallCheck(this, Container);
+
+	    _get(Object.getPrototypeOf(Container.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Container, [{
+	    key: 'classes',
+	    value: function classes() {
+	      return {
+	        'default': {
+	          container: {
+	            maxWidth: this.props.width + 'px',
+	            padding: '0 20px',
+	            margin: '0 auto'
+	          }
+	        }
+	      };
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
+	        'div',
+	        { style: this.styles().container },
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Container;
+	})(ReactCSS.Component);
+
+	Container.defaultProps = {
+	  width: 960
+	};
+
+	module.exports = Container;
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(2);
+	var ReactCSS = __webpack_require__(155);
+
+	var Grid = (function (_ReactCSS$Component) {
+	  _inherits(Grid, _ReactCSS$Component);
+
+	  function Grid() {
+	    _classCallCheck(this, Grid);
+
+	    _get(Object.getPrototypeOf(Grid.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Grid, [{
+	    key: 'classes',
+	    value: function classes() {
+	      return {
+	        'default': {
+	          grid: {
+	            position: 'relative'
+	          }
+	        },
+	        'preset-default': {
+	          left: {
+	            position: 'absolute',
+	            width: '170px'
+	          },
+	          main: {
+	            paddingLeft: '190px'
+	          }
+	        },
+	        'preset-one': {
+	          left: {
+	            width: 'auto',
+	            position: 'relative',
+	            paddingRight: '260px'
+	          },
+	          main: {
+	            position: 'absolute',
+	            right: '0',
+	            top: '0',
+	            width: '225px'
+	          }
+	        },
+	        'preset-two': {
+	          left: {
+	            width: '220px',
+	            position: 'absolute'
+	          },
+	          main: {
+	            paddingLeft: '267px'
+	          }
+	        },
+	        'preset-three': {
+	          left: {
+	            width: '410px',
+	            position: 'absolute',
+	            height: '100%'
+	          },
+	          main: {
+	            paddingLeft: '455px'
+	          }
+	        },
+
+	        'mobile-default': {
+	          main: {
+	            padding: '0'
+	          },
+	          left: {
+	            display: 'none'
+	          }
+	        },
+	        'mobile-one': {
+	          left: {
+	            paddingRight: '0'
+	          },
+	          main: {
+	            display: 'none'
+	          }
+	        },
+	        'mobile-two': {
+	          grid: {
+	            position: 'relative',
+	            width: '100%'
+	          },
+	          left: {
+	            position: 'absolute',
+	            left: '50%',
+	            transform: 'translateX(-50%)',
+	            marginLeft: '-20px'
+	          },
+	          main: {
+	            display: 'none'
+	          }
+	        },
+	        'mobile-three': {
+	          grid: {
+	            display: 'none'
+	          }
+	        }
+	      };
+	    }
+	  }, {
+	    key: 'styles',
+	    value: function styles() {
+	      return this.css({
+	        'mobile-default': this.props.preset === 'default' && document.getElementById('root').clientWidth < 500,
+	        'mobile-one': this.props.preset === 'one' && document.getElementById('root').clientWidth < 500,
+	        'mobile-two': this.props.preset === 'two' && document.getElementById('root').clientWidth < 500,
+	        'mobile-three': this.props.preset === 'three' && document.getElementById('root').clientWidth < 500
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
+	        'div',
+	        { style: this.styles().grid },
+	        React.createElement(
+	          'div',
+	          { style: this.styles().left },
+	          this.props.children[0]
+	        ),
+	        React.createElement(
+	          'div',
+	          { style: this.styles().main },
+	          this.props.children[1]
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Grid;
+	})(ReactCSS.Component);
+
+	Grid.defaultProps = {
+	  preset: 'default'
+	};
+
+	module.exports = Grid;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactcss = __webpack_require__(155);
+
+	var _reactcss2 = _interopRequireDefault(_reactcss);
+
+	var _modulesReactBasicLayout = __webpack_require__(171);
+
+	var _modulesReactMaterialDesign = __webpack_require__(175);
+
+	var _examplesScheduleScheduleJsx = __webpack_require__(182);
+
+	var _examplesScheduleScheduleJsx2 = _interopRequireDefault(_examplesScheduleScheduleJsx);
+
+	var Hero = (function (_ReactCSS$Component) {
+	  _inherits(Hero, _ReactCSS$Component);
+
+	  function Hero() {
+	    _classCallCheck(this, Hero);
+
+	    _get(Object.getPrototypeOf(Hero.prototype), 'constructor', this).call(this);
+
+	    this.handleMouseOver = this.handleMouseOver.bind(this);
+	    this.handleDrag = this.handleDrag.bind(this);
+	  }
+
+	  _createClass(Hero, [{
+	    key: 'classes',
+	    value: function classes() {
+	      return {
+	        'default': {
+	          hero: {
+	            background: '#fafafa',
+	            paddingBottom: '80px'
+	          },
+	          headline: {
+	            color: '#425655',
+	            fontSize: '28px',
+	            lineHeight: '38px',
+	            fontWeight: '500',
+	            margin: '0',
+	            textAlign: 'center',
+	            paddingTop: '20px'
+	          },
+	          stars: {
+	            textAlign: 'center',
+	            padding: '20px 0 30px'
+	          },
+	          schedule: {
+	            height: '350px'
+	          },
+	          draggable: {
+	            height: '100%',
+	            position: 'relative'
+	          },
+	          handle: {
+	            position: 'absolute',
+	            top: '50%',
+	            borderRadius: '2px',
+	            right: '-14px',
+	            width: '28px',
+	            height: '20px',
+	            background: '#9013FE',
+	            zIndex: '2',
+	            cursor: 'ew-resize'
+	          },
+	          icon: {
+	            fill: '#fff',
+	            transform: 'rotate(90deg) translate(-2px, 2px)'
+	          },
+	          instructions: {
+	            color: '#425655',
+	            fontSize: '20px',
+	            textAlign: 'center',
+	            paddingTop: '30px'
+	          },
+	          highlight: {
+	            color: '#9013FE'
+	          }
+	        }
+	      };
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var draggable = _react2['default'].findDOMNode(this.refs.draggable);
+	      var handle = _react2['default'].findDOMNode(this.refs.handle);
+	      var bg = _react2['default'].findDOMNode(this.refs.draggable).children[1].children[0].style;
+
+	      bg.transition = 'transform 700ms ease-in-out';
+	      handle.style.transition = 'transform 700ms ease-in-out';
+	      bg.transformOrigin = '0 0';
+	      this.moving = setInterval(function () {
+	        if (bg.transform === 'scaleX(1)') {
+	          bg.transform = 'scaleX(.99)';
+	          handle.style.transform = 'translateX(-5px)';
+	        } else {
+	          bg.transform = 'scaleX(1)';
+	          handle.style.transform = 'translateX(0)';
+	        }
+	      }, 700);
+	    }
+	  }, {
+	    key: 'handleMouseOver',
+	    value: function handleMouseOver() {
+	      var draggable = _react2['default'].findDOMNode(this.refs.draggable);
+	      draggable.style.transition = '';
+	      clearInterval(this.moving);
+	    }
+	  }, {
+	    key: 'handleDrag',
+	    value: function handleDrag(e) {
+	      var container = _react2['default'].findDOMNode(this.refs.container);
+	      var draggable = _react2['default'].findDOMNode(this.refs.draggable);
+	      var handle = _react2['default'].findDOMNode(this.refs.handle);
+
+	      var containerWidth = container.clientWidth;
+	      var left = e.pageX - (container.getBoundingClientRect().left + window.pageXOffset);
+
+	      var percent = Math.round(left / containerWidth * 100);
+	      if (percent > 100) {
+	        percent = 100;
+	      }
+
+	      if (percent < 40) {
+	        percent = 40;
+	      }
+
+	      if (e.pageX) {
+	        draggable.style.width = percent + '%';
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2['default'].createElement(
+	        'div',
+	        { style: this.styles().hero },
+	        _react2['default'].createElement(
+	          _modulesReactBasicLayout.Container,
+	          { width: 550 },
+	          _react2['default'].createElement(
+	            'h1',
+	            { style: this.styles().headline },
+	            'Morph Components Based On Their Size, Not the Window'
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { style: this.styles().stars },
+	            _react2['default'].createElement('iframe', { style: { paddingLeft: '30px' }, src: 'https://ghbtns.com/github-btn.html?user=casesandberg&repo=react-bounds&type=star&count=true&size=large', scrolling: '0', width: '142px', height: '30px', frameBorder: '0' })
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { style: this.styles().schedule, ref: 'container' },
+	            _react2['default'].createElement(
+	              'div',
+	              { style: this.styles().draggable, ref: 'draggable' },
+	              _react2['default'].createElement(
+	                'div',
+	                { style: this.styles().handle, ref: 'handle', onMouseOver: this.handleMouseOver, onDrag: this.handleDrag, draggable: true },
+	                _react2['default'].createElement(
+	                  'div',
+	                  { style: this.styles().icon },
+	                  _react2['default'].createElement(
+	                    'svg',
+	                    { style: { width: '24px', height: '24px' }, viewBox: '0 0 24 24' },
+	                    _react2['default'].createElement('path', { d: 'M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z' })
+	                  )
+	                )
+	              ),
+	              _react2['default'].createElement(
+	                _modulesReactMaterialDesign.Raised,
+	                null,
+	                _react2['default'].createElement(_examplesScheduleScheduleJsx2['default'], null)
+	              )
+	            )
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { style: this.styles().instructions },
+	            _react2['default'].createElement(
+	              'span',
+	              { style: this.styles().highlight },
+	              'Drag ',
+	              _react2['default'].createElement(_examplesScheduleScheduleJsx2['default'], null)
+	            ),
+	            ' smaller than 400px to change to list-view.'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Hero;
+	})(_reactcss2['default'].Component);
+
+	exports['default'] = Hero;
+	module.exports = exports['default'];
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	module.exports = {
+	  Raised: __webpack_require__(176),
+	  Tile: __webpack_require__(177),
+
+	  Tabs: __webpack_require__(178),
+	};
+
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* jshint node: true, esnext: true */
+	"use strict";
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(2);
+	var ReactCSS = __webpack_require__(155);
+
+	var Raised = (function (_ReactCSS$Component) {
+	  _inherits(Raised, _ReactCSS$Component);
+
+	  function Raised() {
+	    _classCallCheck(this, Raised);
+
+	    _get(Object.getPrototypeOf(Raised.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Raised, [{
+	    key: 'classes',
+	    value: function classes() {
+	      return {
+	        'default': {
+	          wrap: {
+	            position: 'relative',
+	            width: '100%',
+	            height: '100%'
+	          },
+	          content: {
+	            position: 'relative',
+	            width: '100%',
+	            height: '100%'
+	          },
+	          bg: {
+	            Absolute: '0 0 0 0',
+	            boxShadow: '0 ${ this.props.zDepth }px ${ this.props.zDepth * 4 }px rgba(0,0,0,.24)',
+	            borderRadius: this.props.radius,
+	            background: this.props.background
+	          }
+	        },
+	        'zDepth-0': {
+	          bg: {
+	            boxShadow: 'none'
+	          }
+	        },
+
+	        'zDepth-1': {
+	          bg: {
+	            boxShadow: '0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)'
+	          }
+	        },
+	        'zDepth-2': {
+	          bg: {
+	            boxShadow: '0 6px 20px rgba(0,0,0,.19), 0 8px 17px rgba(0,0,0,.2)'
+	          }
+	        },
+	        'zDepth-3': {
+	          bg: {
+	            boxShadow: '0 17px 50px rgba(0,0,0,.19), 0 12px 15px rgba(0,0,0,.24)'
+	          }
+	        },
+	        'zDepth-4': {
+	          bg: {
+	            boxShadow: '0 25px 55px rgba(0,0,0,.21), 0 16px 28px rgba(0,0,0,.22)'
+	          }
+	        },
+	        'zDepth-5': {
+	          bg: {
+	            boxShadow: '0 40px 77px rgba(0,0,0,.22), 0 27px 24px rgba(0,0,0,.2)'
+	          }
+	        },
+	        'square': {
+	          bg: {
+	            borderRadius: '0'
+	          }
+	        },
+	        'circle': {
+	          bg: {
+	            borderRadius: '50%'
+	          }
+	        }
+	      };
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
+	        'div',
+	        { style: this.styles().wrap },
+	        React.createElement('div', { style: this.styles().bg, className: 'bg' }),
+	        React.createElement(
+	          'div',
+	          { style: this.styles().content },
+	          this.props.children
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Raised;
+	})(ReactCSS.Component);
+
+	Raised.propTypes = {
+	  background: React.PropTypes.string,
+	  zDepth: React.PropTypes.oneOf(['0', '1', '2', '3', '4', '5', 0, 1, 2, 3, 4, 5]),
+	  radius: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number])
+	};
+
+	Raised.defaultProps = {
+	  background: '#fff',
+	  zDepth: '1',
+	  radius: '2px'
+	};
+
+	module.exports = Raised;
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* jshint node: true, esnext: true */
+	"use strict";
+
+	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(2);
+	var ReactCSS = __webpack_require__(155);
+
+	module.exports = (function (_ReactCSS$Component) {
+	  _inherits(Tile, _ReactCSS$Component);
+
+	  function Tile() {
+	    _classCallCheck(this, Tile);
+
+	    _get(Object.getPrototypeOf(Tile.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Tile, [{
+	    key: 'classes',
+	    value: function classes() {
+	      return {
+	        'default': {
+	          tile: {
+	            fontSize: '16px',
+	            padding: '16px',
+	            display: 'flex',
+	            justifyContent: 'space-between',
+	            color: this.props.color
+	          },
+	          primary: {
+	            display: 'flex',
+	            width: '100%'
+	          },
+	          sidebar: {
+	            minWidth: '56px',
+	            maxWidth: '56px',
+	            flexBasis: '56' },
+	          // 72 minus 16
+	          content: {
+	            background: 'none',
+	            flex: '1',
+	            maxWidth: '95%'
+	          },
+	          secondary: {
+	            flexBasis: '42',
+	            textAlign: 'center'
+	          },
+	          sidebarIcon: {
+	            marginTop: '-12px',
+	            marginLeft: '-12px',
+	            marginBottom: '-12px'
+	          }
+	        },
+	        'divider': {
+	          tile: {
+	            boxShadow: 'inset 0 -1px 0 rgba(0,0,0,.12)'
+	          }
+	        },
+	        'condensed': {
+	          tile: {
+	            paddingBottom: '0',
+	            paddingTop: '0'
+	          },
+	          sidebar: {
+	            minWidth: '28px',
+	            maxWidth: '28px',
+	            flexBasis: '28'
+	          }
+	        }
+	      };
+	    }
+	  }, {
+	    key: 'styles',
+	    value: function styles() {
+	      return this.css({
+	        'clickable': this.props.onClick
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _props$children = _slicedToArray(this.props.children, 2);
+
+	      var sidebar = _props$children[0];
+	      var content = _props$children[1];
+
+	      return React.createElement(
+	        'div',
+	        { style: this.styles().tile, className: 'flexbox-fix' },
+	        React.createElement(
+	          'div',
+	          { style: this.styles().primary, className: 'flexbox-fix' },
+	          React.createElement(
+	            'div',
+	            { style: this.styles().sidebar, key: "sidebar-#{ sidebar }" },
+	            sidebar
+	          ),
+	          React.createElement(
+	            'div',
+	            { style: this.styles().content, key: "content-#{ content }" },
+	            content
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Tile;
+	})(ReactCSS.Component);
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(2);
+	var ReactCSS = __webpack_require__(155);
+	var _ = __webpack_require__(179);
+
+	var Tab = __webpack_require__(180);
+	var Link = __webpack_require__(181);
+
+	// var Ink = require('./Ink');
+
+	// var context = {
+	//   primaryColor: '#2196F3',
+	//   accentColor: '#E91E63',
+	//   theme: 'light'
+	// }
+
+	var Tabs = (function (_ReactCSS$Component) {
+	  _inherits(Tabs, _ReactCSS$Component);
+
+	  function Tabs(props) {
+	    _classCallCheck(this, Tabs);
+
+	    _get(Object.getPrototypeOf(Tabs.prototype), 'constructor', this).call(this);
+
+	    var selectedTab;
+	    if (props.selectedTab < (props.tabs && props.tabs.length)) {
+	      selectedTab = props.selectedTab;
+	    } else {
+	      selectedTab = 0;
+	    }
+
+	    this.state = {
+	      selectedTab: selectedTab
+	    };
+
+	    this.handleClick = this.handleClick.bind(this);
+	    this.slide = this.slide.bind(this);
+	  }
+
+	  _createClass(Tabs, [{
+	    key: 'classes',
+	    value: function classes() {
+	      return {
+	        'default': {
+	          tabs: {
+	            position: 'relative',
+	            background: this.props.background
+	          },
+	          tabWrap: {
+	            display: 'flex'
+	          },
+	          tab: {
+	            justifyContent: 'flex-start',
+	            minWidth: '68px',
+	            maxWidth: '240px'
+	          },
+	          Tab: {
+	            color: this.props.color,
+	            inactive: this.props.inactive,
+	            capitalize: this.props.capitalize
+	          },
+	          indicator: {
+	            height: '0',
+	            position: 'absolute',
+	            bottom: '0',
+	            left: '0',
+	            background: this.props.color,
+	            transition: 'all 200ms linear'
+	          }
+	        },
+	        'scrollable': {
+	          tabs: {
+	            overflowX: 'scroll'
+	          },
+	          tabWrap: {
+	            paddingLeft: '60px',
+	            justifyContent: 'flex-start',
+	            width: '400%'
+	          },
+	          tab: {
+	            width: 'auto'
+	          }
+	        },
+	        'align-justify': {
+	          tabWrap: {
+	            justifyContent: 'space-between'
+	          },
+	          tab: {
+	            width: 100 / this.props.tabs.length + '%'
+	          }
+	        },
+	        'align-left': {
+	          tabWrap: {
+	            paddingLeft: '60px',
+	            justifyContent: 'flex-start'
+	          },
+	          tab: {
+	            width: 'auto'
+	          }
+	        },
+	        'align-center': {
+	          tabWrap: {
+	            justifyContent: 'center'
+	          },
+	          tab: {
+	            width: 'auto'
+	          }
+	        }
+	      };
+	    }
+	  }, {
+	    key: 'styles',
+	    value: function styles() {
+	      return this.css({
+	        'scrollable': this.props.width / this.props.tabs.length < 72
+	      });
+	    }
+	  }, {
+	    key: 'handleClick',
+	    value: function handleClick(tab) {
+	      if (this.props.onChange) {
+	        this.props.onChange(tab);
+	      }
+
+	      this.setState({
+	        selectedTab: tab
+	      });
+	    }
+	  }, {
+	    key: 'slide',
+	    value: function slide() {
+	      if (this.props.tabs.length) {
+	        var containerNode = this.refs.tabs.getDOMNode();
+	        var containerLeft = containerNode.scrollLeft;
+	        var containerRight = containerNode.offsetWidth + containerNode.scrollLeft;
+
+	        var selectedNode = this.refs['tab-' + this.state.selectedTab] && this.refs['tab-' + this.state.selectedTab].getDOMNode();
+	        var selectedLeft = selectedNode && selectedNode.getBoundingClientRect().left - containerNode.getBoundingClientRect().left + containerNode.scrollLeft;
+	        var selectedRight = selectedNode && selectedLeft + selectedNode.offsetWidth;
+
+	        // scroll right if tab is off screen
+	        if (selectedRight > containerRight) {
+	          containerNode.scrollLeft += selectedRight - containerRight;
+	        }
+
+	        // scroll left if tab is off screen
+	        if (selectedLeft < containerLeft) {
+	          containerNode.scrollLeft -= containerLeft - selectedLeft;
+	        }
+
+	        // slide the indicator
+	        var indicator = React.findDOMNode(this.refs.indicator);
+	        indicator.style.left = selectedLeft + 'px';
+	        indicator.style.width = selectedNode.offsetWidth + 'px';
+	        indicator.style.height = '2px';
+	      }
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.slide();
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      if (nextProps.selectedTab !== this.state.selectedTab) {
+	        this.setState({ selectedTab: nextProps.selectedTab });
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUpdate',
+	    value: function componentWillUpdate(nextProps, nextState) {
+	      if (nextState.selectedTab >= (nextProps.tabs && nextProps.tabs.length)) {
+	        nextState.selectedTab = nextProps.tabs.length - 1;
+	      }
+	    }
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate() {
+	      this.slide();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var tabs = [];
+	      for (var i = 0; i < this.props.tabs.length; i++) {
+	        var tab = this.props.tabs[i];
+
+	        var label;
+	        var callback;
+	        var callbackValue;
+	        var newTab;
+	        if (_.isString(tab)) {
+	          label = tab;
+	          callback = null;
+	        } else {
+	          label = tab.label;
+	          callback = tab.onClick;
+	          callbackValue = tab.callbackValue;
+	          newTab = tab.newTab;
+	        }
+
+	        tabs.push(React.createElement(
+	          'div',
+	          { style: this.styles().tab, ref: 'tab-' + i, key: i },
+	          React.createElement(
+	            Link,
+	            { onClick: callback, callbackValue: callbackValue, newTab: newTab },
+	            React.createElement(
+	              Tab,
+	              _extends({}, this.styles().Tab, { tab: i, selected: this.state.selectedTab === i, selectable: tab.selectable, onClick: this.handleClick }),
+	              label
+	            )
+	          )
+	        ));
+	      }
+
+	      return React.createElement(
+	        'div',
+	        { style: this.styles().tabs, ref: 'tabs' },
+	        React.createElement(
+	          'div',
+	          { style: this.styles().tabWrap, className: 'flexbox-fix' },
+	          tabs
+	        ),
+	        React.createElement('div', { style: this.styles().indicator, ref: 'indicator' })
+	      );
+	    }
+	  }]);
+
+	  return Tabs;
+	})(ReactCSS.Component);
+
+	Tabs.defaultProps = {
+	  selectedTab: 0,
+	  background: 'transparent',
+	  color: '#fff'
+	};
+
+	module.exports = Tabs;
+
+/***/ },
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -32309,1198 +33616,17 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(159)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(166)(module), (function() { return this; }())))
 
 /***/ },
-/* 159 */
-/***/ function(module, exports) {
-
-	module.exports = function(module) {
-		if(!module.webpackPolyfill) {
-			module.deprecate = function() {};
-			module.paths = [];
-			// module.parent = undefined by default
-			module.children = [];
-			module.webpackPolyfill = 1;
-		}
-		return module;
-	}
-
-
-/***/ },
-/* 160 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";var _=__webpack_require__(158);module.exports=function(e){for(var s in e){var o=e[s];if(_.isObject(o))for(var a in o){var t=o[a];_.isObject(t)||console.warn("Make sure the value of the element `"+s+"` is an object of css. You passed it `"+o+"`")}else console.warn("Make sure the value of `"+s+"` is an object of html elements. You passed it `"+o+"`")}};
-
-/***/ },
-/* 161 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";var merge=__webpack_require__(162),mixins=__webpack_require__(164);module.exports=function(r,e){var i=merge(r);return mixins(i,e)};
-
-/***/ },
-/* 162 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";var merge=__webpack_require__(163),_=__webpack_require__(158);module.exports=function(e){return _.isObject(e)&&!_.isArray(e)?e:1===e.length?e[0]:merge.recursive.apply(void 0,e)};
-
-/***/ },
-/* 163 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/*!
-	 * @name JavaScript/NodeJS Merge v1.2.0
-	 * @author yeikos
-	 * @repository https://github.com/yeikos/js.merge
-
-	 * Copyright 2014 yeikos - MIT license
-	 * https://raw.github.com/yeikos/js.merge/master/LICENSE
-	 */
-
-	;(function(isNode) {
-
-		/**
-		 * Merge one or more objects 
-		 * @param bool? clone
-		 * @param mixed,... arguments
-		 * @return object
-		 */
-
-		var Public = function(clone) {
-
-			return merge(clone === true, false, arguments);
-
-		}, publicName = 'merge';
-
-		/**
-		 * Merge two or more objects recursively 
-		 * @param bool? clone
-		 * @param mixed,... arguments
-		 * @return object
-		 */
-
-		Public.recursive = function(clone) {
-
-			return merge(clone === true, true, arguments);
-
-		};
-
-		/**
-		 * Clone the input removing any reference
-		 * @param mixed input
-		 * @return mixed
-		 */
-
-		Public.clone = function(input) {
-
-			var output = input,
-				type = typeOf(input),
-				index, size;
-
-			if (type === 'array') {
-
-				output = [];
-				size = input.length;
-
-				for (index=0;index<size;++index)
-
-					output[index] = Public.clone(input[index]);
-
-			} else if (type === 'object') {
-
-				output = {};
-
-				for (index in input)
-
-					output[index] = Public.clone(input[index]);
-
-			}
-
-			return output;
-
-		};
-
-		/**
-		 * Merge two objects recursively
-		 * @param mixed input
-		 * @param mixed extend
-		 * @return mixed
-		 */
-
-		function merge_recursive(base, extend) {
-
-			if (typeOf(base) !== 'object')
-
-				return extend;
-
-			for (var key in extend) {
-
-				if (typeOf(base[key]) === 'object' && typeOf(extend[key]) === 'object') {
-
-					base[key] = merge_recursive(base[key], extend[key]);
-
-				} else {
-
-					base[key] = extend[key];
-
-				}
-
-			}
-
-			return base;
-
-		}
-
-		/**
-		 * Merge two or more objects
-		 * @param bool clone
-		 * @param bool recursive
-		 * @param array argv
-		 * @return object
-		 */
-
-		function merge(clone, recursive, argv) {
-
-			var result = argv[0],
-				size = argv.length;
-
-			if (clone || typeOf(result) !== 'object')
-
-				result = {};
-
-			for (var index=0;index<size;++index) {
-
-				var item = argv[index],
-
-					type = typeOf(item);
-
-				if (type !== 'object') continue;
-
-				for (var key in item) {
-
-					var sitem = clone ? Public.clone(item[key]) : item[key];
-
-					if (recursive) {
-
-						result[key] = merge_recursive(result[key], sitem);
-
-					} else {
-
-						result[key] = sitem;
-
-					}
-
-				}
-
-			}
-
-			return result;
-
-		}
-
-		/**
-		 * Get type of variable
-		 * @param mixed input
-		 * @return string
-		 *
-		 * @see http://jsperf.com/typeofvar
-		 */
-
-		function typeOf(input) {
-
-			return ({}).toString.call(input).slice(8, -1).toLowerCase();
-
-		}
-
-		if (isNode) {
-
-			module.exports = Public;
-
-		} else {
-
-			window[publicName] = Public;
-
-		}
-
-	})(typeof module === 'object' && module && typeof module.exports === 'object' && module.exports);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(159)(module)))
-
-/***/ },
-/* 164 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";var _=__webpack_require__(158),merge=__webpack_require__(163),localProps={borderRadius:function(r){return null!==r?{msBorderRadius:r,MozBorderRadius:r,OBorderRadius:r,WebkitBorderRadius:r,borderRadius:r}:void 0},boxShadow:function(r){return null!==r?{msBoxShadow:r,MozBoxShadow:r,OBoxShadow:r,WebkitBoxShadow:r,boxShadow:r}:void 0},userSelect:function(r){return null!==r?{WebkitTouchCallout:r,KhtmlUserSelect:r,MozUserSelect:r,msUserSelect:r,WebkitUserSelect:r,userSelect:r}:void 0},flex:function(r){return null!==r?{WebkitBoxFlex:r,MozBoxFlex:r,WebkitFlex:r,msFlex:r,flex:r}:void 0},flexBasis:function(r){return null!==r?{WebkitFlexBasis:r,flexBasis:r}:void 0},justifyContent:function(r){return null!==r?{WebkitJustifyContent:r,justifyContent:r}:void 0},transition:function(r){return null!==r?{msTransition:r,MozTransition:r,OTransition:r,WebkitTransition:r,transition:r}:void 0},transform:function(r){return null!==r?{msTransform:r,MozTransform:r,OTransform:r,WebkitTransform:r,transform:r}:void 0},Absolute:function(r){if(null!==r){var o=r.split(" ");return{position:"absolute",top:o[0],right:o[1],bottom:o[2],left:o[3]}}},Extend:function(r,o){var e=o[r];return e?e:void 0}},transform=function r(o,e,t){var n=merge(e,localProps),i={};for(var s in o){var u=o[s];if(_.isObject(u)&&!_.isArray(u))i[s]=r(u,e,o);else if(n[s]){var l=n[s](u,t);for(var a in l){var f=l[a];i[a]=f}}else i[s]=u}return i};module.exports=function(r,o,e){return transform(r,o,e)};
-
-/***/ },
-/* 165 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	module.exports = {
-	  Container: __webpack_require__(166),
-	  Grid: __webpack_require__(167),
-	};
-
-
-/***/ },
-/* 166 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(2);
-	var ReactCSS = __webpack_require__(155);
-
-	var Container = (function (_ReactCSS$Component) {
-	  _inherits(Container, _ReactCSS$Component);
-
-	  function Container() {
-	    _classCallCheck(this, Container);
-
-	    _get(Object.getPrototypeOf(Container.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(Container, [{
-	    key: 'classes',
-	    value: function classes() {
-	      return {
-	        'default': {
-	          container: {
-	            maxWidth: this.props.width + 'px',
-	            padding: '0 20px',
-	            margin: '0 auto'
-	          }
-	        }
-	      };
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        'div',
-	        { style: this.styles().container },
-	        this.props.children
-	      );
-	    }
-	  }]);
-
-	  return Container;
-	})(ReactCSS.Component);
-
-	Container.defaultProps = {
-	  width: 960
-	};
-
-	module.exports = Container;
-
-/***/ },
-/* 167 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(2);
-	var ReactCSS = __webpack_require__(155);
-
-	var Grid = (function (_ReactCSS$Component) {
-	  _inherits(Grid, _ReactCSS$Component);
-
-	  function Grid() {
-	    _classCallCheck(this, Grid);
-
-	    _get(Object.getPrototypeOf(Grid.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(Grid, [{
-	    key: 'classes',
-	    value: function classes() {
-	      return {
-	        'default': {
-	          grid: {
-	            position: 'relative'
-	          }
-	        },
-	        'preset-default': {
-	          left: {
-	            position: 'absolute',
-	            width: '170px'
-	          },
-	          main: {
-	            paddingLeft: '190px'
-	          }
-	        },
-	        'preset-one': {
-	          left: {
-	            width: 'auto',
-	            position: 'relative',
-	            paddingRight: '260px'
-	          },
-	          main: {
-	            position: 'absolute',
-	            right: '0',
-	            top: '0',
-	            width: '225px'
-	          }
-	        },
-	        'preset-two': {
-	          left: {
-	            width: '220px',
-	            position: 'absolute'
-	          },
-	          main: {
-	            paddingLeft: '267px'
-	          }
-	        },
-	        'preset-three': {
-	          left: {
-	            width: '410px',
-	            position: 'absolute',
-	            height: '100%'
-	          },
-	          main: {
-	            paddingLeft: '455px'
-	          }
-	        },
-
-	        'mobile-default': {
-	          main: {
-	            padding: '0'
-	          },
-	          left: {
-	            display: 'none'
-	          }
-	        },
-	        'mobile-one': {
-	          left: {
-	            paddingRight: '0'
-	          },
-	          main: {
-	            display: 'none'
-	          }
-	        },
-	        'mobile-two': {
-	          grid: {
-	            position: 'relative',
-	            width: '100%'
-	          },
-	          left: {
-	            position: 'absolute',
-	            left: '50%',
-	            transform: 'translateX(-50%)',
-	            marginLeft: '-20px'
-	          },
-	          main: {
-	            display: 'none'
-	          }
-	        },
-	        'mobile-three': {
-	          grid: {
-	            display: 'none'
-	          }
-	        }
-	      };
-	    }
-	  }, {
-	    key: 'styles',
-	    value: function styles() {
-	      return this.css({
-	        'mobile-default': this.props.preset === 'default' && document.getElementById('root').clientWidth < 500,
-	        'mobile-one': this.props.preset === 'one' && document.getElementById('root').clientWidth < 500,
-	        'mobile-two': this.props.preset === 'two' && document.getElementById('root').clientWidth < 500,
-	        'mobile-three': this.props.preset === 'three' && document.getElementById('root').clientWidth < 500
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        'div',
-	        { style: this.styles().grid },
-	        React.createElement(
-	          'div',
-	          { style: this.styles().left },
-	          this.props.children[0]
-	        ),
-	        React.createElement(
-	          'div',
-	          { style: this.styles().main },
-	          this.props.children[1]
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Grid;
-	})(ReactCSS.Component);
-
-	Grid.defaultProps = {
-	  preset: 'default'
-	};
-
-	module.exports = Grid;
-
-/***/ },
-/* 168 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactcss = __webpack_require__(155);
-
-	var _reactcss2 = _interopRequireDefault(_reactcss);
-
-	var _modulesReactBasicLayout = __webpack_require__(165);
-
-	var _modulesReactMaterialDesign = __webpack_require__(169);
-
-	var _examplesScheduleScheduleJsx = __webpack_require__(175);
-
-	var _examplesScheduleScheduleJsx2 = _interopRequireDefault(_examplesScheduleScheduleJsx);
-
-	var Hero = (function (_ReactCSS$Component) {
-	  _inherits(Hero, _ReactCSS$Component);
-
-	  function Hero() {
-	    _classCallCheck(this, Hero);
-
-	    _get(Object.getPrototypeOf(Hero.prototype), 'constructor', this).call(this);
-
-	    this.handleMouseOver = this.handleMouseOver.bind(this);
-	    this.handleDrag = this.handleDrag.bind(this);
-	  }
-
-	  _createClass(Hero, [{
-	    key: 'classes',
-	    value: function classes() {
-	      return {
-	        'default': {
-	          hero: {
-	            background: '#fafafa',
-	            paddingBottom: '80px'
-	          },
-	          headline: {
-	            color: '#425655',
-	            fontSize: '28px',
-	            lineHeight: '38px',
-	            fontWeight: '500',
-	            margin: '0',
-	            textAlign: 'center',
-	            paddingTop: '20px'
-	          },
-	          stars: {
-	            textAlign: 'center',
-	            padding: '20px 0 30px'
-	          },
-	          schedule: {
-	            height: '350px'
-	          },
-	          draggable: {
-	            height: '100%',
-	            position: 'relative'
-	          },
-	          handle: {
-	            position: 'absolute',
-	            top: '50%',
-	            borderRadius: '2px',
-	            right: '-14px',
-	            width: '28px',
-	            height: '20px',
-	            background: '#9013FE',
-	            zIndex: '2',
-	            cursor: 'ew-resize'
-	          },
-	          icon: {
-	            fill: '#fff',
-	            transform: 'rotate(90deg) translate(-2px, 2px)'
-	          },
-	          instructions: {
-	            color: '#425655',
-	            fontSize: '20px',
-	            textAlign: 'center',
-	            paddingTop: '30px'
-	          },
-	          highlight: {
-	            color: '#9013FE'
-	          }
-	        }
-	      };
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var draggable = _react2['default'].findDOMNode(this.refs.draggable);
-	      var handle = _react2['default'].findDOMNode(this.refs.handle);
-	      var bg = _react2['default'].findDOMNode(this.refs.draggable).children[1].children[0].style;
-
-	      bg.transition = 'transform 700ms ease-in-out';
-	      handle.style.transition = 'transform 700ms ease-in-out';
-	      bg.transformOrigin = '0 0';
-	      this.moving = setInterval(function () {
-	        if (bg.transform === 'scaleX(1)') {
-	          bg.transform = 'scaleX(.99)';
-	          handle.style.transform = 'translateX(-5px)';
-	        } else {
-	          bg.transform = 'scaleX(1)';
-	          handle.style.transform = 'translateX(0)';
-	        }
-	      }, 700);
-	    }
-	  }, {
-	    key: 'handleMouseOver',
-	    value: function handleMouseOver() {
-	      var draggable = _react2['default'].findDOMNode(this.refs.draggable);
-	      draggable.style.transition = '';
-	      clearInterval(this.moving);
-	    }
-	  }, {
-	    key: 'handleDrag',
-	    value: function handleDrag(e) {
-	      var container = _react2['default'].findDOMNode(this.refs.container);
-	      var draggable = _react2['default'].findDOMNode(this.refs.draggable);
-	      var handle = _react2['default'].findDOMNode(this.refs.handle);
-
-	      var containerWidth = container.clientWidth;
-	      var left = e.pageX - (container.getBoundingClientRect().left + window.pageXOffset);
-
-	      var percent = Math.round(left / containerWidth * 100);
-	      if (percent > 100) {
-	        percent = 100;
-	      }
-
-	      if (percent < 40) {
-	        percent = 40;
-	      }
-
-	      if (e.pageX) {
-	        draggable.style.width = percent + '%';
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2['default'].createElement(
-	        'div',
-	        { style: this.styles().hero },
-	        _react2['default'].createElement(
-	          _modulesReactBasicLayout.Container,
-	          { width: 550 },
-	          _react2['default'].createElement(
-	            'h1',
-	            { style: this.styles().headline },
-	            'Morph Components Based On Their Size, Not the Window'
-	          ),
-	          _react2['default'].createElement(
-	            'div',
-	            { style: this.styles().stars },
-	            _react2['default'].createElement('iframe', { style: { paddingLeft: '30px' }, src: 'https://ghbtns.com/github-btn.html?user=casesandberg&repo=react-bounds&type=star&count=true&size=large', scrolling: '0', width: '142px', height: '30px', frameBorder: '0' })
-	          ),
-	          _react2['default'].createElement(
-	            'div',
-	            { style: this.styles().schedule, ref: 'container' },
-	            _react2['default'].createElement(
-	              'div',
-	              { style: this.styles().draggable, ref: 'draggable' },
-	              _react2['default'].createElement(
-	                'div',
-	                { style: this.styles().handle, ref: 'handle', onMouseOver: this.handleMouseOver, onDrag: this.handleDrag, draggable: true },
-	                _react2['default'].createElement(
-	                  'div',
-	                  { style: this.styles().icon },
-	                  _react2['default'].createElement(
-	                    'svg',
-	                    { style: { width: '24px', height: '24px' }, viewBox: '0 0 24 24' },
-	                    _react2['default'].createElement('path', { d: 'M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z' })
-	                  )
-	                )
-	              ),
-	              _react2['default'].createElement(
-	                _modulesReactMaterialDesign.Raised,
-	                null,
-	                _react2['default'].createElement(_examplesScheduleScheduleJsx2['default'], null)
-	              )
-	            )
-	          ),
-	          _react2['default'].createElement(
-	            'div',
-	            { style: this.styles().instructions },
-	            _react2['default'].createElement(
-	              'span',
-	              { style: this.styles().highlight },
-	              'Drag <Schedule />'
-	            ),
-	            ' smaller than 400px to change to list-view.'
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Hero;
-	})(_reactcss2['default'].Component);
-
-	exports['default'] = Hero;
-	module.exports = exports['default'];
-
-/***/ },
-/* 169 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	module.exports = {
-	  Raised: __webpack_require__(170),
-	  Tile: __webpack_require__(171),
-
-	  Tabs: __webpack_require__(172),
-	};
-
-
-/***/ },
-/* 170 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jshint node: true, esnext: true */
-	"use strict";
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(2);
-	var ReactCSS = __webpack_require__(155);
-
-	var Raised = (function (_ReactCSS$Component) {
-	  _inherits(Raised, _ReactCSS$Component);
-
-	  function Raised() {
-	    _classCallCheck(this, Raised);
-
-	    _get(Object.getPrototypeOf(Raised.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(Raised, [{
-	    key: 'classes',
-	    value: function classes() {
-	      return {
-	        'default': {
-	          wrap: {
-	            position: 'relative',
-	            width: '100%',
-	            height: '100%'
-	          },
-	          content: {
-	            position: 'relative',
-	            width: '100%',
-	            height: '100%'
-	          },
-	          bg: {
-	            Absolute: '0 0 0 0',
-	            boxShadow: '0 ${ this.props.zDepth }px ${ this.props.zDepth * 4 }px rgba(0,0,0,.24)',
-	            borderRadius: this.props.radius,
-	            background: this.props.background
-	          }
-	        },
-	        'zDepth-0': {
-	          bg: {
-	            boxShadow: 'none'
-	          }
-	        },
-
-	        'zDepth-1': {
-	          bg: {
-	            boxShadow: '0 2px 10px rgba(0,0,0,.12), 0 2px 5px rgba(0,0,0,.16)'
-	          }
-	        },
-	        'zDepth-2': {
-	          bg: {
-	            boxShadow: '0 6px 20px rgba(0,0,0,.19), 0 8px 17px rgba(0,0,0,.2)'
-	          }
-	        },
-	        'zDepth-3': {
-	          bg: {
-	            boxShadow: '0 17px 50px rgba(0,0,0,.19), 0 12px 15px rgba(0,0,0,.24)'
-	          }
-	        },
-	        'zDepth-4': {
-	          bg: {
-	            boxShadow: '0 25px 55px rgba(0,0,0,.21), 0 16px 28px rgba(0,0,0,.22)'
-	          }
-	        },
-	        'zDepth-5': {
-	          bg: {
-	            boxShadow: '0 40px 77px rgba(0,0,0,.22), 0 27px 24px rgba(0,0,0,.2)'
-	          }
-	        },
-	        'square': {
-	          bg: {
-	            borderRadius: '0'
-	          }
-	        },
-	        'circle': {
-	          bg: {
-	            borderRadius: '50%'
-	          }
-	        }
-	      };
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        'div',
-	        { style: this.styles().wrap },
-	        React.createElement('div', { style: this.styles().bg, className: 'bg' }),
-	        React.createElement(
-	          'div',
-	          { style: this.styles().content },
-	          this.props.children
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Raised;
-	})(ReactCSS.Component);
-
-	Raised.propTypes = {
-	  background: React.PropTypes.string,
-	  zDepth: React.PropTypes.oneOf(['0', '1', '2', '3', '4', '5', 0, 1, 2, 3, 4, 5]),
-	  radius: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number])
-	};
-
-	Raised.defaultProps = {
-	  background: '#fff',
-	  zDepth: '1',
-	  radius: '2px'
-	};
-
-	module.exports = Raised;
-
-/***/ },
-/* 171 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jshint node: true, esnext: true */
-	"use strict";
-
-	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(2);
-	var ReactCSS = __webpack_require__(155);
-
-	module.exports = (function (_ReactCSS$Component) {
-	  _inherits(Tile, _ReactCSS$Component);
-
-	  function Tile() {
-	    _classCallCheck(this, Tile);
-
-	    _get(Object.getPrototypeOf(Tile.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(Tile, [{
-	    key: 'classes',
-	    value: function classes() {
-	      return {
-	        'default': {
-	          tile: {
-	            fontSize: '16px',
-	            padding: '16px',
-	            display: 'flex',
-	            justifyContent: 'space-between',
-	            color: this.props.color
-	          },
-	          primary: {
-	            display: 'flex',
-	            width: '100%'
-	          },
-	          sidebar: {
-	            minWidth: '56px',
-	            maxWidth: '56px',
-	            flexBasis: '56' },
-	          // 72 minus 16
-	          content: {
-	            background: 'none',
-	            flex: '1',
-	            maxWidth: '95%'
-	          },
-	          secondary: {
-	            flexBasis: '42',
-	            textAlign: 'center'
-	          },
-	          sidebarIcon: {
-	            marginTop: '-12px',
-	            marginLeft: '-12px',
-	            marginBottom: '-12px'
-	          }
-	        },
-	        'divider': {
-	          tile: {
-	            boxShadow: 'inset 0 -1px 0 rgba(0,0,0,.12)'
-	          }
-	        },
-	        'condensed': {
-	          tile: {
-	            paddingBottom: '0',
-	            paddingTop: '0'
-	          },
-	          sidebar: {
-	            minWidth: '28px',
-	            maxWidth: '28px',
-	            flexBasis: '28'
-	          }
-	        }
-	      };
-	    }
-	  }, {
-	    key: 'styles',
-	    value: function styles() {
-	      return this.css({
-	        'clickable': this.props.onClick
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _props$children = _slicedToArray(this.props.children, 2);
-
-	      var sidebar = _props$children[0];
-	      var content = _props$children[1];
-
-	      return React.createElement(
-	        'div',
-	        { style: this.styles().tile, className: 'flexbox-fix' },
-	        React.createElement(
-	          'div',
-	          { style: this.styles().primary, className: 'flexbox-fix' },
-	          React.createElement(
-	            'div',
-	            { style: this.styles().sidebar, key: "sidebar-#{ sidebar }" },
-	            sidebar
-	          ),
-	          React.createElement(
-	            'div',
-	            { style: this.styles().content, key: "content-#{ content }" },
-	            content
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Tile;
-	})(ReactCSS.Component);
-
-/***/ },
-/* 172 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(2);
-	var ReactCSS = __webpack_require__(155);
-	var _ = __webpack_require__(158);
-
-	var Tab = __webpack_require__(173);
-	var Link = __webpack_require__(174);
-
-	// var Ink = require('./Ink');
-
-	// var context = {
-	//   primaryColor: '#2196F3',
-	//   accentColor: '#E91E63',
-	//   theme: 'light'
-	// }
-
-	var Tabs = (function (_ReactCSS$Component) {
-	  _inherits(Tabs, _ReactCSS$Component);
-
-	  function Tabs(props) {
-	    _classCallCheck(this, Tabs);
-
-	    _get(Object.getPrototypeOf(Tabs.prototype), 'constructor', this).call(this);
-
-	    var selectedTab;
-	    if (props.selectedTab < (props.tabs && props.tabs.length)) {
-	      selectedTab = props.selectedTab;
-	    } else {
-	      selectedTab = 0;
-	    }
-
-	    this.state = {
-	      selectedTab: selectedTab
-	    };
-
-	    this.handleClick = this.handleClick.bind(this);
-	    this.slide = this.slide.bind(this);
-	  }
-
-	  _createClass(Tabs, [{
-	    key: 'classes',
-	    value: function classes() {
-	      return {
-	        'default': {
-	          tabs: {
-	            position: 'relative',
-	            background: this.props.background
-	          },
-	          tabWrap: {
-	            display: 'flex'
-	          },
-	          tab: {
-	            justifyContent: 'flex-start',
-	            minWidth: '68px',
-	            maxWidth: '240px'
-	          },
-	          Tab: {
-	            color: this.props.color,
-	            inactive: this.props.inactive,
-	            capitalize: this.props.capitalize
-	          },
-	          indicator: {
-	            height: '0',
-	            position: 'absolute',
-	            bottom: '0',
-	            left: '0',
-	            background: this.props.color,
-	            transition: 'all 200ms linear'
-	          }
-	        },
-	        'scrollable': {
-	          tabs: {
-	            overflowX: 'scroll'
-	          },
-	          tabWrap: {
-	            paddingLeft: '60px',
-	            justifyContent: 'flex-start',
-	            width: '400%'
-	          },
-	          tab: {
-	            width: 'auto'
-	          }
-	        },
-	        'align-justify': {
-	          tabWrap: {
-	            justifyContent: 'space-between'
-	          },
-	          tab: {
-	            width: 100 / this.props.tabs.length + '%'
-	          }
-	        },
-	        'align-left': {
-	          tabWrap: {
-	            paddingLeft: '60px',
-	            justifyContent: 'flex-start'
-	          },
-	          tab: {
-	            width: 'auto'
-	          }
-	        },
-	        'align-center': {
-	          tabWrap: {
-	            justifyContent: 'center'
-	          },
-	          tab: {
-	            width: 'auto'
-	          }
-	        }
-	      };
-	    }
-	  }, {
-	    key: 'styles',
-	    value: function styles() {
-	      return this.css({
-	        'scrollable': this.props.width / this.props.tabs.length < 72
-	      });
-	    }
-	  }, {
-	    key: 'handleClick',
-	    value: function handleClick(tab) {
-	      if (this.props.onChange) {
-	        this.props.onChange(tab);
-	      }
-
-	      this.setState({
-	        selectedTab: tab
-	      });
-	    }
-	  }, {
-	    key: 'slide',
-	    value: function slide() {
-	      if (this.props.tabs.length) {
-	        var containerNode = this.refs.tabs.getDOMNode();
-	        var containerLeft = containerNode.scrollLeft;
-	        var containerRight = containerNode.offsetWidth + containerNode.scrollLeft;
-
-	        var selectedNode = this.refs['tab-' + this.state.selectedTab] && this.refs['tab-' + this.state.selectedTab].getDOMNode();
-	        var selectedLeft = selectedNode && selectedNode.getBoundingClientRect().left - containerNode.getBoundingClientRect().left + containerNode.scrollLeft;
-	        var selectedRight = selectedNode && selectedLeft + selectedNode.offsetWidth;
-
-	        // scroll right if tab is off screen
-	        if (selectedRight > containerRight) {
-	          containerNode.scrollLeft += selectedRight - containerRight;
-	        }
-
-	        // scroll left if tab is off screen
-	        if (selectedLeft < containerLeft) {
-	          containerNode.scrollLeft -= containerLeft - selectedLeft;
-	        }
-
-	        // slide the indicator
-	        var indicator = React.findDOMNode(this.refs.indicator);
-	        indicator.style.left = selectedLeft + 'px';
-	        indicator.style.width = selectedNode.offsetWidth + 'px';
-	        indicator.style.height = '2px';
-	      }
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      this.slide();
-	    }
-	  }, {
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      if (nextProps.selectedTab !== this.state.selectedTab) {
-	        this.setState({ selectedTab: nextProps.selectedTab });
-	      }
-	    }
-	  }, {
-	    key: 'componentWillUpdate',
-	    value: function componentWillUpdate(nextProps, nextState) {
-	      if (nextState.selectedTab >= (nextProps.tabs && nextProps.tabs.length)) {
-	        nextState.selectedTab = nextProps.tabs.length - 1;
-	      }
-	    }
-	  }, {
-	    key: 'componentDidUpdate',
-	    value: function componentDidUpdate() {
-	      this.slide();
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var tabs = [];
-	      for (var i = 0; i < this.props.tabs.length; i++) {
-	        var tab = this.props.tabs[i];
-
-	        var label;
-	        var callback;
-	        var callbackValue;
-	        var newTab;
-	        if (_.isString(tab)) {
-	          label = tab;
-	          callback = null;
-	        } else {
-	          label = tab.label;
-	          callback = tab.onClick;
-	          callbackValue = tab.callbackValue;
-	          newTab = tab.newTab;
-	        }
-
-	        tabs.push(React.createElement(
-	          'div',
-	          { style: this.styles().tab, ref: 'tab-' + i, key: i },
-	          React.createElement(
-	            Link,
-	            { onClick: callback, callbackValue: callbackValue, newTab: newTab },
-	            React.createElement(
-	              Tab,
-	              _extends({}, this.styles().Tab, { tab: i, selected: this.state.selectedTab === i, selectable: tab.selectable, onClick: this.handleClick }),
-	              label
-	            )
-	          )
-	        ));
-	      }
-
-	      return React.createElement(
-	        'div',
-	        { style: this.styles().tabs, ref: 'tabs' },
-	        React.createElement(
-	          'div',
-	          { style: this.styles().tabWrap, className: 'flexbox-fix' },
-	          tabs
-	        ),
-	        React.createElement('div', { style: this.styles().indicator, ref: 'indicator' })
-	      );
-	    }
-	  }]);
-
-	  return Tabs;
-	})(ReactCSS.Component);
-
-	Tabs.defaultProps = {
-	  selectedTab: 0,
-	  background: 'transparent',
-	  color: '#fff'
-	};
-
-	module.exports = Tabs;
-
-/***/ },
-/* 173 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -33582,21 +33708,21 @@
 	module.exports = Tab;
 
 /***/ },
-/* 174 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var React = __webpack_require__(2);
-	var _ = __webpack_require__(158);
+	var _ = __webpack_require__(179);
 
 	var Link = (function (_React$Component) {
 	  _inherits(Link, _React$Component);
@@ -33654,7 +33780,7 @@
 	module.exports = Link;
 
 /***/ },
-/* 175 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33667,7 +33793,7 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -33683,11 +33809,11 @@
 
 	var _reactcss2 = _interopRequireDefault(_reactcss);
 
-	var _reactBounds = __webpack_require__(176);
+	var _reactBounds = __webpack_require__(183);
 
 	var _reactBounds2 = _interopRequireDefault(_reactBounds);
 
-	var _ScheduleItemJsx = __webpack_require__(181);
+	var _ScheduleItemJsx = __webpack_require__(188);
 
 	var _ScheduleItemJsx2 = _interopRequireDefault(_ScheduleItemJsx);
 
@@ -33890,17 +34016,17 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 176 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	  wrap: __webpack_require__(177)
+	  wrap: __webpack_require__(184)
 	};
 
 /***/ },
-/* 177 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33909,21 +34035,23 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x3, _x4, _x5) { var _again = true; _function: while (_again) { var object = _x3, property = _x4, receiver = _x5; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x3 = parent; _x4 = property; _x5 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var React = __webpack_require__(2);
-	var ReactCSS = __webpack_require__(155);
-	var listener = __webpack_require__(178);
-	var _ = __webpack_require__(179);
-	var classNames = __webpack_require__(180);
+	var listener = __webpack_require__(185);
+	var _ = __webpack_require__(186);
+	var classNames = __webpack_require__(187);
 
 	module.exports = function (Component) {
-	  var Wrap = (function (_ReactCSS$Component) {
-	    _inherits(Wrap, _ReactCSS$Component);
+	  var wrapStyles = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+	  var componentStyles = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+
+	  var Wrap = (function (_React$Component) {
+	    _inherits(Wrap, _React$Component);
 
 	    function Wrap() {
 	      _classCallCheck(this, Wrap);
@@ -33946,31 +34074,16 @@
 	    }
 
 	    _createClass(Wrap, [{
-	      key: 'classes',
-	      value: function classes() {
-	        return {
-	          'default': {
-	            wrap: {
-	              position: 'relative',
-	              height: '100%'
-	            },
-	            component: {
-	              height: '100%'
-	            }
-	          }
-	        };
-	      }
-	    }, {
 	      key: 'handleResize',
 	      value: function handleResize(log) {
-	        var component = React.findDOMNode(this.refs.wrap);
+	        var component = this.wrap;
 	        this.setState({ loaded: true, debounced: false, width: component.clientWidth, height: component.clientHeight, activeBounds: this.calculateBounds(component.clientWidth, component.clientHeight) });
 	        this.debounce();
 	      }
 	    }, {
 	      key: 'calculateBounds',
 	      value: function calculateBounds(newWidth, newHeight) {
-	        var bounds = Component.bounds();
+	        var bounds = Component.bounds && Component.bounds();
 	        var activeBounds = [];
 
 	        if (bounds) {
@@ -33990,8 +34103,8 @@
 	              var minHeight = boundValue.minHeight || 0;
 	              var maxHeight = boundValue.maxHeight || 99999;
 
-	              if (boundValue.minHeight || boundValue.minHeight) {
-	                if (newHeight > minHeight && newHeight < minHeight) {
+	              if (boundValue.minHeight || boundValue.maxHeight) {
+	                if (newHeight > minHeight && newHeight < maxHeight) {
 	                  activeBounds.push(boundName);
 	                }
 	              }
@@ -34004,8 +34117,7 @@
 	    }, {
 	      key: 'componentDidMount',
 	      value: function componentDidMount() {
-	        var component = React.findDOMNode(this.refs.component);
-	        listener.add(component, this.handleResize);
+	        var component = listener.add(this.component, this.handleResize);
 
 	        if (!this.state.loaded) {
 	          this.handleResize();
@@ -34023,8 +34135,7 @@
 	    }, {
 	      key: 'componentWillUnmount',
 	      value: function componentWillUnmount() {
-	        var component = React.findDOMNode(this.refs.component);
-	        listener.remove(component, this.handleResize);
+	        listener.remove(this.component, this.handleResize);
 	      }
 	    }, {
 	      key: 'handleLookup',
@@ -34038,12 +34149,31 @@
 	    }, {
 	      key: 'render',
 	      value: function render() {
+	        var _this = this;
+
+	        var styles = {
+	          wrap: {
+	            position: 'relative',
+	            height: '100%'
+	          },
+	          component: {
+	            height: '100%'
+	          }
+	        };
 	        return React.createElement(
 	          'div',
-	          { ref: 'wrap', style: this.styles().wrap },
+	          { ref: function (wrap) {
+	              return _this.wrap = wrap;
+	            }, style: _extends({}, styles.wrap, wrapStyles) },
 	          React.createElement(
 	            'div',
-	            { ref: 'component', className: classNames(this.state.activeBounds), style: this.styles().component },
+	            {
+	              ref: function (component) {
+	                return _this.component = component;
+	              },
+	              className: classNames(this.state.activeBounds),
+	              style: _extends({}, styles.component, componentStyles)
+	            },
 	            this.state.loaded && this.state.width > 0 ? React.createElement(Component, _extends({}, this.props, {
 	              width: this.state.width,
 	              height: this.state.height,
@@ -34055,13 +34185,13 @@
 	    }]);
 
 	    return Wrap;
-	  })(ReactCSS.Component);
+	  })(React.Component);
 
 	  return Wrap;
 	};
 
 /***/ },
-/* 178 */
+/* 185 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34132,7 +34262,7 @@
 	};
 
 /***/ },
-/* 179 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
@@ -35686,21 +35816,23 @@
 
 
 /***/ },
-/* 180 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2015 Jed Watson.
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2016 Jed Watson.
 	  Licensed under the MIT License (MIT), see
 	  http://jedwatson.github.io/classnames
 	*/
+	/* global define */
 
 	(function () {
 		'use strict';
 
-		function classNames () {
+		var hasOwn = {}.hasOwnProperty;
 
-			var classes = '';
+		function classNames () {
+			var classes = [];
 
 			for (var i = 0; i < arguments.length; i++) {
 				var arg = arguments[i];
@@ -35708,40 +35840,37 @@
 
 				var argType = typeof arg;
 
-				if ('string' === argType || 'number' === argType) {
-					classes += ' ' + arg;
-
+				if (argType === 'string' || argType === 'number') {
+					classes.push(arg);
 				} else if (Array.isArray(arg)) {
-					classes += ' ' + classNames.apply(null, arg);
-
-				} else if ('object' === argType) {
+					classes.push(classNames.apply(null, arg));
+				} else if (argType === 'object') {
 					for (var key in arg) {
-						if (arg.hasOwnProperty(key) && arg[key]) {
-							classes += ' ' + key;
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(key);
 						}
 					}
 				}
 			}
 
-			return classes.substr(1);
+			return classes.join(' ');
 		}
 
 		if (typeof module !== 'undefined' && module.exports) {
 			module.exports = classNames;
-		} else if (true){
-			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
+		} else if (true) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
 				return classNames;
-			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 			window.classNames = classNames;
 		}
-
 	}());
 
 
 /***/ },
-/* 181 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35752,7 +35881,7 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -35896,7 +36025,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 182 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35907,7 +36036,7 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -35923,7 +36052,7 @@
 
 	var _reactcss2 = _interopRequireDefault(_reactcss);
 
-	var _modulesReactBasicLayout = __webpack_require__(165);
+	var _modulesReactBasicLayout = __webpack_require__(171);
 
 	var Tweet = (function (_ReactCSS$Component) {
 	  _inherits(Tweet, _ReactCSS$Component);
@@ -36012,7 +36141,8 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 183 */
+/* 190 */,
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36021,9 +36151,11 @@
 	  value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -36039,54 +36171,36 @@
 
 	var _reactcss2 = _interopRequireDefault(_reactcss);
 
-	var _modulesReactBasicLayout = __webpack_require__(165);
+	var _modulesReactBasicLayout = __webpack_require__(171);
 
-	var _modulesReactDocsSrcComponentsMarkdown = __webpack_require__(184);
+	var _modulesReactDocs = __webpack_require__(192);
 
-	var _modulesReactDocsSrcComponentsMarkdown2 = _interopRequireDefault(_modulesReactDocsSrcComponentsMarkdown);
+	var _modulesReactDocs2 = _interopRequireDefault(_modulesReactDocs);
 
-	var Features = (function (_ReactCSS$Component) {
-	  _inherits(Features, _ReactCSS$Component);
+	var _documentation = __webpack_require__(206);
 
-	  function Features() {
-	    _classCallCheck(this, Features);
+	var _documentation2 = _interopRequireDefault(_documentation);
 
-	    _get(Object.getPrototypeOf(Features.prototype), 'constructor', this).apply(this, arguments);
+	var DocsText = (function (_ReactCSS$Component) {
+	  _inherits(DocsText, _ReactCSS$Component);
+
+	  function DocsText() {
+	    _classCallCheck(this, DocsText);
+
+	    _get(Object.getPrototypeOf(DocsText.prototype), 'constructor', this).apply(this, arguments);
 	  }
 
-	  _createClass(Features, [{
+	  _createClass(DocsText, [{
 	    key: 'classes',
 	    value: function classes() {
 	      return {
 	        'default': {
-	          features: {
-	            background: '#ddd',
-	            padding: '70px 0'
+	          docs: {
+	            background: '#fafafa'
 	          },
-
-	          left: {
-	            float: 'left',
-	            width: '45%'
-	          },
-
-	          right: {
-	            width: '50%',
-	            float: 'right'
-	          },
-	          spacer: {
-	            height: '13px'
-	          },
-	          clear: {
-	            clear: 'both'
-	          },
-
-	          label: {
-	            color: '#425655',
-	            fontSize: '18px',
-	            lineHeight: '26px',
-	            fontWeight: '300',
-	            paddingTop: '20px',
-	            margin: '0'
+	          Documentation: {
+	            primaryColor: '#9013FE',
+	            sidebar: false
 	          }
 	        }
 	      };
@@ -36094,78 +36208,41 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-
-	      var setBreakpoints = '\n```javascript\n static bounds() {\n   return {\n     \'list\': {\n       minWidth: 0,\n       maxWidth: 399,\n     },\n     \'column\': {\n       minWidth: 400,\n     },\n   };\n }\n ```\n    ';
-
-	      var useBreakpoints = '\n ```javascript\nthis.props.isBound(\'list\')\n// true\n\nthis.props.activeBounds\n// [‘list’]\n ```\n    ';
-
-	      var useCSS = '\n ```javascript\n.list .schedule { }\n\n.column .schedule { }\n ```\n    ';
-
 	      return _react2['default'].createElement(
 	        'div',
-	        { style: this.styles().features },
+	        { style: this.styles().docs },
 	        _react2['default'].createElement(
 	          _modulesReactBasicLayout.Container,
 	          { width: 550 },
-	          _react2['default'].createElement(
-	            'div',
-	            { style: this.styles().pinwheel },
-	            _react2['default'].createElement(
-	              'div',
-	              { style: this.styles().left },
-	              _react2['default'].createElement(
-	                _modulesReactDocsSrcComponentsMarkdown2['default'],
-	                { condensed: true },
-	                setBreakpoints
-	              ),
-	              _react2['default'].createElement(
-	                'h3',
-	                { style: this.styles().label },
-	                'Set breakpoints similar to media queries.'
-	              )
-	            ),
-	            _react2['default'].createElement(
-	              'div',
-	              { style: this.styles().right },
-	              _react2['default'].createElement(
-	                _modulesReactDocsSrcComponentsMarkdown2['default'],
-	                { condensed: true },
-	                useBreakpoints
-	              ),
-	              _react2['default'].createElement('div', { style: this.styles().spacer }),
-	              _react2['default'].createElement(
-	                _modulesReactDocsSrcComponentsMarkdown2['default'],
-	                { condensed: true },
-	                useCSS
-	              ),
-	              _react2['default'].createElement(
-	                'h3',
-	                { style: this.styles().label },
-	                'Use breakpoints in the component or with the breakpoint css classes. '
-	              )
-	            ),
-	            _react2['default'].createElement('div', { style: this.styles().clear })
-	          )
+	          _react2['default'].createElement(_modulesReactDocs2['default'], _extends({}, this.styles().Documentation, { markdown: _documentation2['default'] }))
 	        )
 	      );
 	    }
 	  }]);
 
-	  return Features;
+	  return DocsText;
 	})(_reactcss2['default'].Component);
 
-	exports['default'] = Features;
+	exports['default'] = DocsText;
 	module.exports = exports['default'];
 
 /***/ },
-/* 184 */
+/* 192 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	module.exports = __webpack_require__(193);
+
+
+/***/ },
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -36173,84 +36250,180 @@
 
 	var React = __webpack_require__(2);
 	var ReactCSS = __webpack_require__(155);
-	var markdown = __webpack_require__(185);
+	var markdown = __webpack_require__(194);
 
-	var Code = __webpack_require__(191);
+	var _require = __webpack_require__(171);
 
-	module.exports = (function (_ReactCSS$Component) {
-	  _inherits(Markdown, _ReactCSS$Component);
+	var Grid = _require.Grid;
 
-	  function Markdown() {
-	    _classCallCheck(this, Markdown);
+	var MarkdownTitle = __webpack_require__(200);
+	var Markdown = __webpack_require__(201);
+	var Code = __webpack_require__(202);
+	var Sidebar = __webpack_require__(204);
 
-	    _get(Object.getPrototypeOf(Markdown.prototype), 'constructor', this).apply(this, arguments);
+	var Docs = (function (_ReactCSS$Component) {
+	  _inherits(Docs, _ReactCSS$Component);
+
+	  function Docs() {
+	    _classCallCheck(this, Docs);
+
+	    _get(Object.getPrototypeOf(Docs.prototype), 'constructor', this).call(this);
+	    this.state = {
+	      sidebarFixed: false,
+	      visible: false,
+	      files: {}
+	    };
+	    this.changeSelection = this.changeSelection.bind(this);
+	    this.attachSidebar = this.attachSidebar.bind(this);
+	    this.handleScroll = this.handleScroll.bind(this);
 	  }
 
-	  _createClass(Markdown, [{
+	  _createClass(Docs, [{
 	    key: 'classes',
 	    value: function classes() {
 	      return {
-	        'default': {
-	          markdown: {
-	            fontSize: '17px',
-	            lineHeight: '24px',
-	            color: 'rgba(0,0,0,.47)'
-	          }
-	        }
+	        'default': {}
 	      };
 	    }
 	  }, {
-	    key: 'shouldComponentUpdate',
-	    value: function shouldComponentUpdate() {
-	      return false;
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      window.addEventListener('scroll', this.handleScroll, false);
+
+	      var domFiles = React.findDOMNode(this.refs.files) && React.findDOMNode(this.refs.files).children;
+
+	      if (domFiles) {
+	        var files = {};
+	        for (var i = 0; i < domFiles.length; i++) {
+	          var file = domFiles[i];
+	          files[file.offsetTop] = file.id;
+	        }
+
+	        this.setState({ files: files });
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      window.removeEventListener('scroll', this.handleScroll, false);
+	    }
+	  }, {
+	    key: 'handleScroll',
+	    value: function handleScroll(e) {
+	      this.changeSelection();
+	      this.attachSidebar();
+	    }
+	  }, {
+	    key: 'attachSidebar',
+	    value: function attachSidebar() {
+	      var sidebar = React.findDOMNode(this.refs.sidebar);
+
+	      if (sidebar) {
+	        var sidebarTop = sidebar.getBoundingClientRect().top;
+
+	        if (sidebarTop <= 0 && this.state.sidebarFixed === false) {
+	          this.setState({ sidebarFixed: true });
+	        }
+
+	        if (sidebarTop > 0 && this.state.sidebarFixed === true) {
+	          this.setState({ sidebarFixed: false });
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'changeSelection',
+	    value: function changeSelection() {
+	      var top = document.body.scrollTop - 300;
+	      var mostVisible = '';
+
+	      for (var offset in this.state.files) {
+	        if (this.state.files.hasOwnProperty(offset)) {
+	          var id = this.state.files[offset];
+	          if (offset < top) {
+	            mostVisible = id;
+	          }
+	        }
+	      }
+
+	      if (mostVisible !== this.state.visible) {
+	        this.setState({ visible: mostVisible });
+	      }
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var children = this.props.children;
+	      var markdownFiles = [];
 
-	      var newLines = children;
+	      for (var fileName in this.props.markdown) {
+	        if (this.props.markdown.hasOwnProperty(fileName)) {
+	          var file = this.props.markdown[fileName];
+	          var args = markdown.getArgs(file);
+	          var body = markdown.getBody(file);
 
-	      var codes = [];
-	      for (var i = 0; i < markdown.isCode(children).length; i++) {
-	        var codeBlock = markdown.isCode(children)[i];
-	        newLines = newLines.replace(codeBlock[1], '|Code:' + i + '|');
-	        codes[i] = React.createElement(Code, { file: codeBlock[2], condensed: this.props.condensed, borders: true });
-	      }
-
-	      var markdownFile = [];
-	      for (var i = 0; i < newLines.split('\n').length; i++) {
-	        var line = newLines.split('\n')[i];
-	        if (markdown.isCodeBlock(line)) {
-	          markdownFile.push(React.createElement(
+	          markdownFiles.push(React.createElement(
 	            'div',
-	            { key: i },
-	            codes[markdown.codeNumber(line)]
+	            { key: fileName, id: args.id, style: this.styles().file, className: 'markdown' },
+	            React.createElement(MarkdownTitle, {
+	              isHeadline: markdown.isSubSection(fileName) ? true : false,
+	              title: args.title,
+	              link: args.id,
+	              primaryColor: this.props.primaryColor }),
+	            React.createElement(
+	              Markdown,
+	              null,
+	              body
+	            )
 	          ));
-	        } else {
-	          markdownFile.push(React.createElement('div', { key: i, style: this.styles().markdown, className: 'markdown text', dangerouslySetInnerHTML: { __html: markdown.render(line) } }));
 	        }
 	      }
 
 	      return React.createElement(
 	        'div',
-	        { style: this.styles().markdown },
-	        markdownFile
+	        null,
+	        React.createElement(
+	          'style',
+	          null,
+	          '\n          .rendered{\n            color: #607D8B; // blue grey 500\n          }\n          .rendered .hljs-comment {\n            color: #B0BEC5; // blue grey 200\n          }\n          .rendered .hljs-keyword{\n            color: #EF9A9A;  // red 200\n          }\n          .rendered .hljs-string{\n            color: #689F38; // light green 700\n          }\n          .rendered .hljs-title{\n          }\n          .text code{\n            background: #ddd;\n            padding: 1px 5px 3px;\n            border-radius: 2px;\n            box-shadow: inset 0 0 0 1px rgba(0,0,0,.03);\n            font-size: 85%;\n            vertical-align: bottom;\n          }\n          .markdown p{\n            margin: 15px 24px 15px 0;\n          }\n          .markdown h1{\n            font-size: 38px;\n            font-weight: 200;\n            color: rgba(0,0,0,.77);\n            margin: 0;\n            padding-top: 54px;\n            padding-bottom: 5px;\n          }\n          .markdown h2{\n            font-size: 26px;\n            line-height: 32px;\n            font-weight: 200;\n            color: rgba(0,0,0,.57);\n            padding-top: 20px;\n            margin-top: 20px;\n            margin-bottom: 10px;\n          }\n          .markdown h3{\n            font-weight: normal;\n            font-size: 20px;\n            padding-top: 20px;\n            margin-top: 20px;\n            color: rgba(0,0,0,.67);\n          }\n        '
+	        ),
+	        this.props.sidebar !== false ? React.createElement(
+	          Grid,
+	          null,
+	          React.createElement(
+	            'div',
+	            { style: this.styles().sidebar, ref: 'sidebar' },
+	            React.createElement(Sidebar, { files: this.props.markdown, active: this.state.visible, primaryColor: this.props.primaryColor, bottom: this.props.bottom, fixed: this.state.sidebarFixed })
+	          ),
+	          React.createElement(
+	            'div',
+	            { ref: 'files', style: this.styles().files },
+	            markdownFiles
+	          )
+	        ) : React.createElement(
+	          'div',
+	          { ref: 'files', style: this.styles().files },
+	          markdownFiles
+	        )
 	      );
 	    }
 	  }]);
 
-	  return Markdown;
+	  return Docs;
 	})(ReactCSS.Component);
 
+	Docs.defaultProps = {
+	  primaryColor: '#03A9F4'
+	};
+
+	module.exports = Docs;
+
 /***/ },
-/* 185 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Remarkable = __webpack_require__(186);
-	var hljs = __webpack_require__(188);
+	var Remarkable = __webpack_require__(195);
+	var hljs = __webpack_require__(197);
 	var regularMd = new Remarkable();
 	var codeMd = new Remarkable({
 	  highlight: function(str) {
@@ -36335,7 +36508,7 @@
 
 
 /***/ },
-/* 186 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*! remarkable 1.5.0 https://github.com//jonschlinkert/remarkable @license MIT */ ! function(e) {
@@ -36345,11 +36518,11 @@
 	        var t;
 	        "undefined" != typeof window ? t = window : "undefined" != typeof global ? t = global : "undefined" != typeof self && (t = self), t.Remarkable = e()
 	    }
-	}(__webpack_require__(187));
+	}(__webpack_require__(196));
 
 
 /***/ },
-/* 187 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var require;var require;module.exports = function() {
@@ -40946,18 +41119,18 @@
 
 
 /***/ },
-/* 188 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hljs = __webpack_require__(189);
+	var hljs = __webpack_require__(198);
 
-	hljs.registerLanguage('javascript', __webpack_require__(190));
+	hljs.registerLanguage('javascript', __webpack_require__(199));
 
 	module.exports = hljs;
 
 
 /***/ },
-/* 189 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -41734,7 +41907,7 @@
 
 
 /***/ },
-/* 190 */
+/* 199 */
 /***/ function(module, exports) {
 
 	module.exports = function(hljs) {
@@ -41851,14 +42024,15 @@
 	};
 
 /***/ },
-/* 191 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* jshint node: true, esnext: true */
+	"use strict";
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -41866,10 +42040,198 @@
 
 	var React = __webpack_require__(2);
 	var ReactCSS = __webpack_require__(155);
-	var markdown = __webpack_require__(185);
-	var context = __webpack_require__(192);
 
-	var _require = __webpack_require__(169);
+	module.exports = (function (_ReactCSS$Component) {
+	  _inherits(MarkdownTitle, _ReactCSS$Component);
+
+	  function MarkdownTitle() {
+	    _classCallCheck(this, MarkdownTitle);
+
+	    _get(Object.getPrototypeOf(MarkdownTitle.prototype), 'constructor', this).call(this);
+	    this.state = {
+	      hover: false
+	    };
+	    this.handleHover = this.handleHover.bind(this);
+	  }
+
+	  _createClass(MarkdownTitle, [{
+	    key: 'classes',
+	    value: function classes() {
+	      return {
+	        'default': {
+	          link: {
+	            opacity: '0',
+	            textDecoration: 'none',
+	            fill: this.props.primaryColor,
+	            transition: 'opacity 200ms linear'
+	          }
+	        },
+	        'hovered': {
+	          link: {
+	            opacity: '1'
+	          }
+	        }
+	      };
+	    }
+	  }, {
+	    key: 'styles',
+	    value: function styles() {
+	      return this.css({
+	        'hovered': this.state.hover
+	      });
+	    }
+	  }, {
+	    key: 'handleHover',
+	    value: function handleHover(e) {
+	      if (e.type === 'mouseenter') {
+	        this.setState({ hover: true });
+	      } else if (e.type === 'mouseleave') {
+	        this.setState({ hover: false });
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var linkSvg = {
+	        __html: '\n              <svg style="width:24px;height:24px" viewBox="0 0 24 24">\n                  <path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z" />\n              </svg>\n              '
+	      };
+
+	      var title;
+	      if (this.props.isHeadline) {
+	        title = React.createElement(
+	          'h1',
+	          null,
+	          this.props.title,
+	          ' ',
+	          React.createElement('a', { style: this.styles().link, href: '#' + this.props.link, dangerouslySetInnerHTML: linkSvg })
+	        );
+	      } else {
+	        title = React.createElement(
+	          'h2',
+	          null,
+	          this.props.title,
+	          ' ',
+	          React.createElement('a', { style: this.styles().link, href: '#' + this.props.link, dangerouslySetInnerHTML: linkSvg })
+	        );
+	      }
+
+	      return React.createElement(
+	        'div',
+	        { onMouseEnter: this.handleHover, onMouseLeave: this.handleHover },
+	        title
+	      );
+	    }
+	  }]);
+
+	  return MarkdownTitle;
+	})(ReactCSS.Component);
+
+/***/ },
+/* 201 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(2);
+	var ReactCSS = __webpack_require__(155);
+	var markdown = __webpack_require__(194);
+
+	var Code = __webpack_require__(202);
+
+	module.exports = (function (_ReactCSS$Component) {
+	  _inherits(Markdown, _ReactCSS$Component);
+
+	  function Markdown() {
+	    _classCallCheck(this, Markdown);
+
+	    _get(Object.getPrototypeOf(Markdown.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Markdown, [{
+	    key: 'classes',
+	    value: function classes() {
+	      return {
+	        'default': {
+	          markdown: {
+	            fontSize: '17px',
+	            lineHeight: '24px',
+	            color: 'rgba(0,0,0,.47)'
+	          }
+	        }
+	      };
+	    }
+	  }, {
+	    key: 'shouldComponentUpdate',
+	    value: function shouldComponentUpdate() {
+	      return false;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var children = this.props.children;
+
+	      var newLines = children;
+
+	      var codes = [];
+	      for (var i = 0; i < markdown.isCode(children).length; i++) {
+	        var codeBlock = markdown.isCode(children)[i];
+	        newLines = newLines.replace(codeBlock[1], '|Code:' + i + '|');
+	        codes[i] = React.createElement(Code, { file: codeBlock[2], condensed: this.props.condensed, borders: true });
+	      }
+
+	      var markdownFile = [];
+	      for (var i = 0; i < newLines.split('\n').length; i++) {
+	        var line = newLines.split('\n')[i];
+	        if (markdown.isCodeBlock(line)) {
+	          markdownFile.push(React.createElement(
+	            'div',
+	            { key: i },
+	            codes[markdown.codeNumber(line)]
+	          ));
+	        } else {
+	          markdownFile.push(React.createElement('div', { key: i, style: this.styles().markdown, className: 'markdown text', dangerouslySetInnerHTML: { __html: markdown.render(line) } }));
+	        }
+	      }
+
+	      return React.createElement(
+	        'div',
+	        { style: this.styles().markdown },
+	        markdownFile
+	      );
+	    }
+	  }]);
+
+	  return Markdown;
+	})(ReactCSS.Component);
+
+/***/ },
+/* 202 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(2);
+	var ReactCSS = __webpack_require__(155);
+	var markdown = __webpack_require__(194);
+	var context = __webpack_require__(203);
+
+	var _require = __webpack_require__(175);
 
 	var Tile = _require.Tile;
 	var Raised = _require.Raised;
@@ -42003,7 +42365,7 @@
 	module.exports = Code;
 
 /***/ },
-/* 192 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* jshint node: true, esnext: true, browser: true */
@@ -42237,282 +42599,7 @@
 	module.exports = context;
 
 /***/ },
-/* 193 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactcss = __webpack_require__(155);
-
-	var _reactcss2 = _interopRequireDefault(_reactcss);
-
-	var _modulesReactBasicLayout = __webpack_require__(165);
-
-	var _modulesReactDocs = __webpack_require__(194);
-
-	var _modulesReactDocs2 = _interopRequireDefault(_modulesReactDocs);
-
-	var _documentation = __webpack_require__(199);
-
-	var _documentation2 = _interopRequireDefault(_documentation);
-
-	var DocsText = (function (_ReactCSS$Component) {
-	  _inherits(DocsText, _ReactCSS$Component);
-
-	  function DocsText() {
-	    _classCallCheck(this, DocsText);
-
-	    _get(Object.getPrototypeOf(DocsText.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(DocsText, [{
-	    key: 'classes',
-	    value: function classes() {
-	      return {
-	        'default': {
-	          docs: {
-	            background: '#fafafa'
-	          },
-	          Documentation: {
-	            primaryColor: '#9013FE',
-	            sidebar: false
-	          }
-	        }
-	      };
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2['default'].createElement(
-	        'div',
-	        { style: this.styles().docs },
-	        _react2['default'].createElement(
-	          _modulesReactBasicLayout.Container,
-	          { width: 550 },
-	          _react2['default'].createElement(_modulesReactDocs2['default'], _extends({}, this.styles().Documentation, { markdown: _documentation2['default'] }))
-	        )
-	      );
-	    }
-	  }]);
-
-	  return DocsText;
-	})(_reactcss2['default'].Component);
-
-	exports['default'] = DocsText;
-	module.exports = exports['default'];
-
-/***/ },
-/* 194 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	module.exports = __webpack_require__(195);
-
-
-/***/ },
-/* 195 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(2);
-	var ReactCSS = __webpack_require__(155);
-	var markdown = __webpack_require__(185);
-
-	var _require = __webpack_require__(165);
-
-	var Grid = _require.Grid;
-
-	var MarkdownTitle = __webpack_require__(196);
-	var Markdown = __webpack_require__(184);
-	var Code = __webpack_require__(191);
-	var Sidebar = __webpack_require__(197);
-
-	var Docs = (function (_ReactCSS$Component) {
-	  _inherits(Docs, _ReactCSS$Component);
-
-	  function Docs() {
-	    _classCallCheck(this, Docs);
-
-	    _get(Object.getPrototypeOf(Docs.prototype), 'constructor', this).call(this);
-	    this.state = {
-	      sidebarFixed: false,
-	      visible: false,
-	      files: {}
-	    };
-	    this.changeSelection = this.changeSelection.bind(this);
-	    this.attachSidebar = this.attachSidebar.bind(this);
-	    this.handleScroll = this.handleScroll.bind(this);
-	  }
-
-	  _createClass(Docs, [{
-	    key: 'classes',
-	    value: function classes() {
-	      return {
-	        'default': {}
-	      };
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      window.addEventListener('scroll', this.handleScroll, false);
-
-	      var domFiles = React.findDOMNode(this.refs.files) && React.findDOMNode(this.refs.files).children;
-
-	      if (domFiles) {
-	        var files = {};
-	        for (var i = 0; i < domFiles.length; i++) {
-	          var file = domFiles[i];
-	          files[file.offsetTop] = file.id;
-	        }
-
-	        this.setState({ files: files });
-	      }
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      window.removeEventListener('scroll', this.handleScroll, false);
-	    }
-	  }, {
-	    key: 'handleScroll',
-	    value: function handleScroll(e) {
-	      this.changeSelection();
-	      this.attachSidebar();
-	    }
-	  }, {
-	    key: 'attachSidebar',
-	    value: function attachSidebar() {
-	      var sidebar = React.findDOMNode(this.refs.sidebar);
-
-	      if (sidebar) {
-	        var sidebarTop = sidebar.getBoundingClientRect().top;
-
-	        if (sidebarTop <= 0 && this.state.sidebarFixed === false) {
-	          this.setState({ sidebarFixed: true });
-	        }
-
-	        if (sidebarTop > 0 && this.state.sidebarFixed === true) {
-	          this.setState({ sidebarFixed: false });
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'changeSelection',
-	    value: function changeSelection() {
-	      var top = document.body.scrollTop - 300;
-	      var mostVisible = '';
-
-	      for (var offset in this.state.files) {
-	        if (this.state.files.hasOwnProperty(offset)) {
-	          var id = this.state.files[offset];
-	          if (offset < top) {
-	            mostVisible = id;
-	          }
-	        }
-	      }
-
-	      if (mostVisible !== this.state.visible) {
-	        this.setState({ visible: mostVisible });
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var markdownFiles = [];
-
-	      for (var fileName in this.props.markdown) {
-	        if (this.props.markdown.hasOwnProperty(fileName)) {
-	          var file = this.props.markdown[fileName];
-	          var args = markdown.getArgs(file);
-	          var body = markdown.getBody(file);
-
-	          markdownFiles.push(React.createElement(
-	            'div',
-	            { key: fileName, id: args.id, style: this.styles().file, className: 'markdown' },
-	            React.createElement(MarkdownTitle, {
-	              isHeadline: markdown.isSubSection(fileName) ? true : false,
-	              title: args.title,
-	              link: args.id,
-	              primaryColor: this.props.primaryColor }),
-	            React.createElement(
-	              Markdown,
-	              null,
-	              body
-	            )
-	          ));
-	        }
-	      }
-
-	      return React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	          'style',
-	          null,
-	          '\n          .rendered{\n            color: #607D8B; // blue grey 500\n          }\n          .rendered .hljs-comment {\n            color: #B0BEC5; // blue grey 200\n          }\n          .rendered .hljs-keyword{\n            color: #EF9A9A;  // red 200\n          }\n          .rendered .hljs-string{\n            color: #689F38; // light green 700\n          }\n          .rendered .hljs-title{\n          }\n          .text code{\n            background: #ddd;\n            padding: 1px 5px 3px;\n            border-radius: 2px;\n            box-shadow: inset 0 0 0 1px rgba(0,0,0,.03);\n            font-size: 85%;\n            vertical-align: bottom;\n          }\n          .markdown p{\n            margin: 15px 24px 15px 0;\n          }\n          .markdown h1{\n            font-size: 38px;\n            font-weight: 200;\n            color: rgba(0,0,0,.77);\n            margin: 0;\n            padding-top: 54px;\n            padding-bottom: 5px;\n          }\n          .markdown h2{\n            font-size: 26px;\n            line-height: 32px;\n            font-weight: 200;\n            color: rgba(0,0,0,.57);\n            padding-top: 20px;\n            margin-top: 20px;\n            margin-bottom: 10px;\n          }\n          .markdown h3{\n            font-weight: normal;\n            font-size: 20px;\n            padding-top: 20px;\n            margin-top: 20px;\n            color: rgba(0,0,0,.67);\n          }\n        '
-	        ),
-	        this.props.sidebar !== false ? React.createElement(
-	          Grid,
-	          null,
-	          React.createElement(
-	            'div',
-	            { style: this.styles().sidebar, ref: 'sidebar' },
-	            React.createElement(Sidebar, { files: this.props.markdown, active: this.state.visible, primaryColor: this.props.primaryColor, bottom: this.props.bottom, fixed: this.state.sidebarFixed })
-	          ),
-	          React.createElement(
-	            'div',
-	            { ref: 'files', style: this.styles().files },
-	            markdownFiles
-	          )
-	        ) : React.createElement(
-	          'div',
-	          { ref: 'files', style: this.styles().files },
-	          markdownFiles
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Docs;
-	})(ReactCSS.Component);
-
-	Docs.defaultProps = {
-	  primaryColor: '#03A9F4'
-	};
-
-	module.exports = Docs;
-
-/***/ },
-/* 196 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* jshint node: true, esnext: true */
@@ -42520,7 +42607,7 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -42528,116 +42615,13 @@
 
 	var React = __webpack_require__(2);
 	var ReactCSS = __webpack_require__(155);
+	var markdown = __webpack_require__(194);
 
-	module.exports = (function (_ReactCSS$Component) {
-	  _inherits(MarkdownTitle, _ReactCSS$Component);
-
-	  function MarkdownTitle() {
-	    _classCallCheck(this, MarkdownTitle);
-
-	    _get(Object.getPrototypeOf(MarkdownTitle.prototype), 'constructor', this).call(this);
-	    this.state = {
-	      hover: false
-	    };
-	    this.handleHover = this.handleHover.bind(this);
-	  }
-
-	  _createClass(MarkdownTitle, [{
-	    key: 'classes',
-	    value: function classes() {
-	      return {
-	        'default': {
-	          link: {
-	            opacity: '0',
-	            textDecoration: 'none',
-	            fill: this.props.primaryColor,
-	            transition: 'opacity 200ms linear'
-	          }
-	        },
-	        'hovered': {
-	          link: {
-	            opacity: '1'
-	          }
-	        }
-	      };
-	    }
-	  }, {
-	    key: 'styles',
-	    value: function styles() {
-	      return this.css({
-	        'hovered': this.state.hover
-	      });
-	    }
-	  }, {
-	    key: 'handleHover',
-	    value: function handleHover(e) {
-	      if (e.type === 'mouseenter') {
-	        this.setState({ hover: true });
-	      } else if (e.type === 'mouseleave') {
-	        this.setState({ hover: false });
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var linkSvg = {
-	        __html: '\n              <svg style="width:24px;height:24px" viewBox="0 0 24 24">\n                  <path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z" />\n              </svg>\n              '
-	      };
-
-	      var title;
-	      if (this.props.isHeadline) {
-	        title = React.createElement(
-	          'h1',
-	          null,
-	          this.props.title,
-	          ' ',
-	          React.createElement('a', { style: this.styles().link, href: '#' + this.props.link, dangerouslySetInnerHTML: linkSvg })
-	        );
-	      } else {
-	        title = React.createElement(
-	          'h2',
-	          null,
-	          this.props.title,
-	          ' ',
-	          React.createElement('a', { style: this.styles().link, href: '#' + this.props.link, dangerouslySetInnerHTML: linkSvg })
-	        );
-	      }
-
-	      return React.createElement(
-	        'div',
-	        { onMouseEnter: this.handleHover, onMouseLeave: this.handleHover },
-	        title
-	      );
-	    }
-	  }]);
-
-	  return MarkdownTitle;
-	})(ReactCSS.Component);
-
-/***/ },
-/* 197 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* jshint node: true, esnext: true */
-	"use strict";
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(2);
-	var ReactCSS = __webpack_require__(155);
-	var markdown = __webpack_require__(185);
-
-	var _require = __webpack_require__(169);
+	var _require = __webpack_require__(175);
 
 	var Tile = _require.Tile;
 
-	var SidebarItem = __webpack_require__(198);
+	var SidebarItem = __webpack_require__(205);
 
 	module.exports = (function (_ReactCSS$Component) {
 	  _inherits(Sidebar, _ReactCSS$Component);
@@ -42721,7 +42705,7 @@
 	})(ReactCSS.Component);
 
 /***/ },
-/* 198 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* jshint node: true, esnext: true */
@@ -42729,7 +42713,7 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -42738,7 +42722,7 @@
 	var React = __webpack_require__(2);
 	var ReactCSS = __webpack_require__(155);
 
-	var _require = __webpack_require__(169);
+	var _require = __webpack_require__(175);
 
 	var Tile = _require.Tile;
 
@@ -42814,100 +42798,100 @@
 	})(ReactCSS.Component);
 
 /***/ },
-/* 199 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	  '00-why-react-bounds': __webpack_require__(200),
-	  '01-methodology': __webpack_require__(201),
-	  '02-getting-started': __webpack_require__(202),
-	  '02.01-install': __webpack_require__(203),
-	  '02.02-wrap': __webpack_require__(204),
-	  '02.03-define-bounds': __webpack_require__(205),
-	  '03-props': __webpack_require__(206),
-	  '03.01-active': __webpack_require__(207),
-	  '03.02-isBound': __webpack_require__(208),
-	  '03.03-width-height': __webpack_require__(209),
-	  '04-bounds-method': __webpack_require__(210),
-	  '05-reactcss': __webpack_require__(211)
+	  '00-why-react-bounds': __webpack_require__(207),
+	  '01-methodology': __webpack_require__(208),
+	  '02-getting-started': __webpack_require__(209),
+	  '02.01-install': __webpack_require__(210),
+	  '02.02-wrap': __webpack_require__(211),
+	  '02.03-define-bounds': __webpack_require__(212),
+	  '03-props': __webpack_require__(213),
+	  '03.01-active': __webpack_require__(214),
+	  '03.02-isBound': __webpack_require__(215),
+	  '03.03-width-height': __webpack_require__(216),
+	  '04-bounds-method': __webpack_require__(217),
+	  '05-reactcss': __webpack_require__(218)
 	};
-
-/***/ },
-/* 200 */
-/***/ function(module, exports) {
-
-	module.exports = "---\nid: why-react-bounds\ntitle: Why React Bounds?\n\n---\nMedia Queries are a hack. Truly modular components need to respond to the size of their containers.\n\n## Define \"Bounds\" Similar to Media Queries\n\nDefine a set a min-max bounds on any component. React Bounds uses keywords similar to ones you use in media queries.\n\n## Use Bounds in the Component\n\nActive bound information is passed down to components that have them declared. Get an array of all active bounds, or check to see if a specific bound is active. Lastly, you can also get raw width and height information.\n\n## Use Bounds in CSS\n\nIf you are not using inline-styles, React Bounds also exposes the active bounds as class names on the wrapper div. Use these class names to style your component in CSS. \n";
-
-/***/ },
-/* 201 */
-/***/ function(module, exports) {
-
-	module.exports = "---\nid: methodology\ntitle: Methodology\n\n---\nTruly modular components should conform and adapt to whatever size box you give them. To achieve this, top-level elements in components should have a fluid width and height. Components should strive to fill 100% of the space they are given, and leave the burden of constraining them to the parent.\n\nTake, for example, the Schedule component above: It is rendered in a div that has a fixed height and width. The scheduler fills up the available space. Similarly, if you were to render that scheduler in an empty body, it would fill the entire page.\n";
-
-/***/ },
-/* 202 */
-/***/ function(module, exports) {
-
-	module.exports = "---\nid: getting-started\ntitle: Getting Started\n---\n";
-
-/***/ },
-/* 203 */
-/***/ function(module, exports) {
-
-	module.exports = "---\nid: usage-install\ntitle: Install\n---\nStart by installing `react-bounds` via npm:\n```\nnpm install react-bounds --save\n```\n";
-
-/***/ },
-/* 204 */
-/***/ function(module, exports) {
-
-	module.exports = "---\nid: usage-wrap\ntitle: Wrap a Component\n---\nRequire `react-bounds` into a component. Wrap the export with `bounds.wrap` and react-bounds will start tracking the width and height of the component.\n```\nvar React = require('react');\nvar bounds = require('react-bounds');\n\nvar SomeComponent = React.createClass({\n  render(){\n    return <div>Some Component</div>\n  }\n});\n\nmodule.exports = bounds.wrap(SomeComponent);\n```\n";
-
-/***/ },
-/* 205 */
-/***/ function(module, exports) {
-
-	module.exports = "---\nid: usage-bounds\ntitle: Define Bounds\n---\nCreate a bounds method that returns an object with all of the bound information for that component:\n```\nvar React = require('react');\nvar bounds = require('react-bounds');\n\nvar SomeComponent = React.createClass({\n\n  static bounds() {\n    return {\n      'bound-name': {\n        minWidth: 0,\n        maxWidth: 500,\n      },\n    };\n  }\n\n  render(){\n    return <div>{ this.props.activeBounds }</div>\n  }\n});\n\nmodule.exports = bounds.wrap(SomeComponent);\n```\n";
-
-/***/ },
-/* 206 */
-/***/ function(module, exports) {
-
-	module.exports = "---\nid: props\ntitle: Props\n---\n";
 
 /***/ },
 /* 207 */
 /***/ function(module, exports) {
 
-	module.exports = "---\nid: props-active\ntitle: activeBounds\n---\nReturns an array of active bounds.\n\n```\nthis.props.activeBounds\n// ['bound-name', 'another-active-bound']\n```\n";
+	module.exports = "---\nid: why-react-bounds\ntitle: Why React Bounds?\n\n---\nMedia Queries are a hack. Truly modular components need to respond to the size of their containers.\n\n## Define \"Bounds\" Similar to Media Queries\n\nDefine a set a min-max bounds on any component. React Bounds uses keywords similar to ones you use in media queries.\n\n## Use Bounds in the Component\n\nActive bound information is passed down to components that have them declared. Get an array of all active bounds, or check to see if a specific bound is active. Lastly, you can also get raw width and height information.\n\n## Use Bounds in CSS\n\nIf you are not using inline-styles, React Bounds also exposes the active bounds as class names on the wrapper div. Use these class names to style your component in CSS. \n";
 
 /***/ },
 /* 208 */
 /***/ function(module, exports) {
 
-	module.exports = "---\nid: props-isBound\ntitle: isBound\n---\nCall this helper function to check if a specific bound is active:\n\n```\nthis.props.isBound('hide-sidebar');\n// false\n```\n";
+	module.exports = "---\nid: methodology\ntitle: Methodology\n\n---\nTruly modular components should conform and adapt to whatever size box you give them. To achieve this, top-level elements in components should have a fluid width and height. Components should strive to fill 100% of the space they are given, and leave the burden of constraining them to the parent.\n\nTake, for example, the Schedule component above: It is rendered in a div that has a fixed height and width. The scheduler fills up the available space. Similarly, if you were to render that scheduler in an empty body, it would fill the entire page.\n";
 
 /***/ },
 /* 209 */
 /***/ function(module, exports) {
 
-	module.exports = "---\nid: props-width-height\ntitle: width / height\n---\nReturns the width and height of the component:\n\n```\nthis.props.width\n// 340\n\nthis.props.height\n// 100\n```\n";
+	module.exports = "---\nid: getting-started\ntitle: Getting Started\n---\n";
 
 /***/ },
 /* 210 */
 /***/ function(module, exports) {
 
-	module.exports = "---\nid: bounds-method\ntitle: Bounds Method\n---\n\nUse the bounds method to set names to different breakpoints. You can then define `minWidth` `minHeight` `maxWidth` and `maxHeight` just like you would with media queries.\n\n```\nstatic bounds() {\n  return {\n    'tiny': {\n      maxWidth: 50,\n    },\n    'large': {\n      minWidth: 400,\n    }\n  };\n}\n```\n";
+	module.exports = "---\nid: usage-install\ntitle: Install\n---\nStart by installing `react-bounds` via npm:\n```\nnpm install react-bounds --save\n```\n";
 
 /***/ },
 /* 211 */
 /***/ function(module, exports) {
 
-	module.exports = "---\nid: reactcss-support\ntitle: ReactCSS Support\n\n---\n`ReactCSS@0.4.1` introduces support for `react-bounds`. It will now automatically activate and deactivate classes depending on the active bounds:\n\n```\nimport React from 'react';\nimport ReactCSS from 'reactcss';\nimport bounds from 'react-bounds';\n\nclass SomePage extends ReactCSS.Component {\n\n  classes() {\n    return {\n      'default': {\n        page: {\n          width: '960px',\n          margin: '0 auto',\n        },\n      },\n      'no-sidebar': {\n        sidebar: {\n          display: 'none',\n        },\n      },\n      'bigger-content': {\n        page: {\n          width: '1150px',\n        },\n      },\n    };\n  }\n\n  static bounds() {\n    return {\n      'no-sidebar': { maxWidth: 520 },\n      'bigger-content': { minWidth: 1200 },\n    };\n  }\n\n  render() {\n    return (\n      <div is=\"page\">\n        <div is=\"content\"></div>\n        <div is=\"sidebar\"></div>\n      </div>\n    );\n  }\n}\n\nexport default bounds.wrap(SomePage);\n```\n";
+	module.exports = "---\nid: usage-wrap\ntitle: Wrap a Component\n---\nRequire `react-bounds` into a component. Wrap the export with `bounds.wrap` and react-bounds will start tracking the width and height of the component.\n```\nvar React = require('react');\nvar bounds = require('react-bounds');\n\nvar SomeComponent = React.createClass({\n  render(){\n    return <div>Some Component</div>\n  }\n});\n\nmodule.exports = bounds.wrap(SomeComponent);\n```\n";
 
 /***/ },
 /* 212 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: usage-bounds\ntitle: Define Bounds\n---\nCreate a bounds method that returns an object with all of the bound information for that component:\n```\nvar React = require('react');\nvar bounds = require('react-bounds');\n\nvar SomeComponent = React.createClass({\n\n  static bounds() {\n    return {\n      'bound-name': {\n        minWidth: 0,\n        maxWidth: 500,\n      },\n    };\n  }\n\n  render(){\n    return <div>{ this.props.activeBounds }</div>\n  }\n});\n\nmodule.exports = bounds.wrap(SomeComponent);\n```\n";
+
+/***/ },
+/* 213 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: props\ntitle: Props\n---\n";
+
+/***/ },
+/* 214 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: props-active\ntitle: activeBounds\n---\nReturns an array of active bounds.\n\n```\nthis.props.activeBounds\n// ['bound-name', 'another-active-bound']\n```\n";
+
+/***/ },
+/* 215 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: props-isBound\ntitle: isBound\n---\nCall this helper function to check if a specific bound is active:\n\n```\nthis.props.isBound('hide-sidebar');\n// false\n```\n";
+
+/***/ },
+/* 216 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: props-width-height\ntitle: width / height\n---\nReturns the width and height of the component:\n\n```\nthis.props.width\n// 340\n\nthis.props.height\n// 100\n```\n";
+
+/***/ },
+/* 217 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: bounds-method\ntitle: Bounds Method\n---\n\nUse the bounds method to set names to different breakpoints. You can then define `minWidth` `minHeight` `maxWidth` and `maxHeight` just like you would with media queries.\n\n```\nstatic bounds() {\n  return {\n    'tiny': {\n      maxWidth: 50,\n    },\n    'large': {\n      minWidth: 400,\n    }\n  };\n}\n```\n";
+
+/***/ },
+/* 218 */
+/***/ function(module, exports) {
+
+	module.exports = "---\nid: reactcss-support\ntitle: ReactCSS Support\n\n---\n`ReactCSS@0.4.1` introduces support for `react-bounds`. It will now automatically activate and deactivate classes depending on the active bounds:\n\n```\nimport React from 'react';\nimport ReactCSS from 'reactcss';\nimport bounds from 'react-bounds';\n\nclass SomePage extends ReactCSS.Component {\n\n  classes() {\n    return {\n      'default': {\n        page: {\n          width: '960px',\n          margin: '0 auto',\n        },\n      },\n      'no-sidebar': {\n        sidebar: {\n          display: 'none',\n        },\n      },\n      'bigger-content': {\n        page: {\n          width: '1150px',\n        },\n      },\n    };\n  }\n\n  static bounds() {\n    return {\n      'no-sidebar': { maxWidth: 520 },\n      'bigger-content': { minWidth: 1200 },\n    };\n  }\n\n  render() {\n    return (\n      <div is=\"page\">\n        <div is=\"content\"></div>\n        <div is=\"sidebar\"></div>\n      </div>\n    );\n  }\n}\n\nexport default bounds.wrap(SomePage);\n```\n";
+
+/***/ },
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42918,7 +42902,7 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -42934,7 +42918,7 @@
 
 	var _reactcss2 = _interopRequireDefault(_reactcss);
 
-	var _modulesReactBasicLayout = __webpack_require__(165);
+	var _modulesReactBasicLayout = __webpack_require__(171);
 
 	var Footer = (function (_ReactCSS$Component) {
 	  _inherits(Footer, _ReactCSS$Component);
