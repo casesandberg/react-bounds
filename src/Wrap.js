@@ -1,7 +1,10 @@
 'use strict'
 
 var React = require('react')
-var listener = require('./listener')
+var elementResizeDetectorMaker = require("element-resize-detector");
+var erd = elementResizeDetectorMaker({
+  strategy: "scroll" //<- For ultra performance.
+});
 var _ = require('underscore')
 var classNames = require('classnames')
 
@@ -66,7 +69,7 @@ module.exports = function (Component, wrapStyles = {}, componentStyles = {}) {
 
     componentDidMount() {
       var component =
-      listener.add(this.component, this.handleResize)
+      erd.listenTo(this.component, this.handleResize)
 
       if (!this.state.loaded) {
         this.handleResize()
@@ -83,7 +86,7 @@ module.exports = function (Component, wrapStyles = {}, componentStyles = {}) {
     }
 
     componentWillUnmount() {
-      listener.remove(this.component, this.handleResize)
+      erd.removeListener(this.component, this.handleResize)
     }
 
     handleLookup(bound) {
